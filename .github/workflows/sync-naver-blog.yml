@@ -24,12 +24,12 @@ jobs:
         run: python scripts/sync_naver_blog.py
       - name: Commit only when changed
         run: |
-          if git diff --quiet -- blog.html; then
+          if git diff --quiet -- blog.html assets/blog/ && [ -z "$(git status --porcelain -- assets/blog/)" ]; then
             echo "No blog changes."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add blog.html
+          git add blog.html assets/blog/
           git commit -m "Auto-sync latest Naver blog posts"
           git push
