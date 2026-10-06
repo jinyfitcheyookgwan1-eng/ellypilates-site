@@ -1,0 +1,35 @@
+name: Sync latest Naver blog posts
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: naver-blog-sync
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Sync latest six posts
+        run: python scripts/sync_naver_blog.py
+      - name: Commit only when changed
+        run: |
+          if git diff --quiet -- blog.html; then
+            echo "No blog changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add blog.html
+          git commit -m "Auto-sync latest Naver blog posts"
+          git push
