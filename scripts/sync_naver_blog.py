@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import html, re, urllib.request, xml.etree.ElementTree as ET
 from pathlib import Path
+from email.utils import parsedate_to_datetime
 
 BLOG_ID="duswl6880"
 RSS=f"https://rss.blog.naver.com/{BLOG_ID}.xml"
@@ -21,12 +22,21 @@ for item in items:
     link=(item.findtext("link") or "").strip()
     pub=(item.findtext("pubDate") or "").strip()
     desc=(item.findtext("description") or "").strip()
-    clean=re.sub(r"<[^>]+>"," ",html.unescape(desc))
+    raw=html.unescape(desc)
+    img=""
+    m=re.search(r'<img[^>]+(?:src|data-lazy-src)=["\\\']([^"\\\']+)["\\\']',raw,re.I)
+    if m: img=m.group(1).replace("&amp;","&")
+    clean=re.sub(r"<[^>]+>"," ",raw)
     clean=re.sub(r"\s+"," ",clean).strip()
     if len(clean)>110: clean=clean[:107].rstrip()+"…"
-    date=pub[:16] if pub else ""
+    try:
+        date=parsedate_to_datetime(pub).strftime("%Y.%m.%d") if pub else ""
+    except Exception:
+        date=pub[:16] if pub else ""
+    thumb=(f'<div class="blog-latest-thumb"><img src="{html.escape(img,quote=True)}" alt="{html.escape(title,quote=True)}" loading="lazy"></div>' if img else "")
     cards.append(f'''        <article class="blog-latest-card">
           <a href="{html.escape(link,quote=True)}" target="_blank" rel="noopener noreferrer">
+            {thumb}
             <div class="blog-latest-meta"><span>NAVER BLOG</span><time>{html.escape(date)}</time></div>
             <h3 class="blog-latest-title">{html.escape(title)}</h3>
             <p class="blog-latest-summary">{html.escape(clean)}</p>
