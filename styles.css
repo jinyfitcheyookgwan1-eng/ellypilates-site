@@ -4765,3 +4765,17 @@ footer a{text-decoration:underline;text-underline-offset:3px;}
 .blog-latest-note{margin:0;padding:34px 0;border-top:1px solid rgba(25,49,39,.14);border-bottom:1px solid rgba(25,49,39,.14);text-align:center;color:#747a76;font-size:13px}
 @media(max-width:900px){.blog-latest-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.blog-latest-head{align-items:flex-start;flex-direction:column}.blog-latest-head>p br{display:none}}
 @media(max-width:600px){.blog-latest{padding-top:30px;padding-bottom:54px}.blog-latest-grid{grid-template-columns:1fr;gap:34px}.blog-latest-head{margin-bottom:26px}.blog-latest-title{font-size:18px}}
+
+
+/* Latest blog card reliability + compact mobile layout */
+.blog-latest-card>a{display:block;color:inherit;text-decoration:none}
+.blog-latest-title{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+@media(max-width:600px){
+  .blog-latest-grid{gap:30px}
+  .blog-latest-card{padding-top:12px}
+  .blog-latest-thumb{aspect-ratio:16/10;margin-bottom:15px}
+  .blog-latest-meta{margin-bottom:8px}
+  .blog-latest-title{font-size:17.5px;line-height:1.5}
+  .blog-latest-summary{margin-top:8px;line-height:1.65}
+  .blog-latest-go{margin-top:13px}
+}
