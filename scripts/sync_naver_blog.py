@@ -56,7 +56,7 @@ for idx,item in enumerate(items,1):
         date=parsedate_to_datetime(pub).strftime("%Y.%m.%d") if pub else ""
     except Exception:
         date=pub[:16] if pub else ""
-    thumb=(f'<div class="blog-latest-thumb"><img src="{html.escape(local_img,quote=True)}" alt="{html.escape(title,quote=True)}" loading="lazy" width="800" height="600"></div>' if local_img else "")
+    thumb=(f'<div class="blog-latest-thumb"><img src="{html.escape(local_img,quote=True)}" alt="{html.escape(title,quote=True)}" loading="eager" decoding="async" width="800" height="600"></div>' if local_img else "")
     cards.append(f'''        <article class="blog-latest-card">
           <a href="{html.escape(link,quote=True)}" target="_blank" rel="noopener noreferrer">
             {thumb}
