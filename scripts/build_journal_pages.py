@@ -65,6 +65,13 @@ def main():
     if not items:
         raise RuntimeError("RSS returned no posts; leaving files unchanged")
     eligible = {}
+    archive_path = OUT / "feed-index.json"
+    try:
+        archive = json.loads(archive_path.read_text(encoding="utf-8")) if archive_path.exists() else {}
+        if not isinstance(archive, dict):
+            archive = {}
+    except (ValueError, OSError):
+        archive = {}
     for item in items:
         title = (item.findtext("title") or "").strip()
         source = (item.findtext("link") or "").strip()
@@ -72,16 +79,34 @@ def main():
         if not match or not source.startswith("https://blog.naver.com/duswl6880/"):
             continue
         body = clean_text(item.findtext("description") or "")
+        post_id = match.group(1)
+        archive[post_id] = {"title": title, "source": source, "summary": body[:200]}
         if len(body) < MIN_LENGTH:
             continue
         try:
             date = parsedate_to_datetime(item.findtext("pubDate")).date().isoformat()
         except (TypeError, ValueError):
             continue
-        eligible[match.group(1)] = (title, body, date, source)
+        eligible[post_id] = (title, body, date, source)
     OUT.mkdir(exist_ok=True)
+    archive_path.write_text(json.dumps(archive, ensure_ascii=False, indent=2), encoding="utf-8")
     for post_id, (title, body, date, source) in eligible.items():
         (OUT / f"{post_id}.html").write_text(render(title,body,post_id,date,source),encoding="utf-8")
+    # Every observed post remains discoverable in the permanent archive,
+    # including RSS excerpts too short for an independent SEO article.
+    archive_rows = []
+    for post_id, info in reversed(list(archive.items())):
+        local = OUT / f"{post_id}.html"
+        link = f"{post_id}.html" if local.exists() else info["source"]
+        archive_rows.append(f'<li><a href="{html.escape(link, quote=True)}">{html.escape(info["title"])}</a></li>')
+    archive_html = ("<!doctype html><html lang=\"ko\"><head><meta charset=\"utf-8\">"
+        "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">"
+        "<title>엘리필라테스 전체 블로그 글 | ELLY JOURNAL</title>"
+        "<link rel=\"canonical\" href=\"https://ellypilates.co.kr/blog/archive.html\">"
+        "<style>body{max-width:850px;margin:60px auto;padding:20px;font-family:system-ui;line-height:1.8}li{margin:12px 0}a{color:#222}</style>"
+        "</head><body><a href=\"../blog.html\">← ELLY JOURNAL</a><h1>전체 블로그 글</h1><ul>"
+        + "".join(archive_rows) + "</ul></body></html>")
+    (OUT / "archive.html").write_text(archive_html, encoding="utf-8")
     index = ROOT / "blog.html"
     page = index.read_text(encoding="utf-8")
     before, separator, rest = page.partition(START)
@@ -92,13 +117,15 @@ def main():
         cards = re.sub(
             r'href="https://blog\.naver\.com/duswl6880/' + post_id + r'[^"]*" target="_blank" rel="noopener noreferrer"',
             f'href="blog/{post_id}.html"', cards)
+    if 'href="blog/archive.html"' not in tail:
+        tail = tail.replace('</div>\n    </section>', '</div>\n      <p style="text-align:center;margin:28px 0"><a href="blog/archive.html">전체 블로그 글 보기 →</a></p>\n    </section>', 1)
     index.write_text(before+START+cards+END+tail,encoding="utf-8")
     sitemap = ROOT / "sitemap.xml"
     xml = sitemap.read_text(encoding="utf-8")
     xml = re.sub(r'\s*<!-- ELLY_JOURNAL_START -->.*?<!-- ELLY_JOURNAL_END -->', "", xml, flags=re.S)
     # Retain every previously published article URL, not only the current RSS window.
     published = sorted(p.stem for p in OUT.glob("*.html") if re.fullmatch(r"\d{8,}", p.stem))
-    entries = "\n".join(f"  <url><loc>{DOMAIN}/blog/{post_id}.html</loc></url>" for post_id in published)
+    entries = "\n".join([f"  <url><loc>{DOMAIN}/blog/archive.html</loc></url>"] + [f"  <url><loc>{DOMAIN}/blog/{post_id}.html</loc></url>" for post_id in published])
     marker = f"  <!-- ELLY_JOURNAL_START -->\n{entries}\n  <!-- ELLY_JOURNAL_END -->\n"
     xml = xml.replace("</urlset>", marker+"</urlset>")
     ET.fromstring(xml)
