@@ -61,9 +61,9 @@ def main():
     request = urllib.request.Request(RSS, headers={"User-Agent":"Mozilla/5.0 (compatible; EllyJournal/1.0)"})
     with urllib.request.urlopen(request, timeout=30) as response:
         root = ET.fromstring(response.read())
-    items = root.findall("./channel/item")[:6]
-    if len(items) < 6:
-        raise RuntimeError("RSS returned fewer than six posts; leaving files unchanged")
+    items = root.findall("./channel/item")
+    if not items:
+        raise RuntimeError("RSS returned no posts; leaving files unchanged")
     eligible = {}
     for item in items:
         title = (item.findtext("title") or "").strip()
@@ -96,11 +96,14 @@ def main():
     sitemap = ROOT / "sitemap.xml"
     xml = sitemap.read_text(encoding="utf-8")
     xml = re.sub(r'\s*<!-- ELLY_JOURNAL_START -->.*?<!-- ELLY_JOURNAL_END -->', "", xml, flags=re.S)
-    entries = "\n".join(f"  <url><loc>{DOMAIN}/blog/{post_id}.html</loc></url>" for post_id in sorted(eligible))
+    # Retain every previously published article URL, not only the current RSS window.
+    published = sorted(p.stem for p in OUT.glob("*.html") if re.fullmatch(r"\d{8,}", p.stem))
+    entries = "\n".join(f"  <url><loc>{DOMAIN}/blog/{post_id}.html</loc></url>" for post_id in published)
     marker = f"  <!-- ELLY_JOURNAL_START -->\n{entries}\n  <!-- ELLY_JOURNAL_END -->\n"
     xml = xml.replace("</urlset>", marker+"</urlset>")
+    ET.fromstring(xml)
     sitemap.write_text(xml,encoding="utf-8")
-    print(f"Generated {len(eligible)} substantial journal pages; shorter posts still link to Naver.")
+    print(f"Updated {len(eligible)} substantial articles; {len(published)} total archived article URLs. Short excerpts link to Naver.")
 
 if __name__ == "__main__":
     main()
