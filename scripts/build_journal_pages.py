@@ -22,25 +22,25 @@ END = "<!-- LATEST_BLOG_POSTS_END -->"
 MIN_LENGTH = 450
 
 def clean_text(value):
-    value = re.sub(r"(?i)<(script|style)[^>]*>.*?</\\1>", " ", value, flags=re.S)
+    value = re.sub(r"(?i)<(script|style)[^>]*>.*?</\1>", " ", value, flags=re.S)
     value = re.sub(r"<[^>]+>", " ", value)
-    return re.sub(r"\\s+", " ", html.unescape(value)).strip()
+    return re.sub(r"\s+", " ", html.unescape(value)).strip()
 
 def render(title, body, post_id, date, source):
     url = f"{DOMAIN}/blog/{post_id}.html"
     description = body[:150]
     safe = lambda s: html.escape(s, quote=True)
-    paragraphs = [p.strip() for p in re.split(r"\\n\\s*\\n", body) if p.strip()]
+    paragraphs = [p.strip() for p in re.split(r"\n\s*\n", body) if p.strip()]
     if len(paragraphs) == 1:
         paragraphs = [body[i:i+350] for i in range(0, len(body), 350)]
-    article = "\\n".join(f"<p>{safe(p)}</p>" for p in paragraphs)
+    article = "\n".join(f"<p>{safe(p)}</p>" for p in paragraphs)
     structured = json.dumps({
         "@context":"https://schema.org","@type":"BlogPosting",
         "headline":title,"description":description,"datePublished":date,
         "mainEntityOfPage":url,"url":url,
         "publisher":{"@type":"Organization","name":"엘리필라테스 삼송역점","url":DOMAIN},
         "isBasedOn":source
-    }, ensure_ascii=False).replace("<", "\\u003c")
+    }, ensure_ascii=False).replace("<", "\u003c")
     return f"""<!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{safe(title)} | 엘리필라테스</title>
@@ -68,7 +68,7 @@ def main():
     for item in items:
         title = (item.findtext("title") or "").strip()
         source = (item.findtext("link") or "").strip()
-        match = re.search(r"/(\\d{8,})(?:\\?|$)", source)
+        match = re.search(r"/(\d{8,})(?:\?|$)", source)
         if not match or not source.startswith("https://blog.naver.com/duswl6880/"):
             continue
         body = clean_text(item.findtext("description") or "")
@@ -90,14 +90,14 @@ def main():
     cards, tail = rest.split(END, 1)
     for post_id in eligible:
         cards = re.sub(
-            r'href="https://blog\\.naver\\.com/duswl6880/' + post_id + r'[^"]*" target="_blank" rel="noopener noreferrer"',
+            r'href="https://blog\.naver\.com/duswl6880/' + post_id + r'[^"]*" target="_blank" rel="noopener noreferrer"',
             f'href="blog/{post_id}.html"', cards)
     index.write_text(before+START+cards+END+tail,encoding="utf-8")
     sitemap = ROOT / "sitemap.xml"
     xml = sitemap.read_text(encoding="utf-8")
-    xml = re.sub(r'\\s*<!-- ELLY_JOURNAL_START -->.*?<!-- ELLY_JOURNAL_END -->', "", xml, flags=re.S)
-    entries = "\\n".join(f"  <url><loc>{DOMAIN}/blog/{post_id}.html</loc></url>" for post_id in sorted(eligible))
-    marker = f"  <!-- ELLY_JOURNAL_START -->\\n{entries}\\n  <!-- ELLY_JOURNAL_END -->\\n"
+    xml = re.sub(r'\s*<!-- ELLY_JOURNAL_START -->.*?<!-- ELLY_JOURNAL_END -->', "", xml, flags=re.S)
+    entries = "\n".join(f"  <url><loc>{DOMAIN}/blog/{post_id}.html</loc></url>" for post_id in sorted(eligible))
+    marker = f"  <!-- ELLY_JOURNAL_START -->\n{entries}\n  <!-- ELLY_JOURNAL_END -->\n"
     xml = xml.replace("</urlset>", marker+"</urlset>")
     sitemap.write_text(xml,encoding="utf-8")
     print(f"Generated {len(eligible)} substantial journal pages; shorter posts still link to Naver.")
