@@ -37,8 +37,9 @@ jobs:
               body = html.unescape(item.findtext("description") or "")
               body = re.sub(r"<[^>]+>", " ", body)
               body = re.sub(r"\\s+", " ", body).strip()
-              substantial += len(body) >= 450
+              substantial += len(body) >= 80
           print(f"RSS item count: {len(items)}")
-          print(f"Items with 450+ characters: {substantial}")
+          print("RSS text lengths:", sorted([len(re.sub(r"<[^>]+>", " ", html.unescape(i.findtext("description") or "")).strip()) for i in items]))
+          print(f"Items with 80+ characters: {substantial}")
           print(f"Items linking to Naver originals only: {len(items)-substantial}")
           PY
