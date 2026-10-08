@@ -65,6 +65,7 @@ def main():
     if not items:
         raise RuntimeError("RSS returned no posts; leaving files unchanged")
     eligible = {}
+    OUT.mkdir(exist_ok=True)
     archive_path = OUT / "feed-index.json"
     try:
         archive = json.loads(archive_path.read_text(encoding="utf-8")) if archive_path.exists() else {}
@@ -88,7 +89,6 @@ def main():
         except (TypeError, ValueError):
             continue
         eligible[post_id] = (title, body, date, source)
-    OUT.mkdir(exist_ok=True)
     archive_path.write_text(json.dumps(archive, ensure_ascii=False, indent=2), encoding="utf-8")
     for post_id, (title, body, date, source) in eligible.items():
         (OUT / f"{post_id}.html").write_text(render(title,body,post_id,date,source),encoding="utf-8")
