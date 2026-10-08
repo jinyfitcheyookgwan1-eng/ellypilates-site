@@ -19,7 +19,7 @@ RSS = "https://rss.blog.naver.com/duswl6880.xml"
 OUT = ROOT / "blog"
 START = "<!-- LATEST_BLOG_POSTS_START -->"
 END = "<!-- LATEST_BLOG_POSTS_END -->"
-MIN_LENGTH = 450
+MIN_LENGTH = 80
 
 def clean_text(value):
     value = re.sub(r"(?i)<(script|style)[^>]*>.*?</\1>", " ", value, flags=re.S)
@@ -40,7 +40,7 @@ def render(title, body, post_id, date, source):
         "mainEntityOfPage":url,"url":url,
         "publisher":{"@type":"Organization","name":"엘리필라테스 삼송역점","url":DOMAIN},
         "isBasedOn":source
-    }, ensure_ascii=False).replace("<", "\u003c")
+    }, ensure_ascii=False).replace("<", "\\u003c")
     return f"""<!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{safe(title)} | 엘리필라테스</title>
