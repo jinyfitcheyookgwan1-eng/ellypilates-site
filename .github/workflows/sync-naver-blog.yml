@@ -22,14 +22,16 @@ jobs:
           python-version: "3.12"
       - name: Sync latest six posts
         run: python scripts/sync_naver_blog.py
+      - name: Build eligible journal pages
+        run: python scripts/build_journal_pages.py
       - name: Commit only when changed
         run: |
-          if git diff --quiet -- blog.html assets/blog/ && [ -z "$(git status --porcelain -- assets/blog/)" ]; then
+          if git diff --quiet -- blog.html sitemap.xml assets/blog/ blog/ && [ -z "$(git status --porcelain -- assets/blog/ blog/)" ]; then
             echo "No blog changes."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add blog.html assets/blog/
+          git add blog.html sitemap.xml assets/blog/ blog/
           git commit -m "Auto-sync latest Naver blog posts"
           git push

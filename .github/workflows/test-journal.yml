@@ -1,0 +1,45 @@
+name: Test ELLY journal generator
+on:
+  pull_request:
+    paths:
+      - 'scripts/build_journal_pages.py'
+      - 'tests/test_journal.py'
+      - '.github/workflows/test-journal.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  journal:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile journal script
+        run: python -m py_compile scripts/build_journal_pages.py
+      - name: Run offline regression tests
+        run: python -m unittest discover -s tests -p 'test_journal.py' -v
+      - name: Inspect real Naver RSS without modifying the website
+        run: |
+          python - <<'PY'
+          import html, re, urllib.request, xml.etree.ElementTree as ET
+          url = "https://rss.blog.naver.com/duswl6880.xml"
+          req = urllib.request.Request(url, headers={"User-Agent":"Mozilla/5.0"})
+          with urllib.request.urlopen(req, timeout=30) as response:
+              data = response.read()
+          root = ET.fromstring(data)
+          items = root.findall("./channel/item")
+          if not items:
+              raise RuntimeError("No RSS items received")
+          substantial = 0
+          for item in items:
+              body = html.unescape(item.findtext("description") or "")
+              body = re.sub(r"<[^>]+>", " ", body)
+              body = re.sub(r"\\s+", " ", body).strip()
+              substantial += len(body) >= 80
+          print(f"RSS item count: {len(items)}")
+          print("RSS text lengths:", sorted([len(re.sub(r"<[^>]+>", " ", html.unescape(i.findtext("description") or "")).strip()) for i in items]))
+          print(f"Items with 80+ characters: {substantial}")
+          print(f"Items linking to Naver originals only: {len(items)-substantial}")
+          PY
