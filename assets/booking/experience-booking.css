@@ -373,3 +373,18 @@
    line-height:1.8!important;
  }
 }
+
+/* MOM&FIT experience banner | refined editorial typography, 2026-10-26 */
+@media(min-width:901px){
+ .elly-booking[data-elly-booking="momfit"] .eb-photo.eb-momfit-photo .eb-photo-copy{padding-top:44px;padding-bottom:44px;max-width:600px}
+ .elly-booking[data-elly-booking="momfit"] .eb-photo.eb-momfit-photo h2{font-size:clamp(42px,3.65vw,51px);line-height:1.4;letter-spacing:-.048em;font-weight:600}
+ .elly-booking[data-elly-booking="momfit"] .eb-photo.eb-momfit-photo .eb-momfit-program{font-size:16px;line-height:1.75;margin-top:19px}
+ .elly-booking[data-elly-booking="momfit"] .eb-photo.eb-momfit-photo .eb-intro{font-size:16px;line-height:1.85;margin-top:23px}
+}
+@media(min-width:651px) and (max-width:900px){
+ .elly-booking[data-elly-booking="momfit"] .eb-photo.eb-momfit-photo h2{font-size:clamp(32px,4.4vw,40px);line-height:1.42;letter-spacing:-.045em}
+ .elly-booking[data-elly-booking="momfit"] .eb-photo.eb-momfit-photo .eb-momfit-program{font-size:15px}
+}
+@media(max-width:650px){
+ .elly-booking[data-elly-booking="momfit"] .eb-photo.eb-momfit-photo h2{font-size:clamp(30px,7.5vw,36px)!important;line-height:1.4!important}
+}
