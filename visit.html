@@ -349,53 +349,5 @@
   </a>
 </nav>
 <script src="common.js?v=20261027-visit-lightbox"></script>
-<script>
-/* Visit-only fallback for cached or unavailable shared lightbox handlers. */
-(function(){
-  var box=document.getElementById('lightbox');
-  var image=document.getElementById('lightboxImg');
-  var counter=document.getElementById('lightboxCount');
-  var items=window.GALLERY_ITEMS||[];
-  if(!box||!image||!counter||!items.length)return;
-  var current=0,previousFocus=null;
-  function show(n){
-    current=(n+items.length)%items.length;
-    image.src=items[current].src;
-    image.alt=items[current].alt;
-    counter.textContent=(current+1)+' / '+items.length;
-  }
-  function open(n){
-    previousFocus=document.activeElement;
-    show(n);
-    box.classList.add('open');
-    box.setAttribute('aria-hidden','false');
-    document.body.style.overflow='hidden';
-    var close=box.querySelector('.lb-close');
-    if(close)close.focus();
-  }
-  function close(){
-    box.classList.remove('open');
-    box.setAttribute('aria-hidden','true');
-    document.body.style.overflow='';
-    if(previousFocus&&previousFocus.focus)previousFocus.focus();
-  }
-  document.querySelectorAll('.visit-photos .gallery-item,.visit-map-card .gallery-item').forEach(function(btn){
-    btn.addEventListener('click',function(){
-      if(box.classList.contains('open'))return;
-      open(Number(btn.getAttribute('data-index'))||0);
-    });
-  });
-  box.querySelectorAll('[data-lb-close]').forEach(function(el){el.addEventListener('click',close);});
-  var prev=box.querySelector('[data-lb-prev]'),next=box.querySelector('[data-lb-next]');
-  if(prev)prev.addEventListener('click',function(){show(current-1);});
-  if(next)next.addEventListener('click',function(){show(current+1);});
-  document.addEventListener('keydown',function(e){
-    if(!box.classList.contains('open'))return;
-    if(e.key==='Escape')close();
-    if(e.key==='ArrowLeft')show(current-1);
-    if(e.key==='ArrowRight')show(current+1);
-  });
-})();
-</script>
 </body>
 </html>
