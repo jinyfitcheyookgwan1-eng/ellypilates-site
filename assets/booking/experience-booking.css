@@ -177,3 +177,35 @@
  .elly-booking .eb-submit{font-size:16px;font-weight:700}
  .elly-booking .eb-status{font-size:14px;font-weight:500}
 }
+
+/* ELLY signature curved portrait: original image, responsive framing */
+@media(min-width:651px){
+ .elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image{
+   isolation:isolate;background:#e9e1d1!important;min-height:440px;overflow:hidden;
+ }
+ .elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image::before{
+   content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+   background:linear-gradient(90deg,#e9e1d1 0%,rgba(233,225,209,.96) 28%,rgba(233,225,209,.15) 58%,transparent 75%)!important;
+ }
+ .elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image::after{
+   content:"";display:block;position:absolute;z-index:0;right:2.5%;top:5%;bottom:5%;width:49%;
+   background:#e9e1d1 url('DSCF4096-1.jpg') no-repeat right center;
+   background-size:contain;
+   border-radius:47% 47% 9% 47% / 36% 36% 9% 36%;
+   box-shadow:0 0 0 1px rgba(122,93,42,.18);
+ }
+ .elly-booking[data-elly-booking="general"] .eb-photo-copy{z-index:2;width:56%;max-width:590px;padding:48px 0 48px 6%}
+}
+@media(min-width:651px) and (max-width:900px){
+ .elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image{min-height:390px}
+ .elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image::after{width:49%;right:2%;top:7%;bottom:7%}
+ .elly-booking[data-elly-booking="general"] .eb-photo-copy{width:59%;padding-left:5%}
+ .elly-booking[data-elly-booking="general"] .eb-photo-copy h2{font-size:clamp(27px,3.6vw,33px)}
+}
+@media(max-width:650px){
+ .elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image::after{
+   border-radius:46% 46% 12px 12px / 13% 13% 12px 12px;
+   width:calc(100% - 24px);margin:12px 12px 0;
+   background-color:#e9e1d1;
+ }
+}
