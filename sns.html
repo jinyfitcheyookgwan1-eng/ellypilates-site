@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Gowun+Batang:wght@400;700&family=Gothic+A1:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=34d9124894">
+<link rel="stylesheet" href="styles.css?v=20261027mobile-readability">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -114,6 +114,24 @@
 }
 </script>
 
+<!-- SNS responsive readability refinement 20261027 -->
+<style>
+/* SNS only: preserve channel thumbnails, grid proportions and outbound links. */
+@media(max-width:900px){
+ .sns-hero,.sns-yt-head,.sns-ig-head,.ig-card,.ig-card-head,.ig-card-head-info,.ig-handle-row,.ig-grid{min-width:0}
+ .ig-card-head-info,.ig-handle-row{max-width:100%}
+ .yt-name,.ig-handle,.ig-bio,.ig-stats,.sns-yt-head h2,.sns-ig-head h2{
+   word-break:keep-all;overflow-wrap:break-word
+ }
+ .ig-handle-row,.ig-stats{flex-wrap:wrap;row-gap:8px}
+ .ig-bio,.sns-yt-head p,.sns-ig-head p{line-height:1.8;word-break:keep-all;overflow-wrap:break-word}
+}
+@media(max-width:700px){
+ .sns-yt-head p br,.sns-ig-head p br{display:none}
+ .ig-grid .ig-tile{min-width:0}
+ .ig-grid .ig-tile img{max-width:100%}
+}
+</style>
 </head>
 <body>
 <header>
