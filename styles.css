@@ -4779,39 +4779,3 @@ footer a{text-decoration:underline;text-underline-offset:3px;}
   .blog-latest-summary{margin-top:8px;line-height:1.65}
   .blog-latest-go{margin-top:13px}
 }
-
-/* ELLY editorial homepage hero — original photography, no decorative pseudo-photo */
-.home-hero.hero-banner{background:#f3ede3!important;color:#443829!important;min-height:clamp(580px,55vw,740px);overflow:hidden}
-.home-hero .hero-banner-media{position:absolute!important;inset:0 0 0 48%!important;overflow:hidden;border-radius:46% 0 0 46% / 56% 0 0 56%;background:#e8ddce;z-index:0}
-.home-hero .hero-banner-media img{display:block;width:100%;height:100%;object-fit:contain;object-position:right center;animation:none!important}
-.home-hero .hero-banner-scrim{display:none!important}
-.home-hero .hero-banner-row{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:0!important;min-height:inherit;flex-wrap:nowrap!important;padding-top:55px;padding-bottom:55px}
-.home-hero .home-hero-content{width:49%;max-width:590px!important;padding:0!important}
-.home-hero .hero-banner-content .eyebrow{color:#826c50!important;border-bottom-color:#cdbb9e!important;letter-spacing:.17em}
-.home-hero .home-hero-content h1{color:#493b2a!important;font-family:'Nanum Myeongjo','Noto Serif KR',serif;font-size:clamp(34px,3.7vw,54px)!important;line-height:1.36!important;text-shadow:none!important;letter-spacing:-.065em}
-.home-hero .home-hero-content p.lead{color:#675947!important;font-size:clamp(14px,1.2vw,17px)!important;font-weight:400!important;line-height:1.85!important;text-shadow:none!important}
-.home-hero .home-hero-content .lead-tag{color:#796044!important;text-shadow:none!important;font-size:clamp(14px,1.2vw,17px)!important}
-.home-hero .home-hero-content .hero-stat{color:#8b7051!important;text-shadow:none!important;font-size:clamp(17px,1.65vw,23px)!important;margin-top:22px!important}
-.home-hero .hero-banner-actions{padding:26px 0 0!important;align-self:flex-start!important}
-.home-hero .hero-banner-actions .cta-row{flex-direction:row!important;align-items:center!important;gap:12px!important;flex-wrap:wrap}
-.home-hero .hero-banner-actions .btn{border-radius:100px!important;padding:15px 24px!important;font-size:15px!important}
-.home-hero .hero-banner-actions .btn-primary{background:#765a37!important;border-color:#765a37!important;color:#fff!important}
-.home-hero .hero-banner-actions .btn-ghost{color:#765a37!important;border-color:#bca88d!important;background:rgba(255,255,255,.35)!important}
-@media(max-width:900px){
- .home-hero.hero-banner{min-height:0}
- .home-hero .hero-banner-media{inset:0 0 auto 0!important;position:relative!important;order:0;height:clamp(310px,54vw,470px);width:100%;border-radius:0 0 44% 44% / 0 0 12% 12%}
- .home-hero.hero-banner{display:flex;flex-direction:column}
- .home-hero .hero-banner-row{min-height:0;order:1;padding:35px 28px 45px!important}
- .home-hero .home-hero-content{width:100%;max-width:670px!important}
- .home-hero .home-hero-content h1{font-size:clamp(31px,5vw,45px)!important}
-}
-@media(max-width:600px){
- .home-hero .hero-banner-media{height:clamp(270px,82vw,410px);border-radius:0 0 43% 43% / 0 0 10% 10%}
- .home-hero .hero-banner-row{padding:30px 24px 38px!important}
- .home-hero .home-hero-content h1{font-size:clamp(28px,7.3vw,37px)!important}
- .home-hero .home-hero-content p.lead{font-size:14px!important}
- .home-hero .home-hero-content .hero-stat{font-size:16px!important}
- .home-hero .hero-banner-actions{width:100%}
- .home-hero .hero-banner-actions .cta-row{flex-direction:column!important;align-items:stretch!important;width:100%}
- .home-hero .hero-banner-actions .btn{width:100%!important;justify-content:center}
-}
