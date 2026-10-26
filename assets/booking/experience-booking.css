@@ -272,3 +272,34 @@
     background:linear-gradient(90deg,#e9e1d1 0%,#e9e1d1 34%,rgba(233,225,209,.91) 48%,rgba(233,225,209,.08) 75%,transparent 100%);
   }
 }
+
+/* ELLY MOM&FIT booking portrait — align with the home booking composition */
+@media(min-width:651px){
+ .elly-booking[data-elly-booking="momfit"] .eb-photo.eb-momfit-photo{
+   background-position:right 22px center;
+ }
+ .elly-booking[data-elly-booking="momfit"] .eb-photo.eb-momfit-photo .eb-photo-copy{
+   padding-left:calc(6% + 18px);
+   max-width:570px;
+ }
+ .elly-booking[data-elly-booking="momfit"] .eb-photo.eb-momfit-photo::before{
+   background:linear-gradient(90deg,#e9e1d1 0%,#e9e1d1 29%,rgba(233,225,209,.93) 42%,rgba(233,225,209,.1) 70%,transparent 85%);
+ }
+}
+/* Mobile: full portrait above copy, same flow as the home experience section */
+@media(max-width:650px){
+ .elly-booking[data-elly-booking="momfit"] .eb-photo.eb-momfit-photo{
+   display:flex;flex-direction:column;align-items:stretch;
+   min-height:0;background:#e9e1d1;
+ }
+ .elly-booking[data-elly-booking="momfit"] .eb-photo.eb-momfit-photo::before{display:none}
+ .elly-booking[data-elly-booking="momfit"] .eb-photo.eb-momfit-photo::after{
+   content:"";display:block;order:-1;width:100%;
+   height:clamp(330px,110vw,500px);
+   background:#e9e1d1 url('../momfit/momfit-booking.jpg') no-repeat center center;
+   background-size:contain;
+ }
+ .elly-booking[data-elly-booking="momfit"] .eb-photo.eb-momfit-photo .eb-photo-copy{
+   max-width:none;padding:29px 23px 34px;background:#e9e1d1;
+ }
+}
