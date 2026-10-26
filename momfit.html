@@ -129,9 +129,8 @@
     color:var(--text); font:700 17px/1.45 'Gothic A1',sans-serif;
     word-break:keep-all;
   }
-  .momfit-program-toggle::before {
-    content:attr(aria-controls); display:none;
-  }
+  .momfit-program-toggle-num { color:var(--accent-gold); font:700 13px/1.4 "Nanum Myeongjo",serif; flex:none; }
+  .momfit-program-toggle > span:nth-child(2) { flex:1; }
   .momfit-program-chevron {
     width:10px; height:10px; flex:none; border-right:1.5px solid var(--accent-gold);
     border-bottom:1.5px solid var(--accent-gold); transform:rotate(45deg);
@@ -223,31 +222,31 @@
       <div class="momfit-program-card">
         <span class="momfit-program-num">01</span>
         <h3>임신 준비 · 난임 관리</h3>
-        <button type="button" class="momfit-program-toggle" aria-expanded="false" aria-controls="momfit-program-description-01"><span>임신 준비 · 난임 관리</span><span class="momfit-program-chevron" aria-hidden="true"></span></button>
+        <button type="button" class="momfit-program-toggle" aria-expanded="false" aria-controls="momfit-program-description-01"><span class="momfit-program-toggle-num">01</span><span>임신 준비 · 난임 관리</span><span class="momfit-program-chevron" aria-hidden="true"></span></button>
         <p id="momfit-program-description-01">자연임신부터 난임 시술을 준비하는 과정까지, 개인의 신체 상태와 치료 일정을 고려해 무리 없는 운동을 설계하고 건강한 컨디션을 유지하도록 돕습니다.</p>
       </div>
       <div class="momfit-program-card">
         <span class="momfit-program-num">02</span>
         <h3>산전 필라테스</h3>
-        <button type="button" class="momfit-program-toggle" aria-expanded="false" aria-controls="momfit-program-description-02"><span>산전 필라테스</span><span class="momfit-program-chevron" aria-hidden="true"></span></button>
+        <button type="button" class="momfit-program-toggle" aria-expanded="false" aria-controls="momfit-program-description-02"><span class="momfit-program-toggle-num">02</span><span>산전 필라테스</span><span class="momfit-program-chevron" aria-hidden="true"></span></button>
         <p id="momfit-program-description-02">임신 주수와 현재 컨디션을 고려하여 안전하고 편안한 움직임을 만들어가는 임산부 맞춤 필라테스 프로그램입니다.</p>
       </div>
       <div class="momfit-program-card">
         <span class="momfit-program-num">03</span>
         <h3>임신 주기별 맞춤 관리</h3>
-        <button type="button" class="momfit-program-toggle" aria-expanded="false" aria-controls="momfit-program-description-03"><span>임신 주기별 맞춤 관리</span><span class="momfit-program-chevron" aria-hidden="true"></span></button>
+        <button type="button" class="momfit-program-toggle" aria-expanded="false" aria-controls="momfit-program-description-03"><span class="momfit-program-toggle-num">03</span><span>임신 주기별 맞춤 관리</span><span class="momfit-program-chevron" aria-hidden="true"></span></button>
         <p id="momfit-program-description-03">임신 초기부터 중·후기까지 변화하는 몸에 맞춰 호흡, 자세, 코어와 골반의 움직임을 단계적으로 세심하게 관리합니다.</p>
       </div>
       <div class="momfit-program-card">
         <span class="momfit-program-num">04</span>
         <h3>산후 필라테스</h3>
-        <button type="button" class="momfit-program-toggle" aria-expanded="false" aria-controls="momfit-program-description-04"><span>산후 필라테스</span><span class="momfit-program-chevron" aria-hidden="true"></span></button>
+        <button type="button" class="momfit-program-toggle" aria-expanded="false" aria-controls="momfit-program-description-04"><span class="momfit-program-toggle-num">04</span><span>산후 필라테스</span><span class="momfit-program-chevron" aria-hidden="true"></span></button>
         <p id="momfit-program-description-04">출산 후 변화한 몸의 상태를 살피고 호흡과 코어, 움직임을 단계적으로 회복하며 건강한 일상으로의 복귀를 돕습니다.</p>
       </div>
       <div class="momfit-program-card">
         <span class="momfit-program-num">05</span>
         <h3>아기 동반 필라테스</h3>
-        <button type="button" class="momfit-program-toggle" aria-expanded="false" aria-controls="momfit-program-description-05"><span>아기 동반 필라테스</span><span class="momfit-program-chevron" aria-hidden="true"></span></button>
+        <button type="button" class="momfit-program-toggle" aria-expanded="false" aria-controls="momfit-program-description-05"><span class="momfit-program-toggle-num">05</span><span>아기 동반 필라테스</span><span class="momfit-program-chevron" aria-hidden="true"></span></button>
         <p id="momfit-program-description-05">아기와 함께 참여할 수 있는 수업으로, 육아 중에도 편안하게 운동을 이어가며 나를 위한 움직임을 만들어갑니다.</p>
       </div>
     </div>
