@@ -295,3 +295,24 @@
   border-radius:46% 0 0 46% / 58% 0 0 58%!important;
  }
 }
+
+/* Real photo element: fixes the previous CSS-only empty curve. */
+.elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image{background-image:none!important;background-color:#e9e1d1!important;position:relative;isolation:isolate}
+.elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image::before,
+.elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image::after{content:none!important;display:none!important}
+.elly-booking[data-elly-booking="general"] .eb-portrait-frame{position:absolute;z-index:0;top:0;bottom:0;right:0;width:54%;overflow:hidden;border-radius:46% 0 0 46% / 55% 0 0 55%;background:#e9e1d1}
+.elly-booking[data-elly-booking="general"] .eb-portrait-frame img{display:block!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:contain!important;object-position:center center!important}
+.elly-booking[data-elly-booking="general"] .eb-photo-copy{position:relative;z-index:2}
+@media(min-width:901px){
+ .elly-booking[data-elly-booking="general"] .eb-photo-copy{width:49%!important}
+}
+@media(min-width:651px) and (max-width:900px){
+ .elly-booking[data-elly-booking="general"] .eb-portrait-frame{width:51%}
+ .elly-booking[data-elly-booking="general"] .eb-photo-copy{width:50%!important}
+}
+@media(max-width:650px){
+ .elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image{display:flex;flex-direction:column;min-height:0}
+ .elly-booking[data-elly-booking="general"] .eb-portrait-frame{position:relative;order:-1;top:auto;right:auto;bottom:auto;width:100%;height:clamp(300px,96vw,450px);border-radius:0 0 46% 46% / 0 0 12% 12%}
+ .elly-booking[data-elly-booking="general"] .eb-portrait-frame img{object-fit:contain!important}
+ .elly-booking[data-elly-booking="general"] .eb-photo-copy{width:100%!important}
+}
