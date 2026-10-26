@@ -315,6 +315,16 @@
  .faq-section .faq-side-lead{font-size:clamp(17px,4.25vw,21px);line-height:1.55;letter-spacing:-.045em;}
  .faq-section .faq-side-desc{margin-top:12px;font-size:14px;line-height:1.9;letter-spacing:-.025em;}
 }
+
+/* FAQ: mobile line breaks, readable copy and balanced spacing */
+@media(max-width:700px){
+ .faq-hero p{font-size:clamp(13px,3.35vw,15px);line-height:1.85;letter-spacing:-.045em;word-break:keep-all;overflow-wrap:break-word;}
+ .faq-hero p br{display:none;}
+ .faq-section .faq-side-text{margin-top:18px;}
+ .faq-section .faq-side-lead{font-size:clamp(17px,4.2vw,20px);line-height:1.55;letter-spacing:-.045em;margin:0;word-break:keep-all;}
+ .faq-section .faq-side-desc{margin:10px 0 0;font-size:clamp(13px,3.4vw,15px);line-height:1.8;letter-spacing:-.045em;word-break:keep-all;overflow-wrap:break-word;text-wrap:pretty;}
+ .faq-section .faq-side{margin-bottom:24px;}
+}
 </style>
 </head>
 <body>
