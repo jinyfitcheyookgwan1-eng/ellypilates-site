@@ -165,30 +165,45 @@ document.querySelectorAll('.copy-btn').forEach(function(btn){
   var panel = document.getElementById('mobileNav');
   if(!toggle || !panel) return;
 
+  var priorOverflow = '';
   function open(){
+    priorOverflow = document.body.style.overflow;
     panel.classList.add('open');
     panel.setAttribute('aria-hidden','false');
     toggle.setAttribute('aria-expanded','true');
+    toggle.setAttribute('aria-label','메뉴 닫기');
     document.body.style.overflow = 'hidden';
+    var closeButton = panel.querySelector('.mobile-nav-close');
+    if(closeButton) closeButton.focus();
   }
-  function close(){
+  function close(restoreFocus){
     panel.classList.remove('open');
     panel.setAttribute('aria-hidden','true');
     toggle.setAttribute('aria-expanded','false');
-    document.body.style.overflow = '';
+    toggle.setAttribute('aria-label','메뉴 열기');
+    document.body.style.overflow = priorOverflow;
+    if(restoreFocus) toggle.focus();
   }
 
   toggle.addEventListener('click', function(){
-    if(panel.classList.contains('open')) close(); else open();
+    if(panel.classList.contains('open')) close(true); else open();
   });
   panel.querySelectorAll('[data-mnav-close]').forEach(function(el){
-    el.addEventListener('click', close);
+    el.addEventListener('click', function(){ close(true); });
   });
   panel.querySelectorAll('.mobile-nav-links a').forEach(function(a){
-    a.addEventListener('click', close);
+    a.addEventListener('click', function(){ close(false); });
   });
   document.addEventListener('keydown', function(e){
-    if(e.key === 'Escape' && panel.classList.contains('open')) close();
+    if(!panel.classList.contains('open')) return;
+    if(e.key === 'Escape'){ e.preventDefault(); close(true); }
+    else if(e.key === 'Tab'){
+      var focusable = [].slice.call(panel.querySelectorAll('button:not([disabled]), a[href]')).filter(function(el){ return el.getClientRects().length > 0; });
+      if(!focusable.length){ e.preventDefault(); return; }
+      var first = focusable[0], last = focusable[focusable.length - 1];
+      if(e.shiftKey && (document.activeElement === first || !panel.contains(document.activeElement))){ e.preventDefault(); last.focus(); }
+      else if(!e.shiftKey && (document.activeElement === last || !panel.contains(document.activeElement))){ e.preventDefault(); first.focus(); }
+    }
   });
 })();
 
