@@ -289,6 +289,20 @@
 }
 </script>
 
+
+<style>
+/* FAQ-specific responsive layout; other pages and SEO settings unchanged */
+.faq-section .faq-side{position:static;max-width:680px;margin:0 auto 38px;width:100%;}
+.faq-section .faq-side-photo{margin:0;}
+.faq-section .faq-layout{display:block;}
+.faq-section .faq-accordion{width:100%;}
+@media(max-width:700px){
+ .faq-hero p{font-size:clamp(13px,3.3vw,16px);line-height:1.8;word-break:keep-all;overflow-wrap:break-word;}
+ .faq-hero p br{display:none;}
+ .faq-section .faq-side{max-width:none;margin:0 auto 28px;}
+ .faq-section .faq-side-lead,.faq-section .faq-side-desc{white-space:normal;}
+}
+</style>
 </head>
 <body>
 <header>
@@ -345,6 +359,15 @@
   </section>
 
   <section class="block wrap faq-section">
+      <aside class="faq-side">
+        <figure class="faq-side-photo">
+          <img width="800" height="800" src="assets/faq/faq-consult.jpg" alt="엘리필라테스 삼송역점, 편안하게 진행되는 체형 상담 현장" loading="lazy">
+        </figure>
+        <div class="faq-side-text">
+          <p class="faq-side-lead">어떤 수업이 나에게 맞을지 고민되시나요?</p>
+          <p class="faq-side-desc">전문 상담을 통해 운동 목적과 현재 몸 상태에 알맞은 수업 프로그램을 안내해 드립니다.</p>
+        </div>
+      </aside>
     <div class="faq-layout">
       <div class="faq-accordion">
       <div class="faq-accordion-item">
@@ -608,15 +631,7 @@
         </div>
       </div>
       </div>
-      <aside class="faq-side">
-        <figure class="faq-side-photo">
-          <img width="800" height="800" src="assets/faq/faq-consult.jpg" alt="엘리필라테스 삼송역점, 편안하게 진행되는 체형 상담 현장" loading="lazy">
-        </figure>
-        <div class="faq-side-text">
-          <p class="faq-side-lead">어떤 수업이 나에게 맞을지 고민되시나요?</p>
-          <p class="faq-side-desc">현재의 몸과 운동 목적에 알맞은 수업을 안내해드립니다.</p>
-        </div>
-      </aside>
+
     </div>
   </section>
 
