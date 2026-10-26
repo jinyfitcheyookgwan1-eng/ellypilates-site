@@ -118,9 +118,8 @@
 <link rel="stylesheet" href="assets/booking/experience-booking.css?v=20261026restored">
 
 <style id="elly-section-tone-20261026">
-/* Full-viewport beige bands. Literal color is intentional: --bg resolves to white in the shared theme. */
-section.elly-tone-beige { position:relative; isolation:isolate; background:transparent!important; }
-section.elly-tone-beige::before { content:""; position:absolute; top:0; bottom:0; left:50%; width:100vw; transform:translateX(-50%); background:#F4EEE0; z-index:-1; pointer-events:none; }
+/* Apply beige only to sections explicitly marked elly-tone-beige. */
+section.elly-tone-beige { background-color:#F4EEE0!important; }
 </style>
 <style id="elly-home-booking-intro-20261026">
 /* HOME only: use the site's established gold token and readable responsive type. */
