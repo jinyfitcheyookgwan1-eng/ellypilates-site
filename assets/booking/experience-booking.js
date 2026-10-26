@@ -15,7 +15,7 @@ document.querySelectorAll('[data-elly-booking]').forEach(root=>{
   const group=kind().includes('3:1'),dateVal=date.value;
   time.innerHTML='<option value="">희망 시간을 선택해 주세요</option>';
   if(group){(groupSchedule[dayOf(dateVal)]||[]).forEach(t=>{const o=document.createElement('option');o.value=t;o.textContent=t;time.append(o)});time.disabled=!dateVal||time.options.length===1}
-  else {time.disabled=false;for(let h=9;h<=21;h++)for(const m of ['00','30']){if(h===21&&m==='30')continue;const t=String(h).padStart(2,'0')+':'+m;const o=document.createElement('option');o.value=t;o.textContent=t;time.append(o)}}
+  else {time.disabled=false;for(let h=7;h<=21;h++)for(const m of ['00','30']){if(h===21&&m==='30')continue;const t=String(h).padStart(2,'0')+':'+m;const o=document.createElement('option');o.value=t;o.textContent=t;time.append(o)}}
   root.querySelector('[data-schedule-help]').textContent=group?(isMom?'산전 그룹은 수요일 11:00 · 19:00 · 20:00 중 선택할 수 있어요.':'그룹 수업 운영 요일을 선택하면 가능한 시간이 표시돼요.'):'희망 시간을 선택해 주세요. 담당자 확인 후 확정됩니다.';
  };
  date.min=today();
