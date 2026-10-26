@@ -177,3 +177,65 @@
  .elly-booking .eb-submit{font-size:16px;font-weight:700}
  .elly-booking .eb-status{font-size:14px;font-weight:500}
 }
+
+
+/* 2026-10-26 | ELLY booking readability and warm-beige controls (home + MOM&FIT) */
+.elly-booking .eb-choice span{
+  background:#F4EEE0;
+  border-color:#D9CAA9;
+  color:#272218;
+  font-weight:600;
+}
+.elly-booking .eb-choice small{color:#554733;font-weight:500}
+.elly-booking .eb-choice input:checked+span{
+  background:#E8D9B9;
+  border-color:#8A6C36;
+  color:#302416;
+  box-shadow:inset 0 0 0 1px #8A6C36;
+}
+.elly-booking .eb-choice input:focus-visible+span{
+  outline:2px solid #80622C;
+  outline-offset:3px;
+}
+.elly-booking input[type=date],
+.elly-booking input[type=text],
+.elly-booking input[type=tel],
+.elly-booking input[type=number],
+.elly-booking select,
+.elly-booking textarea{
+  background:#F8F3E9;
+  border-color:#D5C5A5;
+  color:#29241C;
+}
+.elly-booking input::placeholder,
+.elly-booking textarea::placeholder{color:#635847;opacity:1}
+.elly-booking select:invalid{color:#635847}
+.elly-booking .eb-help{
+  color:#4F4435;
+  font-size:14px;
+  font-weight:600;
+  line-height:1.75;
+  margin-top:10px;
+}
+.elly-booking .eb-date-wrap .eb-date-placeholder{
+  color:#514535!important;
+  font-weight:600;
+}
+.elly-booking .eb-date-wrap:not(.eb-date-filled) .eb-date-placeholder{
+  color:#514535!important;
+}
+.elly-booking .eb-consent{
+  color:#514535;
+  font-size:13px;
+  font-weight:500;
+  line-height:1.85;
+}
+.elly-booking .eb-consent strong{color:#30271C;font-weight:700}
+.elly-booking .eb-status{color:#3D3428;font-weight:600}
+@media(max-width:650px){
+  .elly-booking .eb-choice span{font-size:14px;font-weight:600}
+  .elly-booking .eb-choice small{font-size:12px}
+  .elly-booking .eb-help{font-size:13px;line-height:1.75}
+  .elly-booking .eb-consent{font-size:12.5px;line-height:1.8}
+  .elly-booking .eb-date-wrap .eb-date-placeholder{font-size:13px}
+}
