@@ -303,3 +303,8 @@
    max-width:none;padding:29px 23px 34px;background:#e9e1d1;
  }
 }
+
+/* MOM&FIT hero program subtitle */
+.elly-booking[data-elly-booking="momfit"] .eb-momfit-program{margin:13px 0 0;font-size:15px;font-weight:600;line-height:1.7;color:#62513b;letter-spacing:-.025em}
+.elly-booking[data-elly-booking="momfit"] .eb-momfit-program+.eb-intro{margin-top:20px}
+@media(max-width:650px){.elly-booking[data-elly-booking="momfit"] .eb-momfit-program{font-size:14px;margin-top:10px}}
