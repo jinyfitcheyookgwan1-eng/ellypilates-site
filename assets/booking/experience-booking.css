@@ -364,3 +364,12 @@
    letter-spacing:-.025em;
  }
 }
+
+/* MOM&FIT mobile booking intro: final 16px gold typography */
+@media(max-width:650px){
+ .elly-booking[data-elly-booking="momfit"] .eb-photo.eb-momfit-photo .eb-intro{
+   font-size:16px!important;
+   font-weight:500!important;
+   line-height:1.8!important;
+ }
+}
