@@ -151,3 +151,12 @@
  .elly-booking[data-elly-booking="general"]{padding-bottom:36px!important}
  .elly-booking[data-elly-booking="general"]+.wellness-intro{padding-top:32px!important;margin-top:0!important}
 }
+
+/* Desktop hero refinement: visually connect headline and original instructor portrait */
+@media(min-width:901px){
+ .elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image{min-height:420px;background-position:right 20px center;background-size:auto 100%}
+ .elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image:before{background:linear-gradient(90deg,#e9e1d1 0%,rgba(233,225,209,.98) 19%,rgba(233,225,209,.86) 35%,rgba(233,225,209,.28) 54%,transparent 70%)}
+ .elly-booking[data-elly-booking="general"] .eb-photo-copy{padding:44px 0 44px 7%;max-width:610px;width:58%}
+ .elly-booking[data-elly-booking="general"] .eb-photo-copy h2{font-size:clamp(32px,3vw,39px);line-height:1.47}
+ .elly-booking[data-elly-booking="general"] .eb-photo-copy .eb-intro{max-width:420px}
+}
