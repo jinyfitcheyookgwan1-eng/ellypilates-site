@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Gowun+Batang:wght@400;700&family=Gothic+A1:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=34d9124894">
+<link rel="stylesheet" href="styles.css?v=20261027mobile-readability">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -121,6 +121,24 @@ body { background-color:#FFFFFF!important; }
 main > section.elly-band-white { background:#FFFFFF!important; }
 main > section.elly-band-beige { background:#F4EEE0!important; }
 </style>
+<!-- Programs mobile readability refinement 20261027 -->
+<style>
+/* Programs only: responsive text and image-viewer containment. */
+@media(max-width:700px){
+ .lt-intro-desc{white-space:normal;word-break:keep-all;overflow-wrap:break-word;line-height:1.75}
+ .lt-intro-desc br{display:none}
+ .lesson-type-card,.program-card,.lesson-type-body,.program-body{min-width:0}
+ .lesson-type-body h3,.program-body h3,.lt-tagline,.lt-desc,.program-body p{
+   word-break:keep-all;overflow-wrap:break-word
+ }
+ .lt-desc,.program-body p{line-height:1.75}
+ .lt-tagline{line-height:1.65}
+ .program-grid,.lesson-type-grid{min-width:0}
+}
+#lightbox{z-index:10000}
+#lightbox .lightbox-figure{max-width:min(92vw,1100px);max-height:calc(100dvh - 100px)}
+#lightbox .lightbox-figure img{max-height:calc(100dvh - 145px);object-fit:contain}
+</style>
 </head>
 <body>
 <header>
@@ -212,7 +230,7 @@ main > section.elly-band-beige { background:#F4EEE0!important; }
     </div>
   </section>
 
-  <div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="프로그램 사진 확대">
     <div class="lightbox-backdrop" data-lb-close></div>
     <button type="button" class="lb-close" data-lb-close aria-label="닫기">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 5l14 14M19 5L5 19" stroke-linecap="round"/></svg>
@@ -262,7 +280,7 @@ main > section.elly-band-beige { background:#F4EEE0!important; }
       <article class="program-card"><div class="program-photo"><button type="button" class="gallery-item" data-index="9" aria-label="맨즈필라테스 크게 보기"><img width="1254" height="1254" src="assets/programs/mens.jpg" alt="맨즈필라테스" loading="lazy"></button></div><div class="program-body"><span class="tag">맨즈</span><h3>삼송 맨즈 필라테스</h3><p>체형 관리와 자세 개선에 집중한 남성 맞춤 필라테스 프로그램</p></div></article>
       <article class="program-card"><div class="program-photo"><button type="button" class="gallery-item" data-index="10" aria-label="MPA 국제필라테스 강사 자격증반 크게 보기"><img width="1254" height="1254" src="assets/programs/cert.jpg" alt="MPA 국제필라테스 강사 자격증반" loading="lazy"></button></div><div class="program-body"><span class="tag">자격증</span><h3>MPA 국제필라테스 강사 자격증반</h3><p>국제 공인 MPA 과정으로 강사를 양성하는 자격증반</p></div></article>
       <article class="program-card"><div class="program-photo"><button type="button" class="gallery-item" data-index="11" aria-label="GLP-1 관리 프로그램 크게 보기"><img width="1254" height="1254" src="assets/programs/glp1.jpg" alt="GLP-1 관리 프로그램" loading="lazy"></button></div><div class="program-body"><span class="tag">다이어트</span><h3>GLP-1 관리 프로그램</h3><p>체중 관리와 병행하는 근력 유지 운동 프로그램</p></div></article>
-      <article class="program-card"><div class="program-photo"><button type="button" class="gallery-item" data-index="12" aria-label="아기 동반 필라테스 크게 보기"><img width="1254" height="1254" src="assets/programs/kidswith.jpg" alt="아기 동반 필라테스" loading="lazy"></button></div><div class="program-body"><span class="tag">맘앤핏</span><h3>아기 동반 필라테스</h3><p>소중한 우리 아이와 엄마가 함께 참여 할 수 있는 동반 클래스</p></div></article>
+      <article class="program-card"><div class="program-photo"><button type="button" class="gallery-item" data-index="12" aria-label="아기 동반 필라테스 크게 보기"><img width="1254" height="1254" src="assets/programs/kidswith.jpg" alt="아기 동반 필라테스" loading="lazy"></button></div><div class="program-body"><span class="tag">맘앤핏</span><h3>아기 동반 필라테스</h3><p>소중한 우리 아이와 엄마가 함께 참여할 수 있는 동반 클래스</p></div></article>
     </div>
   </section>
 
