@@ -308,3 +308,21 @@
 .elly-booking[data-elly-booking="momfit"] .eb-momfit-program{margin:13px 0 0;font-size:15px;font-weight:600;line-height:1.7;color:#62513b;letter-spacing:-.025em}
 .elly-booking[data-elly-booking="momfit"] .eb-momfit-program+.eb-intro{margin-top:20px}
 @media(max-width:650px){.elly-booking[data-elly-booking="momfit"] .eb-momfit-program{font-size:14px;margin-top:10px}}
+
+/* MOM&FIT mobile hero typography: refined hierarchy and less visual weight */
+@media(max-width:650px){
+ .elly-booking[data-elly-booking="momfit"] .eb-photo.eb-momfit-photo .eb-kicker{
+   font-size:10px!important;font-weight:600!important;letter-spacing:.16em!important;line-height:1.6!important;
+ }
+ .elly-booking[data-elly-booking="momfit"] .eb-photo.eb-momfit-photo h2{
+   font-size:clamp(27px,6.7vw,32px)!important;
+   font-weight:600!important;line-height:1.45!important;letter-spacing:-.045em!important;
+   margin-top:12px!important;
+ }
+ .elly-booking[data-elly-booking="momfit"] .eb-photo.eb-momfit-photo .eb-momfit-program{
+   font-size:13px!important;font-weight:500!important;line-height:1.7!important;margin-top:13px!important;
+ }
+ .elly-booking[data-elly-booking="momfit"] .eb-photo.eb-momfit-photo .eb-intro{
+   font-size:12.5px!important;font-weight:400!important;line-height:1.85!important;margin-top:19px!important;
+ }
+}
