@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Gowun+Batang:wght@400;700&family=Gothic+A1:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=34d9124894">
+<link rel="stylesheet" href="styles.css?v=20261027mobile-readability">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -114,6 +114,28 @@
 }
 </script>
 
+<!-- Gallery responsive refinement 20261027 -->
+<style>
+/* Gallery only: original photographs and masonry arrangement remain untouched. */
+@media(max-width:700px){
+ .page-hero p.gallery-hero-desc{
+   white-space:normal;
+   max-width:38em;
+   margin-inline:auto;
+   font-size:clamp(13px,3.5vw,15px);
+   line-height:1.8;
+   letter-spacing:-.015em;
+   word-break:keep-all;
+   overflow-wrap:break-word;
+ }
+ .gallery-section-head h2{word-break:keep-all;overflow-wrap:break-word}
+ .gallery-grid figure,.gallery-grid .gallery-item{min-width:0}
+ .gallery-feature .gf-caption{word-break:keep-all;overflow-wrap:break-word}
+}
+#lightbox{z-index:10000}
+#lightbox .lightbox-figure{max-width:min(92vw,1100px);max-height:calc(100dvh - 100px)}
+#lightbox .lightbox-figure img{max-height:calc(100dvh - 145px);object-fit:contain}
+</style>
 </head>
 <body>
 <header>
@@ -219,11 +241,11 @@
         <div class="eyebrow">EXTERIOR VIEW</div>
         <h2>창릉천 전망</h2>
       </div>
-      <figure class="gallery-feature-wrap"><button type="button" class="gallery-feature" data-index="35" aria-label="창릉천을 마주한 스튜디오 크게 보기"><img width="1400" height="933" src="assets/gallery/exterior-wide.jpg" alt="창릉천을 마주한 스튜디오" loading="lazy"><div class="gf-scrim"></div><span class="gf-caption">창릉천을 마주한 스튜디오</span></button></figure>
+      <figure class="gallery-feature-wrap"><button type="button" class="gallery-feature gallery-item" data-index="35" aria-label="창릉천을 마주한 스튜디오 크게 보기"><img width="1400" height="933" src="assets/gallery/exterior-wide.jpg" alt="창릉천을 마주한 스튜디오" loading="lazy"><div class="gf-scrim"></div><span class="gf-caption">창릉천을 마주한 스튜디오</span></button></figure>
     </div>
   </section>
 
-  <div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="스튜디오 갤러리 사진 확대">
     <div class="lightbox-backdrop" data-lb-close></div>
     <button type="button" class="lb-close" data-lb-close aria-label="닫기">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 5l14 14M19 5L5 19" stroke-linecap="round"/></svg>
