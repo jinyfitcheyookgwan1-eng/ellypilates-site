@@ -1,38 +1,55 @@
-
-/* ELLY experience booking: isolated styles */
-.elly-booking{--eb-ink:#36372f;--eb-muted:#77786e;--eb-line:#deddd2;--eb-accent:#77765a;background:#f7f5ef;color:var(--eb-ink);padding:65px 0 80px}
+/* ELLY | First Experience — aligned with the existing brand system */
+.elly-booking{--eb-ink:var(--text,#211d17);--eb-muted:var(--text-muted,#453b2c);--eb-line:var(--line,#dacaa0);--eb-accent:var(--accent,#3e4c2e);background:var(--bg,#f4eee0);color:var(--eb-ink);padding:64px 0 88px;font-family:'Gothic A1',sans-serif}
 .elly-booking *{box-sizing:border-box}
-.elly-booking .eb-inner{max-width:1100px;margin:auto;padding:0 24px}
-.elly-booking .eb-photo{min-height:400px;display:flex;align-items:center;background:#eae5d9;position:relative;overflow:hidden}
-.elly-booking .eb-photo:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(239,234,222,.95) 0%,rgba(239,234,222,.72) 46%,rgba(239,234,222,.08) 75%)}
-.elly-booking .eb-photo.eb-has-image{background-image:url('DSCF4096-1.jpg');background-size:cover;background-position:center 42%}
-.elly-booking .eb-photo-copy{position:relative;padding:50px 6%;max-width:570px}
-.elly-booking .eb-kicker{font-size:12px;letter-spacing:.22em;font-weight:600;color:#79765d}
-.elly-booking h2{font-size:clamp(29px,4vw,49px);line-height:1.4;letter-spacing:-.055em;margin:18px 0;color:#37382f}
-.elly-booking .eb-intro{margin:22px 0 0;color:#6d6b60;font-size:15px;line-height:1.85}
-.elly-booking .eb-form{background:#fff;padding:clamp(24px,5vw,58px);margin-top:28px;border:1px solid #e9e5dc}
-.elly-booking .eb-form-heading{margin:0 0 30px;font-size:22px;letter-spacing:-.04em}
-.elly-booking fieldset{border:0;padding:0;margin:0 0 30px;min-width:0}
-.elly-booking legend,.elly-booking .eb-label{display:block;font-size:15px;font-weight:700;margin-bottom:13px;line-height:1.6}
-.elly-booking .eb-step{font-size:12px;letter-spacing:.12em;color:#9b927b;margin-right:8px}
-.elly-booking .eb-choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
-.elly-booking .eb-choices.two{grid-template-columns:repeat(2,minmax(0,1fr))}
-.elly-booking .eb-choices.goal{grid-template-columns:repeat(2,minmax(0,1fr))}
+.elly-booking .eb-inner{max-width:1080px;margin:auto;padding:0 24px}
+.elly-booking .eb-photo{min-height:390px;display:flex;align-items:center;position:relative;overflow:hidden;background:#e9e1d1}
+.elly-booking .eb-photo.eb-has-image{background-image:url('DSCF4096-1.jpg');background-repeat:no-repeat;background-size:auto 100%;background-position:right center;background-color:#e9e1d1}
+.elly-booking .eb-photo.eb-has-image:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#e9e1d1 0%,rgba(233,225,209,.97) 32%,rgba(233,225,209,.25) 64%,transparent 82%);pointer-events:none}
+.elly-booking .eb-photo-copy{position:relative;z-index:1;padding:48px 6%;max-width:540px}
+.elly-booking .eb-kicker{font-size:12px;letter-spacing:.2em;font-weight:700;color:var(--accent-gold,#7a5d2a);line-height:1.7}
+.elly-booking h2{font-family:'Nanum Myeongjo',serif;font-size:clamp(29px,3.8vw,43px);font-weight:700;line-height:1.48;letter-spacing:-.055em;margin:18px 0 0;color:var(--eb-ink);word-break:keep-all}
+.elly-booking .eb-intro{margin:22px 0 0;color:var(--eb-muted);font-size:14px;line-height:1.9;font-weight:400;word-break:keep-all}
+.elly-booking .eb-form{background:var(--surface,#fffefb);padding:clamp(28px,5vw,58px);margin-top:24px;border:1px solid var(--eb-line)}
+.elly-booking .eb-form-heading{font-family:'Nanum Myeongjo',serif;margin:0 0 38px;font-size:clamp(21px,2.6vw,27px);line-height:1.5;letter-spacing:-.045em;font-weight:700}
+.elly-booking fieldset{border:0;padding:0;margin:0 0 36px;min-width:0}
+.elly-booking legend,.elly-booking .eb-label{display:block;font-size:15px;font-weight:600;margin-bottom:15px;line-height:1.7;letter-spacing:-.025em;word-break:keep-all}
+.elly-booking .eb-step{font-size:12px;letter-spacing:.1em;color:var(--accent-gold,#7a5d2a);margin-right:11px;font-weight:700}
+.elly-booking .eb-choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+.elly-booking .eb-choices.two,.elly-booking .eb-choices.goal{grid-template-columns:repeat(2,minmax(0,1fr))}
 .elly-booking .eb-choice{position:relative;display:block;cursor:pointer}
 .elly-booking .eb-choice input{position:absolute;opacity:0;width:1px;height:1px}
-.elly-booking .eb-choice span{display:block;border:1px solid var(--eb-line);padding:16px 12px;min-height:55px;text-align:center;font-size:14px;line-height:1.55;border-radius:3px}
-.elly-booking .eb-choice small{display:block;font-size:12px;color:var(--eb-muted);margin-top:4px}
-.elly-booking .eb-choice input:checked+span{border-color:#77765a;background:#f4f2e9;color:#53543e}
-.elly-booking .eb-choice input:focus-visible+span{outline:2px solid #77765a;outline-offset:3px}
-.elly-booking .eb-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.elly-booking .eb-choice span{display:flex;flex-direction:column;justify-content:center;border:1px solid var(--eb-line);background:var(--surface,#fffefb);padding:16px 15px;min-height:62px;text-align:center;font-size:14px;font-weight:500;line-height:1.65;border-radius:2px;transition:border-color .18s,background-color .18s}
+.elly-booking .eb-choice small{display:block;font-size:12px;font-weight:400;color:var(--eb-muted);margin-top:3px}
+.elly-booking .eb-choice input:checked+span{border-color:var(--eb-accent);background:#eeeee4;color:var(--eb-accent)}
+.elly-booking .eb-choice input:focus-visible+span{outline:2px solid var(--eb-accent);outline-offset:3px}
+.elly-booking .eb-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 .elly-booking .eb-field{min-width:0}
-.elly-booking input[type=date],.elly-booking input[type=text],.elly-booking input[type=tel],.elly-booking input[type=number],.elly-booking select,.elly-booking textarea{width:100%;border:1px solid var(--eb-line);background:#fff;border-radius:3px;padding:15px;font:inherit;font-size:14px;color:var(--eb-ink)}
-.elly-booking textarea{resize:vertical;min-height:110px}
-.elly-booking .eb-help{font-size:12px;color:var(--eb-muted);margin:8px 0 0;line-height:1.7}
-.elly-booking .eb-consent{display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.8}
-.elly-booking .eb-consent input{margin-top:6px}
-.elly-booking .eb-submit{display:block;width:100%;border:0;border-radius:3px;background:#676b52;color:#fff;padding:18px;font:inherit;font-size:16px;font-weight:700;cursor:pointer}
+.elly-booking input[type=date],.elly-booking input[type=text],.elly-booking input[type=tel],.elly-booking input[type=number],.elly-booking select,.elly-booking textarea{width:100%;max-width:100%;border:1px solid var(--eb-line);background:var(--surface,#fffefb);border-radius:2px;padding:16px;font-family:'Gothic A1',sans-serif;font-size:14px;font-weight:400;line-height:1.6;color:var(--eb-ink)}
+.elly-booking input:focus-visible,.elly-booking select:focus-visible,.elly-booking textarea:focus-visible{outline:2px solid var(--eb-accent);outline-offset:2px}
+.elly-booking textarea{resize:vertical;min-height:115px}
+.elly-booking .eb-help{font-size:12px;color:var(--eb-muted);margin:9px 0 0;line-height:1.8}
+.elly-booking .eb-consent{display:flex;align-items:flex-start;gap:11px;font-size:12px;line-height:1.9;color:var(--eb-muted)}
+.elly-booking .eb-consent input{margin-top:5px;accent-color:var(--eb-accent);flex:none}
+.elly-booking .eb-submit{display:block;width:100%;border:0;border-radius:2px;background:var(--eb-accent);color:#fff;padding:20px;font-family:'Gothic A1',sans-serif;font-size:15px;font-weight:700;letter-spacing:-.015em;cursor:pointer}
 .elly-booking .eb-submit:disabled{opacity:.55;cursor:wait}
-.elly-booking .eb-status{margin:16px 0 0;font-size:14px;line-height:1.8}
+.elly-booking .eb-status{margin:17px 0 0;font-size:13px;line-height:1.8}
 .elly-booking [hidden]{display:none!important}
-@media(max-width:650px){.elly-booking{padding:35px 0 55px}.elly-booking .eb-inner{padding:0 15px}.elly-booking .eb-photo{min-height:370px;align-items:flex-start}.elly-booking .eb-photo-copy{padding:34px 23px;max-width:78%}.elly-booking .eb-photo:before{background:linear-gradient(90deg,rgba(239,234,222,.95),rgba(239,234,222,.3) 85%)}.elly-booking .eb-choices,.elly-booking .eb-choices.two,.elly-booking .eb-choices.goal,.elly-booking .eb-fields{grid-template-columns:1fr}.elly-booking .eb-form{padding:25px 18px}.elly-booking .eb-choice span{text-align:left;padding:13px 16px;min-height:0}}
+@media(max-width:650px){
+ .elly-booking{padding:40px 0 64px}
+ .elly-booking .eb-inner{padding:0 16px}
+ .elly-booking .eb-photo{min-height:0;display:flex;flex-direction:column;align-items:stretch;background:#e9e1d1}
+ .elly-booking .eb-photo.eb-has-image{background-image:none;background-color:transparent}
+ .elly-booking .eb-photo.eb-has-image:before{display:none}
+ .elly-booking .eb-photo.eb-has-image:after{content:"";display:block;order:-1;width:100%;height:clamp(300px,96vw,450px);background:#e9e1d1 url('DSCF4096-1.jpg') no-repeat center center;background-size:contain}
+ .elly-booking .eb-photo-copy{max-width:none;padding:29px 23px 34px;background:#e9e1d1}
+ .elly-booking h2{font-size:clamp(25px,6.2vw,32px);line-height:1.55;margin-top:13px}
+ .elly-booking .eb-intro{font-size:13px;line-height:1.85;margin-top:15px}
+ .elly-booking .eb-form{padding:30px 21px;margin-top:20px}
+ .elly-booking .eb-form-heading{font-size:21px;margin-bottom:32px}
+ .elly-booking fieldset{margin-bottom:32px}
+ .elly-booking legend,.elly-booking .eb-label{font-size:14px}
+ .elly-booking .eb-choices,.elly-booking .eb-choices.two,.elly-booking .eb-choices.goal,.elly-booking .eb-fields{grid-template-columns:1fr}
+ .elly-booking .eb-choice span{text-align:left;align-items:flex-start;min-height:0;padding:14px 16px;font-size:14px}
+ .elly-booking .eb-choice small{font-size:12px}
+ .elly-booking .eb-submit{font-size:15px}
+}
