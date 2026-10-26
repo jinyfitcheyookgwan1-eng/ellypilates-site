@@ -262,3 +262,36 @@
  }
  .elly-booking[data-elly-booking="general"] .eb-photo-copy{width:100%;max-width:none;padding:29px 23px 34px}
 }
+
+/* Final: show the actual original portrait inside the curve, not an empty outline. */
+@media(min-width:901px){
+ .elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image{background:#e9e1d1!important;min-height:430px!important}
+ .elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image::before{
+  display:block!important;content:"";position:absolute;inset:0 0 0 auto!important;
+  width:55%!important;height:100%;z-index:0!important;
+  background-image:url('DSCF4096-1.jpg')!important;
+  background-position:right center!important;background-size:auto 100%!important;
+  background-repeat:no-repeat!important;
+  border-radius:46% 0 0 46% / 58% 0 0 58%!important;
+ }
+ .elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image::after{
+  display:block!important;content:"";position:absolute;inset:0 0 0 auto!important;
+  width:55%!important;height:100%;z-index:0!important;
+  background:none!important;border:0!important;border-left:1px solid rgba(122,93,42,.28)!important;
+  border-radius:46% 0 0 46% / 58% 0 0 58%!important;
+ }
+ .elly-booking[data-elly-booking="general"] .eb-photo-copy{width:50%!important;z-index:2!important;padding:44px 2% 44px 6%!important}
+}
+@media(min-width:651px) and (max-width:900px){
+ .elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image{background:#e9e1d1!important}
+ .elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image::before{
+  display:block!important;inset:0 0 0 auto!important;width:51%!important;
+  background:url('DSCF4096-1.jpg') no-repeat right center / auto 100%!important;
+  border-radius:46% 0 0 46% / 58% 0 0 58%!important;
+ }
+ .elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image::after{
+  display:block!important;inset:0 0 0 auto!important;width:51%!important;
+  background:none!important;border-left:1px solid rgba(122,93,42,.25)!important;
+  border-radius:46% 0 0 46% / 58% 0 0 58%!important;
+ }
+}
