@@ -137,3 +137,9 @@
 .elly-booking .eb-date-wrap:has(input:valid) .eb-date-placeholder,.elly-booking .eb-date-wrap:has(input:focus) .eb-date-placeholder{display:none}
 .elly-booking .eb-date-wrap input:invalid:not(:focus)::-webkit-datetime-edit{color:transparent!important}
 .elly-booking .eb-date-wrap input:invalid:not(:focus){color:transparent!important}
+
+/* Explicit empty/filled state: Safari's native date validity differs across versions */
+.elly-booking .eb-date-wrap:not(.eb-date-filled) .eb-date-placeholder{display:block!important;visibility:visible!important;opacity:1!important;color:var(--eb-ink)!important;z-index:5!important}
+.elly-booking .eb-date-wrap.eb-date-filled .eb-date-placeholder{display:none!important}
+.elly-booking .eb-date-wrap:not(.eb-date-filled) input[type="date"]::-webkit-datetime-edit{color:transparent!important}
+.elly-booking .eb-date-wrap.eb-date-filled input[type="date"]::-webkit-datetime-edit{color:var(--eb-ink)!important}
