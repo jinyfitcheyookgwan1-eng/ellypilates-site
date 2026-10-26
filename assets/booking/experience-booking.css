@@ -260,3 +260,15 @@
 .elly-booking select[name="preferred_time"] option{color:#17130D!important;background-color:#F5EDDC!important;font-family:Arial,'Noto Sans KR',sans-serif!important;font-size:19px!important;font-weight:800!important;opacity:1!important}
 .elly-booking select[name="preferred_time"]:disabled{opacity:.85!important;-webkit-text-fill-color:#453A29!important}
 @media(max-width:650px){.elly-booking select[name="preferred_time"]{font-size:17px!important}}
+
+/* ELLY MOM & FIT | desktop booking portrait, original portrait proportions */
+@media(min-width:651px){
+  .elly-booking[data-elly-booking="momfit"] .eb-photo.eb-momfit-photo{
+    background:#e9e1d1 url('../momfit/momfit-booking.jpg') no-repeat right center;
+    background-size:auto 100%;
+  }
+  .elly-booking[data-elly-booking="momfit"] .eb-photo.eb-momfit-photo::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(90deg,#e9e1d1 0%,#e9e1d1 34%,rgba(233,225,209,.91) 48%,rgba(233,225,209,.08) 75%,transparent 100%);
+  }
+}
