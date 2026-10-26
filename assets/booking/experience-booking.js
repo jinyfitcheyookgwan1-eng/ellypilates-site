@@ -10,6 +10,10 @@ document.querySelectorAll('[data-elly-booking]').forEach(root=>{
  const form=root.querySelector('form'),isMom=root.dataset.ellyBooking==='momfit';
  const kind=()=>form.querySelector('input[name="lesson_type"]:checked')?.value||'';
  const date=form.querySelector('[name="preferred_date"]'),time=form.querySelector('[name="preferred_time"]');
+ const dateWrap=date.closest('.eb-date-wrap');
+ const syncDateHint=()=>{if(dateWrap)dateWrap.classList.toggle('eb-date-filled',!!date.value)};
+ date.addEventListener('input',syncDateHint);
+ date.addEventListener('change',syncDateHint);
  const groupSchedule=isMom?prenatal:schedule;
  const update=()=>{
   const group=kind().includes('3:1'),dateVal=date.value;
@@ -38,10 +42,10 @@ document.querySelectorAll('[data-elly-booking]').forEach(root=>{
   payload.set('_subject',isMom?'[엘리맘앤핏] 산전·산후 체험 신청':'[엘리필라테스] 일반 체험 신청');
   try{const res=await fetch(endpoint,{method:'POST',body:payload,headers:{Accept:'application/json'}});
    if(!res.ok)throw new Error('전송 실패');
-   form.reset();update();status.textContent='체험 신청이 정상적으로 접수되었습니다. 담당자가 신청 내용을 확인한 후 순차적으로 연락드리겠습니다.';
+   form.reset();update();syncDateHint();status.textContent='체험 신청이 정상적으로 접수되었습니다. 담당자가 신청 내용을 확인한 후 순차적으로 연락드리겠습니다.';
   }catch(_){status.textContent='신청이 전송되지 않았어요. 잠시 후 다시 시도해 주세요.'}
   finally{submit.disabled=false}
  });
- update();
+ update();syncDateHint();
 });
 })();
