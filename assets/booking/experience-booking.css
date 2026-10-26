@@ -209,3 +209,56 @@
    background-color:#e9e1d1;
  }
 }
+
+/* ELLY signature curved portrait: original image, responsive framing */
+.elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image{
+  isolation:isolate;
+  background-image:none;
+  background-color:#e9e1d1;
+  min-height:410px;
+}
+.elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image::before{
+  content:"";
+  position:absolute;
+  z-index:0;
+  inset:0 0 0 auto;
+  width:57%;
+  background:url('DSCF4096-1.jpg') no-repeat right center / auto 100%;
+  border-radius:48% 0 0 48% / 62% 0 0 62%;
+  pointer-events:none;
+}
+.elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image::after{
+  content:"";
+  position:absolute;
+  z-index:0;
+  top:5%;bottom:5%;right:0;
+  width:57%;
+  border-left:1px solid rgba(122,93,42,.35);
+  border-radius:48% 0 0 48% / 62% 0 0 62%;
+  pointer-events:none;
+}
+.elly-booking[data-elly-booking="general"] .eb-photo-copy{
+  position:relative;z-index:1;width:52%;max-width:none;
+  padding:44px 0 44px 6%;
+}
+.elly-booking[data-elly-booking="general"] .eb-photo-copy h2{font-size:clamp(29px,3vw,39px)}
+@media(min-width:651px) and (max-width:900px){
+ .elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image{min-height:365px}
+ .elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image::before,
+ .elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image::after{width:52%}
+ .elly-booking[data-elly-booking="general"] .eb-photo-copy{width:53%;padding:32px 0 32px 5%}
+ .elly-booking[data-elly-booking="general"] .eb-photo-copy h2{font-size:clamp(25px,3.5vw,32px)}
+ .elly-booking[data-elly-booking="general"] .eb-photo-copy .eb-intro{font-size:14px}
+}
+@media(max-width:650px){
+ .elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image{min-height:0;display:flex;flex-direction:column;align-items:stretch;background:#e9e1d1}
+ .elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image::before{display:none}
+ .elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image::after{
+  content:"";display:block;position:relative;inset:auto;order:-1;
+  width:100%;height:clamp(300px,96vw,450px);
+  border:0;border-radius:0 0 46% 46% / 0 0 12% 12%;
+  background:#e9e1d1 url('DSCF4096-1.jpg') no-repeat center center / contain;
+  overflow:hidden;
+ }
+ .elly-booking[data-elly-booking="general"] .eb-photo-copy{width:100%;max-width:none;padding:29px 23px 34px}
+}
