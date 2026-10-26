@@ -113,6 +113,12 @@
 }
 </script>
 
+
+<style id="elly-section-tone-20261026">
+/* Responsive, content-based warm-beige section bands. */
+section.elly-tone-beige { position:relative; isolation:isolate; }
+section.elly-tone-beige::before { content:""; position:absolute; inset-block:0; left:50%; width:100vw; transform:translateX(-50%); background:var(--surface, #f5f0e9); z-index:-1; pointer-events:none; }
+</style>
 </head>
 <body>
 <header>
@@ -238,13 +244,13 @@
   ];
   </script>
 
-  <section class="page-hero wrap" id="program">
+  <section class="elly-tone-beige page-hero wrap" id="program">
     <div class="eyebrow">02 · PROGRAM</div>
     <h1>나의 운동 목적에 맞는<br>전문 프로그램으로 관리하세요</h1>
     <p class="programs-hero-desc">체형과 움직임, 생애주기와 라이프스타일에 따라<br>지금 나에게 필요한 전문 프로그램을 선택하실 수 있습니다.</p>
   </section>
 
-  <section class="block wrap" style="padding-top:18px;">
+  <section class="elly-tone-beige block wrap" style="padding-top:18px;">
     <div class="program-grid">
       <article class="program-card"><div class="program-photo"><button type="button" class="gallery-item" data-index="4" aria-label="엘리맘앤핏 크게 보기"><img width="1254" height="1254" src="assets/programs/momfit.jpg" alt="엘리맘앤핏" loading="lazy"></button></div><div class="program-body"><span class="tag">맘앤핏</span><h3>엘리맘앤핏</h3><p>산전산후 임산부 필라테스</p></div></article>
       <article class="program-card"><div class="program-photo"><button type="button" class="gallery-item" data-index="5" aria-label="체형교정 &amp; 자세개선 프로그램 크게 보기"><img width="1254" height="1254" src="assets/programs/correction.jpg" alt="체형교정 &amp; 자세개선 프로그램" loading="lazy"></button></div><div class="program-body"><span class="tag">교정</span><h3>삼송 체형교정 필라테스</h3><p>체형과 움직임을 확인하고 자세 개선을 돕는 맞춤 체형교정 프로그램</p></div></article>
