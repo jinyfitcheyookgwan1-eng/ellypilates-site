@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Gowun+Batang:wght@400;700&family=Gothic+A1:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=34d9124894">
+<link rel="stylesheet" href="styles.css?v=20261027mobile-readability">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -114,6 +114,20 @@
 }
 </script>
 
+<!-- Blog mobile readability refinement 20261027 -->
+<style>
+/* Blog only: preserve current feed, images, and navigation behavior. */
+@media(max-width:700px){
+ .blog-hero-grid,.blog-hero-main,.blog-hero-side,.blog-latest-grid,.blog-latest-card{min-width:0}
+ .blog-hero h1,.blog-latest-title,.blog-latest-head h2{word-break:keep-all;overflow-wrap:break-word}
+ .blog-hero-copy,.blog-hero-desc,.blog-latest-summary{
+   word-break:keep-all;overflow-wrap:break-word;line-height:1.8
+ }
+ .blog-hero-desc br{display:none}
+ .blog-hero-keywords{white-space:normal;overflow-wrap:anywhere;line-height:1.65}
+ .blog-latest-meta{flex-wrap:wrap;row-gap:5px}
+}
+</style>
 </head>
 <body>
 <header>
