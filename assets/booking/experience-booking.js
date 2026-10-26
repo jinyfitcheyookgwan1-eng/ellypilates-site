@@ -5,7 +5,7 @@ const endpoint='https://formspree.io/f/myeeeknl';
 const schedule={1:['10:00','19:00','20:00'],2:['09:00','19:00'],3:['10:00','21:00'],4:['09:00','19:00','20:00']};
 const prenatal={3:['11:00','19:00','20:00']};
 const today=()=>{const d=new Date();return [d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-')};
-const dayOf=s=>{if(!/^\\d{4}-\\d{2}-\\d{2}$/.test(s))return -1;const [y,m,d]=s.split('-').map(Number);return new Date(y,m-1,d).getDay()};
+const dayOf=s=>{if(!/^\d{4}-\d{2}-\d{2}$/.test(s))return -1;const [y,m,d]=s.split('-').map(Number);return new Date(y,m-1,d).getDay()};
 document.querySelectorAll('[data-elly-booking]').forEach(root=>{
  const form=root.querySelector('form'),isMom=root.dataset.ellyBooking==='momfit';
  const kind=()=>form.querySelector('input[name="lesson_type"]:checked')?.value||'';
