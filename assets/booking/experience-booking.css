@@ -104,3 +104,11 @@
 .elly-booking input[type="date"]::-webkit-datetime-edit{min-width:0!important;max-width:100%!important;overflow:hidden!important;padding:0!important}
 .elly-booking input[type="date"]::-webkit-calendar-picker-indicator{flex-shrink:0;opacity:1!important}
 @media(max-width:650px){.elly-booking .eb-fields{display:block!important}.elly-booking .eb-fields>.eb-field+.eb-field{margin-top:16px}.elly-booking input[type="date"]{height:50px!important;min-height:50px!important;max-height:50px!important}}
+
+/* 2026-10-26: strengthen visual hierarchy for the three highlighted headings */
+@media(max-width:650px){
+ .elly-booking .eb-photo.eb-has-image .eb-photo-copy h2{font-size:clamp(29px,7.1vw,36px)!important;line-height:1.43!important;letter-spacing:-.05em!important}
+ .elly-booking .eb-form-heading{font-size:clamp(24px,6vw,29px)!important;line-height:1.5!important;font-weight:700!important;margin-bottom:36px!important}
+ .elly-booking legend,.elly-booking .eb-label{font-size:clamp(16px,4.1vw,19px)!important;font-weight:700!important;line-height:1.65!important}
+ .elly-booking .eb-step{font-size:13px!important}
+}
