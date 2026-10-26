@@ -130,3 +130,10 @@
  .elly-booking[data-elly-booking="general"] .eb-form{padding-bottom:16px!important}
  .elly-booking[data-elly-booking="general"]+.wellness-intro{padding-top:12px!important;margin-top:0!important}
 }
+
+/* Date field: visible hint like the time dropdown, without replacing native calendar */
+.elly-booking .eb-date-wrap{position:relative;width:100%;min-width:0}
+.elly-booking .eb-date-wrap .eb-date-placeholder{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-family:'Gothic A1',sans-serif;font-size:14px;color:var(--eb-ink);line-height:1.6;pointer-events:none;white-space:nowrap;z-index:2}
+.elly-booking .eb-date-wrap:has(input:valid) .eb-date-placeholder,.elly-booking .eb-date-wrap:has(input:focus) .eb-date-placeholder{display:none}
+.elly-booking .eb-date-wrap input:invalid:not(:focus)::-webkit-datetime-edit{color:transparent!important}
+.elly-booking .eb-date-wrap input:invalid:not(:focus){color:transparent!important}
