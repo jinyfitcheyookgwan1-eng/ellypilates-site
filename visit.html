@@ -114,6 +114,18 @@
 }
 </script>
 
+<style>
+/* Visit page only: mobile copy and photo enlargement */
+@media(max-width:700px){
+ .visit-hero-intro{font-size:15px;line-height:1.75;letter-spacing:-.015em;word-break:keep-all;overflow-wrap:break-word}
+ .visit-hero-intro br{display:none}
+ .visit-hero-quote{line-height:1.65;word-break:keep-all}
+ .visit-photo .gallery-item{touch-action:manipulation}
+}
+#lightbox{z-index:10000}
+#lightbox .lightbox-figure{max-width:min(92vw,1100px);max-height:calc(100dvh - 100px)}
+#lightbox .lightbox-figure img{max-height:calc(100dvh - 145px);object-fit:contain}
+</style>
 </head>
 <body>
 <header>
@@ -179,7 +191,7 @@
     </div>
   </section>
 
-  <div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="오시는 길 사진 확대">
     <div class="lightbox-backdrop" data-lb-close></div>
     <button type="button" class="lb-close" data-lb-close aria-label="닫기">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 5l14 14M19 5L5 19" stroke-linecap="round"/></svg>
