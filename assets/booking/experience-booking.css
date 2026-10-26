@@ -53,3 +53,15 @@
  .elly-booking .eb-choice small{font-size:12px}
  .elly-booking .eb-submit{font-size:15px}
 }
+
+/* Mobile polish: portrait remains unobstructed; booking copy is a separate panel */
+@media(max-width:650px){
+ .elly-booking .eb-photo.eb-has-image{display:flex!important;flex-direction:column!important;background-image:none!important;min-height:0!important}
+ .elly-booking .eb-photo.eb-has-image::after{content:"";display:block;order:-1;position:relative;width:100%;height:clamp(320px,104vw,480px);background:#e9e1d1 url('DSCF4096-1.jpg') no-repeat center center;background-size:contain}
+ .elly-booking .eb-photo.eb-has-image .eb-photo-copy{position:relative!important;inset:auto!important;display:block!important;max-width:100%!important;width:100%!important;background:#e9e1d1!important;padding:30px 24px 36px!important}
+ .elly-booking .eb-photo.eb-has-image .eb-photo-copy h2{font-size:clamp(24px,6vw,31px);line-height:1.55}
+ .elly-booking .eb-photo.eb-has-image .eb-photo-copy .eb-intro{font-size:13px;line-height:1.9}
+ .elly-booking input[type=date]{display:block;min-height:58px;appearance:auto;-webkit-appearance:auto;color:var(--eb-ink)!important}
+ .elly-booking input[type=date]::-webkit-date-and-time-value{text-align:left;min-height:1.5em}
+ .elly-booking input[type=date]::-webkit-calendar-picker-indicator{opacity:1}
+}
