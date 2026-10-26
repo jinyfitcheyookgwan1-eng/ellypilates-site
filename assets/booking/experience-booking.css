@@ -112,3 +112,11 @@
  .elly-booking legend,.elly-booking .eb-label{font-size:clamp(16px,4.1vw,19px)!important;font-weight:700!important;line-height:1.65!important}
  .elly-booking .eb-step{font-size:13px!important}
 }
+
+/* Tighten transition from booking form to the next homepage section */
+@media(max-width:650px){
+ .elly-booking[data-elly-booking="general"]{padding-bottom:18px!important}
+ .elly-booking[data-elly-booking="general"] .eb-form{padding-bottom:22px}
+ .elly-booking[data-elly-booking="general"] .eb-form>.eb-help:last-of-type{margin-bottom:0}
+ .elly-booking[data-elly-booking="general"]+.wellness-intro{padding-top:24px!important;margin-top:0!important}
+}
