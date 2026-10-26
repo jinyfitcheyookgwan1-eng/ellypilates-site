@@ -4779,3 +4779,23 @@ footer a{text-decoration:underline;text-underline-offset:3px;}
   .blog-latest-summary{margin-top:8px;line-height:1.65}
   .blog-latest-go{margin-top:13px}
 }
+
+/* Shared mobile readability: preserve existing colors, imagery and layouts. */
+@media (max-width:700px){
+  .page-hero p:not(.visit-hero-highlight):not(.visit-hero-quote),
+  .site-cta-note,
+  .footer-address,
+  .footer-cta-sub{
+    word-break:keep-all;
+    overflow-wrap:break-word;
+    white-space:normal;
+  }
+  .page-hero p:not(.visit-hero-highlight):not(.visit-hero-quote){
+    line-height:1.75;
+  }
+  .site-cta-note,
+  .footer-address,
+  .footer-cta-sub{
+    line-height:1.75;
+  }
+}
