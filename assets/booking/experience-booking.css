@@ -254,3 +254,9 @@
 .elly-booking select[name="preferred_time"]{font-size:18px!important;font-weight:700!important;line-height:1.5!important;color:#292319!important;min-height:58px;padding:14px 18px;background-color:#F4EEE0;border:1px solid #CDBB97}
 .elly-booking select[name="preferred_time"] option{font-size:18px;font-weight:600;color:#292319;background:#fffdf8}
 @media(max-width:650px){.elly-booking select[name="preferred_time"]{font-size:17px!important;min-height:54px}}
+
+/* Strong contrast for booking time selector 20261026 */
+.elly-booking select[name="preferred_time"]{color:#17130D!important;-webkit-text-fill-color:#17130D!important;font-family:Arial,'Noto Sans KR',sans-serif!important;font-size:19px!important;font-weight:800!important;opacity:1!important;background-color:#EAE0CD!important;border:2px solid #967D52!important}
+.elly-booking select[name="preferred_time"] option{color:#17130D!important;background-color:#F5EDDC!important;font-family:Arial,'Noto Sans KR',sans-serif!important;font-size:19px!important;font-weight:800!important;opacity:1!important}
+.elly-booking select[name="preferred_time"]:disabled{opacity:.85!important;-webkit-text-fill-color:#453A29!important}
+@media(max-width:650px){.elly-booking select[name="preferred_time"]{font-size:17px!important}}
