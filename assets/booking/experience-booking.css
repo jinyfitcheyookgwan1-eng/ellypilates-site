@@ -95,3 +95,12 @@
  .elly-booking .eb-photo.eb-has-image .eb-photo-copy h2{font-size:clamp(24px,5.8vw,29px);line-height:1.48;letter-spacing:-.055em;margin-top:11px;font-weight:700}
  .elly-booking .eb-photo.eb-has-image .eb-photo-copy .eb-intro{font-size:12.5px;line-height:1.75;margin-top:12px;font-weight:400;letter-spacing:-.025em}
 }
+
+/* iOS Safari native date control: prevent intrinsic-width overflow */
+.elly-booking .eb-fields{min-width:0;width:100%}
+.elly-booking .eb-fields>.eb-field{min-width:0;width:100%;overflow:hidden}
+.elly-booking input[type="date"]{display:block!important;width:100%!important;min-width:0!important;max-width:100%!important;box-sizing:border-box!important;overflow:clip!important;position:relative;-webkit-appearance:none!important;appearance:none!important;direction:ltr;color:var(--eb-ink)!important;font-size:16px!important}
+.elly-booking input[type="date"]::-webkit-date-and-time-value{display:block!important;min-width:0!important;width:100%!important;text-align:left!important}
+.elly-booking input[type="date"]::-webkit-datetime-edit{min-width:0!important;max-width:100%!important;overflow:hidden!important;padding:0!important}
+.elly-booking input[type="date"]::-webkit-calendar-picker-indicator{flex-shrink:0;opacity:1!important}
+@media(max-width:650px){.elly-booking .eb-fields{display:block!important}.elly-booking .eb-fields>.eb-field+.eb-field{margin-top:16px}.elly-booking input[type="date"]{height:50px!important;min-height:50px!important;max-height:50px!important}}
