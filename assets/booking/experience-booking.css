@@ -65,3 +65,26 @@
  .elly-booking input[type=date]::-webkit-date-and-time-value{text-align:left;min-height:1.5em}
  .elly-booking input[type=date]::-webkit-calendar-picker-indicator{opacity:1}
 }
+
+
+/* 2026-10 mobile booking form: compact, overflow-safe native date/time controls */
+.elly-booking .eb-fields,.elly-booking .eb-field{min-width:0;max-width:100%}
+.elly-booking input[type="date"],.elly-booking select[name="preferred_time"]{
+ display:block;width:100%;max-width:100%;min-width:0;
+ height:52px;min-height:52px;max-height:52px;
+ padding:0 13px;line-height:normal;font-size:14px;
+ box-sizing:border-box;overflow:hidden;
+}
+.elly-booking input[type="date"]{-webkit-appearance:none;appearance:none}
+.elly-booking input[type="date"]::-webkit-date-and-time-value{min-width:0;text-align:left}
+.elly-booking input[type="date"]::-webkit-datetime-edit{min-width:0;padding:0}
+.elly-booking input[type="date"]::-webkit-calendar-picker-indicator{opacity:1;margin:0 0 0 6px}
+@media(max-width:650px){
+ .elly-booking .eb-form{min-width:0}
+ .elly-booking .eb-fields{width:100%;grid-template-columns:minmax(0,1fr);gap:16px}
+ .elly-booking input[type="date"],.elly-booking select[name="preferred_time"]{
+  width:100%!important;max-width:100%!important;min-width:0!important;
+  height:50px!important;min-height:50px!important;max-height:50px!important;
+  padding:0 12px!important;font-size:14px!important;
+ }
+}
