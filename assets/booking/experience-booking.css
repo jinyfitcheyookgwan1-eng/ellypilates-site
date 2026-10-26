@@ -352,3 +352,15 @@
  .elly-booking select[name="preferred_time"],
  .elly-booking select[name="preferred_time"] option{font-size:15px!important;font-weight:500!important}
 }
+
+/* MOM&FIT mobile booking instructions — match home page's warm gold emphasis */
+@media(max-width:650px){
+ .elly-booking[data-elly-booking="momfit"] .eb-photo.eb-momfit-photo .eb-intro{
+   color:#87672f!important;
+   -webkit-text-fill-color:#87672f!important;
+   font-size:14px!important;
+   font-weight:600!important;
+   line-height:1.9!important;
+   letter-spacing:-.025em;
+ }
+}
