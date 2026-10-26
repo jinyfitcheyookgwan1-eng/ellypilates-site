@@ -326,3 +326,12 @@
    font-size:12.5px!important;font-weight:400!important;line-height:1.85!important;margin-top:19px!important;
  }
 }
+
+/* MOM&FIT mobile photo: softly rounded corners, matching site image cards */
+@media(max-width:650px){
+ .elly-booking[data-elly-booking="momfit"] .eb-photo.eb-momfit-photo::after{
+   border-radius:14px!important;
+   overflow:hidden;
+   background-clip:padding-box;
+ }
+}
