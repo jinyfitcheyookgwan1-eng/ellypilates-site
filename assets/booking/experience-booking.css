@@ -249,3 +249,8 @@
 .elly-booking[data-elly-booking="momfit"] select[name="mom_stage"]{font-size:18px!important;font-weight:700!important;line-height:1.5!important;color:#292319!important;min-height:58px;padding:14px 18px;background-color:#F4EEE0;border:1px solid #CDBB97}
 .elly-booking[data-elly-booking="momfit"] select[name="mom_stage"] option{font-size:18px;font-weight:600;color:#292319;background:#fffdf8}
 @media(max-width:650px){.elly-booking[data-elly-booking="momfit"] select[name="mom_stage"]{font-size:17px!important;min-height:54px}}
+
+/* Booking time dropdown readability 20261026 */
+.elly-booking select[name="preferred_time"]{font-size:18px!important;font-weight:700!important;line-height:1.5!important;color:#292319!important;min-height:58px;padding:14px 18px;background-color:#F4EEE0;border:1px solid #CDBB97}
+.elly-booking select[name="preferred_time"] option{font-size:18px;font-weight:600;color:#292319;background:#fffdf8}
+@media(max-width:650px){.elly-booking select[name="preferred_time"]{font-size:17px!important;min-height:54px}}
