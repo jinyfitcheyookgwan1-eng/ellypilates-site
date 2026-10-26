@@ -142,6 +142,47 @@
   .momfit-program-toggle:focus-visible { outline:2px solid var(--accent-gold); outline-offset:3px; }
 }
 </style>
+<style id="elly-momfit-desktop-accordion-20261026">
+/* One horizontal row on desktop; mobile accordion below 680px stays unchanged. */
+@media (min-width:681px) {
+  .momfit-program-grid {
+    grid-template-columns:repeat(5,minmax(0,1fr));
+    align-items:stretch;
+  }
+  .momfit-program-card {
+    min-width:0;
+    padding:0 16px;
+    gap:0;
+  }
+  .momfit-program-card > .momfit-program-num,
+  .momfit-program-card > h3 { display:none; }
+  .momfit-program-toggle {
+    display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-start;
+    gap:10px; width:100%; min-height:118px; padding:23px 0 16px;
+    background:transparent; border:0; text-align:left; cursor:pointer;
+    color:var(--text); font:700 15px/1.55 'Gothic A1',sans-serif;
+    word-break:keep-all; position:relative;
+  }
+  .momfit-program-toggle-num {
+    font:700 13px/1.4 'Nanum Myeongjo',serif;
+    color:var(--accent-gold);
+  }
+  .momfit-program-toggle > span:nth-child(2) { padding-right:12px; }
+  .momfit-program-chevron {
+    position:absolute; right:1px; top:66px; width:8px; height:8px;
+    border-right:1.5px solid var(--accent-gold);
+    border-bottom:1.5px solid var(--accent-gold);
+    transform:rotate(45deg); transition:transform .2s ease;
+  }
+  .momfit-program-toggle[aria-expanded="true"] .momfit-program-chevron { transform:rotate(225deg); }
+  .momfit-program-card > p { display:none; margin:0; padding:0 0 24px; font-size:13px; line-height:1.8; }
+  .momfit-program-card:has(.momfit-program-toggle[aria-expanded="true"]) > p { display:block; }
+  .momfit-program-toggle:focus-visible { outline:2px solid var(--accent-gold); outline-offset:-3px; }
+}
+@media (min-width:681px) and (max-width:900px) {
+  .momfit-program-grid { overflow-x:auto; grid-template-columns:repeat(5,minmax(170px,1fr)); }
+}
+</style>
 </head>
 <body>
 <header>
