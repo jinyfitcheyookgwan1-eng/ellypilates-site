@@ -392,7 +392,7 @@
 /* MOM&FIT experience | single-line editorial headline and refined program emphasis */
 @media(min-width:901px){
  .elly-booking[data-elly-booking="momfit"] .eb-photo.eb-momfit-photo h2{
-  font-size:clamp(25px,2.6vw,35px);font-weight:600;letter-spacing:-.075em;line-height:1.5;
+  font-size:clamp(36px,3.3vw,44px);font-weight:600;letter-spacing:-.085em;line-height:1.42;
   white-space:nowrap;max-width:100%;margin-top:18px;
  }
  .elly-booking[data-elly-booking="momfit"] .eb-photo.eb-momfit-photo .eb-momfit-program{
