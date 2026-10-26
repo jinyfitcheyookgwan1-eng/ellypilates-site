@@ -120,3 +120,13 @@
  .elly-booking[data-elly-booking="general"] .eb-form>.eb-help:last-of-type{margin-bottom:0}
  .elly-booking[data-elly-booking="general"]+.wellness-intro{padding-top:24px!important;margin-top:0!important}
 }
+
+/* Compact, uninterrupted transition into Wellness Community (no extra content) */
+.elly-booking[data-elly-booking="general"]{padding-bottom:24px}
+.elly-booking[data-elly-booking="general"]+.wellness-intro{padding-top:18px!important;margin-top:0!important}
+.elly-booking[data-elly-booking="general"] .eb-status:empty{display:none}
+@media(max-width:650px){
+ .elly-booking[data-elly-booking="general"]{padding-bottom:0!important}
+ .elly-booking[data-elly-booking="general"] .eb-form{padding-bottom:16px!important}
+ .elly-booking[data-elly-booking="general"]+.wellness-intro{padding-top:12px!important;margin-top:0!important}
+}
