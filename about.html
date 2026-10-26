@@ -115,9 +115,8 @@
 
 
 <style id="elly-section-tone-20261026">
-/* Responsive, content-based warm-beige section bands. */
-section.elly-tone-beige { position:relative; isolation:isolate; }
-section.elly-tone-beige::before { content:""; position:absolute; inset-block:0; left:50%; width:100vw; transform:translateX(-50%); background:var(--bg, #F4EEE0); z-index:-1; pointer-events:none; }
+/* Direct section background: visible above the page canvas on all viewport sizes. */
+section.elly-tone-beige { background-color:var(--bg,#F4EEE0)!important; }
 </style>
 <style id="elly-about-story-desktop-readability-20261026">
 /* OUR STORY only: improve desktop readability; tablet/mobile unchanged. */
