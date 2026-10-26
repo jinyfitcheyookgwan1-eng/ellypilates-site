@@ -143,3 +143,11 @@
 .elly-booking .eb-date-wrap.eb-date-filled .eb-date-placeholder{display:none!important}
 .elly-booking .eb-date-wrap:not(.eb-date-filled) input[type="date"]::-webkit-datetime-edit{color:transparent!important}
 .elly-booking .eb-date-wrap.eb-date-filled input[type="date"]::-webkit-datetime-edit{color:var(--eb-ink)!important}
+
+/* Balanced spacing between booking and Wellness Community, aligned with homepage rhythm */
+.elly-booking[data-elly-booking="general"]{padding-bottom:48px!important}
+.elly-booking[data-elly-booking="general"]+.wellness-intro{padding-top:40px!important;margin-top:0!important}
+@media(max-width:650px){
+ .elly-booking[data-elly-booking="general"]{padding-bottom:36px!important}
+ .elly-booking[data-elly-booking="general"]+.wellness-intro{padding-top:32px!important;margin-top:0!important}
+}
