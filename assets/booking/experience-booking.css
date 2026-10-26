@@ -335,3 +335,20 @@
    background-clip:padding-box;
  }
 }
+
+/* Preferred time selector: normal readable weight, not extra bold */
+.elly-booking select[name="preferred_time"]{
+ font-family:'Gothic A1','Noto Sans KR',Arial,sans-serif!important;
+ font-size:16px!important;
+ font-weight:500!important;
+ -webkit-text-fill-color:#30291e!important;
+}
+.elly-booking select[name="preferred_time"] option{
+ font-family:'Gothic A1','Noto Sans KR',Arial,sans-serif!important;
+ font-size:16px!important;
+ font-weight:500!important;
+}
+@media(max-width:650px){
+ .elly-booking select[name="preferred_time"],
+ .elly-booking select[name="preferred_time"] option{font-size:15px!important;font-weight:500!important}
+}
