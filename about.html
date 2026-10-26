@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Gowun+Batang:wght@400;700&family=Gothic+A1:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=34d9124894">
+<link rel="stylesheet" href="styles.css?v=20261027mobile-readability">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -133,6 +133,24 @@
 body { background-color:#FFFFFF!important; }
 main > section.elly-band-white { background:#FFFFFF!important; }
 main > section.elly-band-beige { background:#F4EEE0!important; }
+</style>
+<!-- About mobile readability refinement 20261027 -->
+<style>
+/* About-only mobile typography; keep studio photography and all existing section bands. */
+@media(max-width:700px){
+ .about-hero-columns,.story-intro,.why-elly,.founder-layout,.founder-main,.founder-side{min-width:0}
+ .story-intro p,.why-desc,.founder-main p,.about-copy p{
+   word-break:keep-all;overflow-wrap:break-word;line-height:1.8
+ }
+ .story-intro p br{display:none}
+ .story-intro h2,.why-elly h2,.why-title,.founder-main h2{
+   word-break:keep-all;overflow-wrap:break-word
+ }
+ .why-desc--space{line-height:1.8}
+}
+#lightbox{z-index:10000}
+#lightbox .lightbox-figure{max-width:min(92vw,1100px);max-height:calc(100dvh - 100px)}
+#lightbox .lightbox-figure img{max-height:calc(100dvh - 145px);object-fit:contain}
 </style>
 </head>
 <body>
@@ -267,7 +285,7 @@ main > section.elly-band-beige { background:#F4EEE0!important; }
     </div>
   </section>
 
-  <div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="엘리필라테스 소개 사진 확대">
     <div class="lightbox-backdrop" data-lb-close></div>
     <button type="button" class="lb-close" data-lb-close aria-label="닫기">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 5l14 14M19 5L5 19" stroke-linecap="round"/></svg>
