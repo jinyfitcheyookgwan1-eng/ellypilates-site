@@ -88,3 +88,10 @@
   padding:0 12px!important;font-size:14px!important;
  }
 }
+
+/* Final mobile typography and spacing refinement */
+@media(max-width:650px){
+ .elly-booking .eb-photo.eb-has-image .eb-photo-copy{padding:25px 24px 27px!important}
+ .elly-booking .eb-photo.eb-has-image .eb-photo-copy h2{font-size:clamp(24px,5.8vw,29px);line-height:1.48;letter-spacing:-.055em;margin-top:11px;font-weight:700}
+ .elly-booking .eb-photo.eb-has-image .eb-photo-copy .eb-intro{font-size:12.5px;line-height:1.75;margin-top:12px;font-weight:400;letter-spacing:-.025em}
+}
