@@ -122,6 +122,17 @@
 section.elly-tone-beige { position:relative; isolation:isolate; }
 section.elly-tone-beige::before { content:""; position:absolute; inset-block:0; left:50%; width:100vw; transform:translateX(-50%); background:var(--surface, #f5f0e9); z-index:-1; pointer-events:none; }
 </style>
+<style id="elly-home-booking-intro-20261026">
+/* HOME only: use the site's established gold token and readable responsive type. */
+.elly-booking[data-elly-booking="general"] .eb-photo-copy .eb-intro,
+.elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image .eb-photo-copy .eb-intro {
+  color:var(--accent-gold,#7A5D2A);
+  font-size:clamp(15px,1.35vw,18px);
+  font-weight:600;
+  line-height:1.85;
+  letter-spacing:-.025em;
+}
+</style>
 </head>
 <body>
 <header>
