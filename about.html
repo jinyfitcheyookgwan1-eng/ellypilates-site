@@ -128,8 +128,15 @@
 }
 </style>
 <style id="elly-about-page-background-20261026">
-/* ABOUT page canvas stays white; only the two explicitly selected sections use beige. */
+/* ABOUT: explicit alternating backgrounds. Never rely on inherited page background. */
 body { background-color:#FFFFFF!important; }
+main > section.story-intro,
+main > section.story-proof-static,
+main > section.why-elly,
+main > section.video-section { background-color:#FFFFFF!important; }
+main > section.story-proof-static { background-color:var(--surface,#FFFEFB)!important; }
+main > section.elly-tone-beige.block.wrap:not(.home-education),
+main > section.elly-tone-beige.goal-intro.wrap:not(.story-intro) { background-color:#F4EEE0!important; }
 </style>
 </head>
 <body>
