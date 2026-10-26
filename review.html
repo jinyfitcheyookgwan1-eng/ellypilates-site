@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Gowun+Batang:wght@400;700&family=Gothic+A1:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=34d9124894">
+<link rel="stylesheet" href="styles.css?v=20261027mobile-readability">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -114,6 +114,21 @@
 }
 </script>
 
+<!-- Review mobile readability refinement 20261027 -->
+<style>
+/* Review page only: preserve original reviews, photos, ratings and card layout. */
+@media(max-width:700px){
+ .review-hero,.review-list-block,.review-section-head,.testimonial-item,.testi-main,.testi-head,.testi-who,.testi-who-text{min-width:0}
+ .review-hero p,.review-real-desc,.testi-quote,.testi-name,.testi-meta,.testi-program{
+   word-break:keep-all;overflow-wrap:break-word
+ }
+ .review-hero p,.review-real-desc{line-height:1.75}
+ .testi-quote{line-height:1.85}
+ .testi-tags{flex-wrap:wrap}
+ .testi-tags span{max-width:100%;white-space:normal;overflow-wrap:break-word}
+ .testi-source{flex-wrap:wrap;row-gap:6px}
+}
+</style>
 </head>
 <body>
 <header>
