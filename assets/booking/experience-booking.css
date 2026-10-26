@@ -1,0 +1,38 @@
+
+/* ELLY experience booking: isolated styles */
+.elly-booking{--eb-ink:#36372f;--eb-muted:#77786e;--eb-line:#deddd2;--eb-accent:#77765a;background:#f7f5ef;color:var(--eb-ink);padding:65px 0 80px}
+.elly-booking *{box-sizing:border-box}
+.elly-booking .eb-inner{max-width:1100px;margin:auto;padding:0 24px}
+.elly-booking .eb-photo{min-height:400px;display:flex;align-items:center;background:#eae5d9;position:relative;overflow:hidden}
+.elly-booking .eb-photo:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(239,234,222,.95) 0%,rgba(239,234,222,.72) 46%,rgba(239,234,222,.08) 75%)}
+.elly-booking .eb-photo.eb-has-image{background-image:url('assets/booking/elly-director-original.jpg');background-size:cover;background-position:center 42%}
+.elly-booking .eb-photo-copy{position:relative;padding:50px 6%;max-width:570px}
+.elly-booking .eb-kicker{font-size:12px;letter-spacing:.22em;font-weight:600;color:#79765d}
+.elly-booking h2{font-size:clamp(29px,4vw,49px);line-height:1.4;letter-spacing:-.055em;margin:18px 0;color:#37382f}
+.elly-booking .eb-intro{margin:22px 0 0;color:#6d6b60;font-size:15px;line-height:1.85}
+.elly-booking .eb-form{background:#fff;padding:clamp(24px,5vw,58px);margin-top:28px;border:1px solid #e9e5dc}
+.elly-booking .eb-form-heading{margin:0 0 30px;font-size:22px;letter-spacing:-.04em}
+.elly-booking fieldset{border:0;padding:0;margin:0 0 30px;min-width:0}
+.elly-booking legend,.elly-booking .eb-label{display:block;font-size:15px;font-weight:700;margin-bottom:13px;line-height:1.6}
+.elly-booking .eb-step{font-size:12px;letter-spacing:.12em;color:#9b927b;margin-right:8px}
+.elly-booking .eb-choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.elly-booking .eb-choices.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.elly-booking .eb-choices.goal{grid-template-columns:repeat(2,minmax(0,1fr))}
+.elly-booking .eb-choice{position:relative;display:block;cursor:pointer}
+.elly-booking .eb-choice input{position:absolute;opacity:0;width:1px;height:1px}
+.elly-booking .eb-choice span{display:block;border:1px solid var(--eb-line);padding:16px 12px;min-height:55px;text-align:center;font-size:14px;line-height:1.55;border-radius:3px}
+.elly-booking .eb-choice small{display:block;font-size:12px;color:var(--eb-muted);margin-top:4px}
+.elly-booking .eb-choice input:checked+span{border-color:#77765a;background:#f4f2e9;color:#53543e}
+.elly-booking .eb-choice input:focus-visible+span{outline:2px solid #77765a;outline-offset:3px}
+.elly-booking .eb-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.elly-booking .eb-field{min-width:0}
+.elly-booking input[type=date],.elly-booking input[type=text],.elly-booking input[type=tel],.elly-booking input[type=number],.elly-booking select,.elly-booking textarea{width:100%;border:1px solid var(--eb-line);background:#fff;border-radius:3px;padding:15px;font:inherit;font-size:14px;color:var(--eb-ink)}
+.elly-booking textarea{resize:vertical;min-height:110px}
+.elly-booking .eb-help{font-size:12px;color:var(--eb-muted);margin:8px 0 0;line-height:1.7}
+.elly-booking .eb-consent{display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.8}
+.elly-booking .eb-consent input{margin-top:6px}
+.elly-booking .eb-submit{display:block;width:100%;border:0;border-radius:3px;background:#676b52;color:#fff;padding:18px;font:inherit;font-size:16px;font-weight:700;cursor:pointer}
+.elly-booking .eb-submit:disabled{opacity:.55;cursor:wait}
+.elly-booking .eb-status{margin:16px 0 0;font-size:14px;line-height:1.8}
+.elly-booking [hidden]{display:none!important}
+@media(max-width:650px){.elly-booking{padding:35px 0 55px}.elly-booking .eb-inner{padding:0 15px}.elly-booking .eb-photo{min-height:370px;align-items:flex-start}.elly-booking .eb-photo-copy{padding:34px 23px;max-width:78%}.elly-booking .eb-photo:before{background:linear-gradient(90deg,rgba(239,234,222,.95),rgba(239,234,222,.3) 85%)}.elly-booking .eb-choices,.elly-booking .eb-choices.two,.elly-booking .eb-choices.goal,.elly-booking .eb-fields{grid-template-columns:1fr}.elly-booking .eb-form{padding:25px 18px}.elly-booking .eb-choice span{text-align:left;padding:13px 16px;min-height:0}}
