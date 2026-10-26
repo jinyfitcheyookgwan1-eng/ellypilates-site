@@ -160,3 +160,20 @@
  .elly-booking[data-elly-booking="general"] .eb-photo-copy h2{font-size:clamp(32px,3vw,39px);line-height:1.47}
  .elly-booking[data-elly-booking="general"] .eb-photo-copy .eb-intro{max-width:420px}
 }
+
+/* Desktop typography: match the 16px body / 13.5px eyebrow scale of the rest of ELLY */
+@media(min-width:651px){
+ .elly-booking .eb-kicker{font-size:13.5px;font-weight:700;letter-spacing:.19em}
+ .elly-booking .eb-intro{font-size:16px;font-weight:500;line-height:1.85}
+ .elly-booking .eb-form-heading{font-size:clamp(25px,2.6vw,29px)}
+ .elly-booking legend,.elly-booking .eb-label{font-size:17px;font-weight:700;line-height:1.65}
+ .elly-booking .eb-step{font-size:14px;font-weight:700}
+ .elly-booking .eb-choice span{font-size:16px;font-weight:600;line-height:1.6}
+ .elly-booking .eb-choice small{font-size:14px;font-weight:500;line-height:1.55}
+ .elly-booking input[type=date],.elly-booking input[type=text],.elly-booking input[type=tel],.elly-booking input[type=number],.elly-booking select,.elly-booking textarea{font-size:16px;font-weight:500}
+ .elly-booking .eb-date-wrap .eb-date-placeholder{font-size:16px;font-weight:500}
+ .elly-booking .eb-help{font-size:14px;font-weight:500;line-height:1.75}
+ .elly-booking .eb-consent{font-size:14px;font-weight:500;line-height:1.8}
+ .elly-booking .eb-submit{font-size:16px;font-weight:700}
+ .elly-booking .eb-status{font-size:14px;font-weight:500}
+}
