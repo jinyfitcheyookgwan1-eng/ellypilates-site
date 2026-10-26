@@ -119,6 +119,19 @@
 section.elly-tone-beige { position:relative; isolation:isolate; }
 section.elly-tone-beige::before { content:""; position:absolute; inset-block:0; left:50%; width:100vw; transform:translateX(-50%); background:var(--surface, #f5f0e9); z-index:-1; pointer-events:none; }
 </style>
+<style id="elly-about-story-desktop-readability-20261026">
+/* OUR STORY only: improve desktop readability; tablet/mobile unchanged. */
+@media (min-width:1025px) {
+  .goal-intro.story-intro p {
+    color:var(--text,#211d17);
+    font-size:19px;
+    font-weight:600;
+    line-height:1.95;
+    max-width:760px;
+    letter-spacing:-.025em;
+  }
+}
+</style>
 </head>
 <body>
 <header>
