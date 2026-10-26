@@ -239,3 +239,8 @@
   .elly-booking .eb-consent{font-size:12.5px;line-height:1.8}
   .elly-booking .eb-date-wrap .eb-date-placeholder{font-size:13px}
 }
+
+/* 2026-10-26 | ELLY booking clearly visible beige choices */
+.elly-booking .eb-choice span{background-color:#EAE0CD!important;border-color:#CDBB97!important;color:#292319!important}
+.elly-booking .eb-choice input:checked+span{background-color:#DCC9A3!important;border-color:#86662F!important;box-shadow:inset 0 0 0 1px #86662F!important;color:#292319!important}
+.elly-booking .eb-choice input:focus-visible+span{outline:2px solid #86662F;outline-offset:3px}
