@@ -4852,3 +4852,21 @@ footer a{text-decoration:underline;text-underline-offset:3px;}
 
 /* Keep the original logo colors when the device uses dark appearance. */
 :root:not([data-theme="dark"]) .brand-logo{filter:none;}
+
+/* ELLY typography system — 2026-10-27. Keep brand logo artwork unchanged. */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+:root{--elly-font:'Pretendard',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;}
+body,button,input,textarea,select{font-family:var(--elly-font);}
+/* Unify Korean copy, including older page-specific serif selectors. */
+main :is(h1,h2,h3,h4,h5,h6,p,li,dt,dd,summary,label,button,input,textarea,select),
+header :is(a,button,span),footer :is(a,p,span),
+.mobile-nav :is(a,button,span),.floating-contact :is(a,span){font-family:var(--elly-font);}
+main :is(h1,h2,h3,h4){letter-spacing:-.035em;word-break:keep-all;overflow-wrap:break-word;}
+main :is(p,li,dd){letter-spacing:-.015em;word-break:keep-all;overflow-wrap:break-word;}
+.home-education-title{font-family:var(--elly-font);font-weight:700;letter-spacing:-.04em;}
+.home-education-body{font-family:var(--elly-font);font-weight:500;line-height:1.8;opacity:1;}
+@media(max-width:700px){
+  main :is(p,li,dd){line-height:1.75;}
+  .home-education-title{font-size:clamp(27px,6vw,34px);line-height:1.35;}
+  .home-education-body{font-size:16px;line-height:1.8;}
+}
