@@ -364,6 +364,26 @@ main > section.elly-band-beige { background:#F4EEE0!important; }
       .elly-schedule-section .elly-schedule-note{font-size:17px;font-weight:600;line-height:1.7;margin-bottom:23px;color:#5d5044}
       .elly-schedule-section .elly-schedule-cta{max-width:360px;padding:18px 24px;font-size:18px;font-weight:750}
     }
+
+    /* Consistent checklist alignment: grid items with fixed check column */
+    .elly-schedule-section .elly-schedule-notices li{
+      display:grid;grid-template-columns:24px minmax(0,1fr);column-gap:10px;
+      align-items:start;padding-left:0;
+    }
+    .elly-schedule-section .elly-schedule-notices li:before{
+      position:static;grid-column:1;grid-row:1;line-height:1.65;text-align:center;
+    }
+    .elly-schedule-section .elly-schedule-notices li{grid-auto-flow:column}
+    @media(min-width:850px){
+      .elly-schedule-section .elly-schedule-notices ul{
+        grid-template-columns:repeat(2,minmax(0,1fr));column-gap:34px;
+        row-gap:18px;align-items:start;
+      }
+      .elly-schedule-section .elly-schedule-notices li:last-child{grid-column:1 / -1}
+    }
+    @media(max-width:849px){
+      .elly-schedule-section .elly-schedule-notices li{grid-template-columns:20px minmax(0,1fr);column-gap:8px}
+    }
   </style>
   <script>
     (() => {
