@@ -125,6 +125,19 @@
 #lightbox{z-index:10000}
 #lightbox .lightbox-figure{max-width:min(92vw,1100px);max-height:calc(100dvh - 100px)}
 #lightbox .lightbox-figure img{max-height:calc(100dvh - 145px);object-fit:contain}
+/* LOCATION gallery: reliable pointer targets and visible focus on desktop/mobile. */
+.visit-photo .gallery-item{z-index:1;-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
+.visit-photo .gallery-item:focus-visible{outline:3px solid #967D52;outline-offset:-4px;}
+#lightbox.open{display:flex;}
+#lightbox .lightbox-figure{width:auto;max-width:min(90vw,1100px);max-height:calc(100dvh - 110px);pointer-events:none;}
+#lightbox .lightbox-figure img{max-width:100%;max-height:calc(100dvh - 160px);object-fit:contain;}
+#lightbox .lb-close,#lightbox .lb-nav{z-index:3;touch-action:manipulation;}
+#lightbox .lb-close:focus-visible,#lightbox .lb-nav:focus-visible{outline:3px solid #d8bd87;outline-offset:3px;}
+@media(max-width:640px){
+ #lightbox .lightbox-figure{max-width:calc(100vw - 74px);}
+ #lightbox .lightbox-figure img{max-height:calc(100dvh - 130px);}
+ #lightbox .lb-prev{left:4px;}#lightbox .lb-next{right:4px;}
+}
 </style>
 </head>
 <body>
