@@ -470,13 +470,3 @@
   .elly-booking select[name="preferred_time"] option{font-size:16px!important;}
 }
 
-/* ELLY First Experience: contemporary Pretendard display, preserving existing layout. */
-.elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image .eb-photo-copy h2,
-.elly-booking[data-elly-booking="general"] .eb-form-heading{
- font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',sans-serif!important;
- font-weight:700!important;letter-spacing:-.045em!important;word-break:keep-all;
-}
-@media(max-width:700px){
- .elly-booking[data-elly-booking="general"] .eb-photo.eb-has-image .eb-photo-copy h2{font-size:clamp(27px,6.5vw,33px)!important;line-height:1.4!important;letter-spacing:-.045em!important}
- .elly-booking[data-elly-booking="general"] .eb-form-heading{font-size:clamp(23px,5.8vw,28px)!important;line-height:1.45!important}
-}
