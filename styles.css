@@ -5005,3 +5005,19 @@ main :is(a,button):focus-visible,nav a:focus-visible{outline:2px solid #7A5D2A;o
 .elly-proof .elly-proof-card p{font-size:9.8px}
 .elly-proof .elly-proof-card:first-child strong{font-size:17px}
 }
+
+/* Homepage hero editorial headline: restore ELLY's Nanum Myeongjo identity. */
+.home-hero .home-hero-content h1{
+  font-family:'Nanum Myeongjo','Noto Serif KR',serif!important;
+  font-weight:700;
+  letter-spacing:-.065em;
+  line-height:1.42;
+  word-break:keep-all;
+}
+@media(max-width:600px){
+  .home-hero .home-hero-content h1{
+    font-size:clamp(25px,6.7vw,32px);
+    line-height:1.48;
+    letter-spacing:-.075em;
+  }
+}
