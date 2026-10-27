@@ -230,6 +230,95 @@ main > section.elly-band-beige { background:#F4EEE0!important; }
     </div>
   </section>
 
+
+  <!-- ELLY weekly group timetable: edit scheduleRows below to change class slots. -->
+  <section class="elly-schedule-section elly-band-beige" id="elly-weekly-schedule" aria-labelledby="elly-schedule-title">
+    <div class="wrap elly-schedule-wrap">
+      <div class="section-head">
+        <div class="eyebrow">ELLY PILATES · WEEKLY SCHEDULE</div>
+        <h2 id="elly-schedule-title">3:1 그룹레슨 시간표</h2>
+        <p>요일과 시간을 한눈에 확인하고, 나에게 맞는 수업을 찾아보세요.</p>
+      </div>
+      <div class="elly-schedule-panel">
+        <table class="elly-schedule-table" aria-label="엘리필라테스 월요일부터 목요일까지 그룹레슨 시간표">
+          <thead><tr><th scope="col">시간</th><th scope="col">월</th><th scope="col">화</th><th scope="col">수</th><th scope="col">목</th></tr></thead>
+          <tbody id="elly-schedule-body"></tbody>
+        </table>
+        <div class="elly-schedule-legend" aria-label="시간표 표시 안내">
+          <div class="elly-legend-item"><span class="elly-schedule-dot" aria-hidden="true"></span><strong>정규 그룹 수업</strong></div>
+          <div class="elly-legend-item"><span class="elly-prenatal-mark" aria-hidden="true">산전</span><strong>산전 임산부 그룹 수업</strong></div>
+        </div>
+        <p class="elly-schedule-note">모든 레슨은 50분 사전 예약제로 운영되며, 스튜디오 사정에 따라 일정이 변경될 수 있습니다.</p>
+        <a class="elly-schedule-cta" href="index.html#experience-booking">체험 레슨 신청하기 <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+  <style>
+    .elly-schedule-section{padding:78px 20px 86px;background:#f8f5f0}
+    .elly-schedule-wrap{max-width:1100px;margin:auto}
+    .elly-schedule-section .section-head{text-align:center;margin-bottom:30px}
+    .elly-schedule-section .section-head h2{letter-spacing:-.035em}
+    .elly-schedule-panel{max-width:1000px;margin:auto;background:#fff;border:1px solid #e8e0d6;border-radius:20px;padding:26px 30px 32px;box-shadow:0 12px 34px rgba(65,47,29,.035)}
+    .elly-schedule-table{width:100%;border-collapse:separate;border-spacing:0;table-layout:fixed;color:#40382f}
+    .elly-schedule-table th{background:#f0e9df;color:#594a39;font-size:16px;font-weight:650;padding:17px 6px;border-bottom:1px solid #e4d8c9}
+    .elly-schedule-table th:first-child{border-radius:10px 0 0 0;width:19%}
+    .elly-schedule-table th:last-child{border-radius:0 10px 0 0}
+    .elly-schedule-table td{height:68px;text-align:center;vertical-align:middle;border-bottom:1px solid #eee8e0;border-right:1px solid #f2ede7}
+    .elly-schedule-table td:last-child{border-right:0}
+    .elly-schedule-table tr:last-child td{border-bottom:0}
+    .elly-schedule-table .elly-time{font-size:16px;font-weight:600;font-variant-numeric:tabular-nums;background:#fbf9f6}
+    .elly-schedule-dot{display:inline-block;width:12px;height:12px;background:#a78964;border-radius:50%;vertical-align:middle;flex:none}
+    .elly-prenatal-mark{display:inline-flex;align-items:center;justify-content:center;background:#f0e1cc;color:#825c32;font-size:14px;font-weight:700;border-radius:6px;min-width:48px;min-height:30px;padding:3px 8px}
+    .elly-schedule-legend{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:18px 38px;margin:27px 0 20px;padding:20px 16px;background:#faf7f3;border-radius:12px}
+    .elly-legend-item{display:flex;align-items:center;gap:12px;color:#302c27;font-size:16px;line-height:1.5}
+    .elly-legend-item strong{font-weight:700;word-break:keep-all}
+    .elly-schedule-note{text-align:center;font-size:14px;line-height:1.7;color:#6d6256;margin:0 auto 22px;word-break:keep-all}
+    .elly-schedule-cta{display:flex;align-items:center;justify-content:center;gap:10px;max-width:310px;margin:auto;padding:15px 20px;background:#78634e;color:#fff!important;border-radius:9px;text-decoration:none;font-size:15px;font-weight:650;transition:background .2s}
+    .elly-schedule-cta:hover,.elly-schedule-cta:focus-visible{background:#5f4b38}
+    @media(max-width:640px){
+      .elly-schedule-section{padding:55px 14px 62px}
+      .elly-schedule-panel{padding:14px 9px 23px;border-radius:14px}
+      .elly-schedule-table th{font-size:14px;padding:13px 2px}
+      .elly-schedule-table th:first-child{width:22%}
+      .elly-schedule-table td{height:57px}
+      .elly-schedule-table .elly-time{font-size:13px}
+      .elly-schedule-dot{width:11px;height:11px}
+      .elly-prenatal-mark{font-size:12px;min-width:38px;min-height:27px;padding:3px 5px}
+      .elly-schedule-legend{gap:14px;margin:20px 0 16px;padding:16px 12px;align-items:flex-start;flex-direction:column}
+      .elly-legend-item{font-size:15px;gap:12px}
+      .elly-schedule-note{font-size:13px;padding:0 6px}
+      .elly-schedule-cta{max-width:none;margin:0 7px}
+    }
+  </style>
+  <script>
+    (() => {
+      // Edit only this array when the timetable changes: 0 = no class, 1 = regular, 2 = prenatal.
+      const scheduleRows = [
+        {time:'09:00',days:[0,1,0,1]},
+        {time:'10:00',days:[1,0,1,0]},
+        {time:'11:00',days:[0,0,2,0]},
+        {time:'19:00',days:[1,1,2,1]},
+        {time:'20:00',days:[1,1,2,1]},
+        {time:'21:00',days:[0,0,1,0]}
+      ];
+      const body=document.getElementById('elly-schedule-body');
+      if(!body)return;
+      const dayNames=['월요일','화요일','수요일','목요일'];
+      scheduleRows.forEach(row=>{
+        const tr=document.createElement('tr');
+        const time=document.createElement('td');
+        time.className='elly-time';time.textContent=row.time;tr.appendChild(time);
+        row.days.forEach((kind,i)=>{
+          const td=document.createElement('td');
+          td.setAttribute('aria-label',dayNames[i]+' '+row.time+' '+(kind===1?'정규 그룹 수업':kind===2?'산전 임산부 그룹 수업':'수업 없음'));
+          if(kind===1)td.innerHTML='<span class="elly-schedule-dot" aria-hidden="true"></span>';
+          if(kind===2)td.innerHTML='<span class="elly-prenatal-mark" aria-hidden="true">산전</span>';
+          tr.appendChild(td);
+        });
+        body.appendChild(tr);
+      });
+    })();
+  </script>
   <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="프로그램 사진 확대">
     <div class="lightbox-backdrop" data-lb-close></div>
     <button type="button" class="lb-close" data-lb-close aria-label="닫기">
