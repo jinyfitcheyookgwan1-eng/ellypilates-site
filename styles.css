@@ -4969,3 +4969,26 @@ main :is(a,button):focus-visible,nav a:focus-visible{outline:2px solid #7A5D2A;o
  .elly-studio-info .elly-info-table dt{font-size:13.5px}
  .elly-studio-info .elly-info-table dd{font-size:13.5px;line-height:1.75}
 }
+
+/* Homepage OUR EXPERIENCE — premium forest-green compact cards, 2026-10-28. */
+.elly-proof{background:#F3EEE6;padding-block:clamp(52px,6vw,76px)}
+.elly-proof .elly-add-head{margin-bottom:clamp(26px,3vw,38px)}
+.elly-proof .elly-proof-grid{max-width:790px;gap:clamp(12px,1.8vw,18px);margin-inline:auto}
+.elly-proof .elly-proof-card{box-sizing:border-box;min-width:0;min-height:160px;padding:25px 15px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:15px;background:#25372D;border:1px solid rgba(245,238,221,.14);border-radius:15px;box-shadow:0 12px 26px rgba(28,43,31,.16),0 3px 7px rgba(28,43,31,.09);text-align:center}
+.elly-proof .elly-proof-card strong{display:block;margin:0;color:#F8EEDB;font-family:var(--elly-font)!important;font-size:clamp(28px,3vw,39px);font-weight:800;letter-spacing:-.045em;line-height:1.13;white-space:nowrap}
+.elly-proof .elly-proof-card p{margin:0;color:#E5E0D5;font-family:var(--elly-font)!important;font-size:14px;font-weight:400;line-height:1.65;letter-spacing:-.025em;word-break:keep-all;overflow-wrap:normal}
+@media(max-width:600px){
+ .elly-proof{padding-block:52px}
+ .elly-proof .elly-add-head{margin-bottom:27px}
+ .elly-proof .elly-proof-grid{max-width:440px;gap:11px;padding-inline:6px}
+ .elly-proof .elly-proof-card{min-height:138px;padding:20px 7px;gap:13px;border-radius:13px;box-shadow:0 8px 19px rgba(28,43,31,.16),0 2px 5px rgba(28,43,31,.07)}
+ .elly-proof .elly-proof-card strong{font-size:clamp(22px,5.7vw,29px);letter-spacing:-.05em}
+ .elly-proof .elly-proof-card:first-child strong{font-size:clamp(19px,5.15vw,26px);letter-spacing:-.055em}
+ .elly-proof .elly-proof-card p{font-size:clamp(10.5px,2.85vw,12.5px);line-height:1.6;letter-spacing:-.04em}
+}
+@media(max-width:360px){
+ .elly-proof .elly-proof-grid{padding-inline:0;gap:9px}
+ .elly-proof .elly-proof-card{padding-inline:5px}
+ .elly-proof .elly-proof-card:first-child strong{font-size:18px}
+ .elly-proof .elly-proof-card p{font-size:10.5px}
+}
