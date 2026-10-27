@@ -258,7 +258,7 @@ main > section.elly-band-beige { background:#F4EEE0!important; }
             <li>레슨 프로그램은 참석 회원님들의 숙련도 등을 고려하여 변경될 수 있습니다.</li>
           </ul>
         </div>
-        <p class="elly-schedule-note">모든 레슨은 사전 예약제로 운영되며, 스튜디오 사정에 따라 일정이 변경될 수 있습니다.</p>
+        <p class="elly-schedule-note"><span>모든 레슨은 사전 예약제로 운영됩니다.</span><span>스튜디오 사정에 따라 일정이 변경될 수 있습니다.</span></p>
         <a class="elly-schedule-cta" href="index.html#experience-booking">체험 레슨 신청하기 <span aria-hidden="true">↗</span></a>
       </div>
     </div>
@@ -333,6 +333,36 @@ main > section.elly-band-beige { background:#F4EEE0!important; }
       .elly-schedule-legend{gap:4px;padding:12px 5px}
       .elly-legend-item{gap:4px}
       .elly-legend-item strong{font-size:11px}
+    }
+  
+    /* Final mobile typography and balanced notices */
+    .elly-schedule-section .elly-schedule-note span{display:block}
+    @media(max-width:640px){
+      .elly-schedule-section .section-head p{
+        color:#947345;font-size:16px;font-weight:700;line-height:1.6;
+        letter-spacing:-.025em;max-width:330px;margin:13px auto 0;
+        text-align:center;word-break:keep-all;text-wrap:balance;
+      }
+      .elly-schedule-section .elly-schedule-notices h3{
+        font-size:18px;font-weight:750;line-height:1.4;
+        margin-bottom:17px;white-space:nowrap;
+      }
+      .elly-schedule-section .elly-schedule-notices ul{gap:17px}
+      .elly-schedule-section .elly-schedule-notices li{
+        font-size:14px;font-weight:500;line-height:1.7;
+        letter-spacing:-.025em;gap:9px;
+      }
+      .elly-schedule-section .elly-schedule-notices li::before{flex-basis:20px}
+      .elly-schedule-section .elly-schedule-note{
+        max-width:340px;padding:0 5px;margin:0 auto 22px;
+        font-size:14px;font-weight:550;line-height:1.7;
+        letter-spacing:-.025em;text-align:center;
+      }
+    }
+    @media(max-width:360px){
+      .elly-schedule-section .section-head p{font-size:15px}
+      .elly-schedule-section .elly-schedule-notices li{font-size:13px}
+      .elly-schedule-section .elly-schedule-note{font-size:13px}
     }
   </style>
   <script>
