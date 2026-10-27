@@ -442,7 +442,7 @@
 .elly-booking select[name="preferred_time"]{
   border:1px solid var(--eb-line,#dacaa0)!important;
   border-radius:5px!important;
-  background-color:var(--surface,#fffefb)!important;
+  background-color:#F4EEE0!important;
   color:var(--eb-ink,#211d17)!important;
   -webkit-text-fill-color:var(--eb-ink,#211d17)!important;
   font-family:'Gothic A1','Noto Sans KR',Arial,sans-serif!important;
