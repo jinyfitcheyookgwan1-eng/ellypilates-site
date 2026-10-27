@@ -4722,3 +4722,25 @@ footer a{text-decoration:underline;text-underline-offset:3px;}
     line-height:1.75;
   }
 }
+
+/* 2026-10-27: cross-device finishing pass. Preserve original photography and branding. */
+:where(a,button,input,select,textarea,summary):focus-visible{
+  outline:3px solid #B68B52;
+  outline-offset:3px;
+}
+:where(h1,h2,h3,.section-head,.program-card,.lesson-type-card) {
+  overflow-wrap:break-word;
+}
+:where(.program-card,.lesson-type-card,.blog-latest-card,.blog-card) h3,
+:where(.program-card,.lesson-type-card,.blog-latest-card,.blog-card) p{
+  word-break:keep-all;
+  overflow-wrap:break-word;
+}
+@media (max-width:700px){
+  :where(button,.site-cta-btn,.fc-item,summary){touch-action:manipulation;}
+  :where(.site-cta-btn,.blog-cta-go){min-height:48px;}
+  :where(.footer-address,.footer-biz,.footer-copyright){overflow-wrap:anywhere;}
+}
+@media (prefers-reduced-motion:reduce){
+  html:focus-within{scroll-behavior:auto;}
+}
