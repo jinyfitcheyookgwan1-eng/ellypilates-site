@@ -264,125 +264,75 @@ main > section.elly-band-beige { background:#F4EEE0!important; }
     </div>
   </section>
   <style>
+    /* ELLY weekly schedule — consolidated, component-scoped styles */
     .elly-schedule-section{padding:78px 20px 86px;background:#f8f5f0}
-    .elly-schedule-wrap{max-width:1100px;margin:auto}
-    .elly-schedule-section .section-head{text-align:center;margin-bottom:30px}
+    .elly-schedule-section .elly-schedule-wrap.wrap{width:min(1120px,calc(100% - 32px));max-width:1120px;margin:auto;padding:0}
+    .elly-schedule-section .section-head{text-align:center;margin:0 auto 30px}
     .elly-schedule-section .section-head h2{letter-spacing:-.035em}
-    .elly-schedule-panel{max-width:1000px;margin:auto;background:#fff;border:1px solid #e8e0d6;border-radius:20px;padding:26px 30px 32px;box-shadow:0 12px 34px rgba(65,47,29,.035)}
+    .elly-schedule-panel{width:100%;max-width:1000px;box-sizing:border-box;margin:auto;background:#fff;border:1px solid #e8e0d6;border-radius:20px;padding:26px 30px 32px;box-shadow:0 12px 34px rgba(65,47,29,.035)}
     .elly-schedule-table{width:100%;border-collapse:separate;border-spacing:0;table-layout:fixed;color:#40382f}
-    .elly-schedule-table th{background:#f0e9df;color:#594a39;font-size:16px;font-weight:650;padding:17px 6px;border-bottom:1px solid #e4d8c9}
+    .elly-schedule-table th{background:#f0e9df;color:#594a39;font-size:16px;font-weight:650;padding:14px 6px;border-bottom:1px solid #e4d8c9}
     .elly-schedule-table th:first-child{border-radius:10px 0 0 0;width:19%}
     .elly-schedule-table th:last-child{border-radius:0 10px 0 0}
-    .elly-schedule-table td{height:68px;text-align:center;vertical-align:middle;border-bottom:1px solid #eee8e0;border-right:1px solid #f2ede7}
+    .elly-schedule-table td{height:55px;text-align:center;vertical-align:middle;border-bottom:1px solid #eee8e0;border-right:1px solid #f2ede7}
     .elly-schedule-table td:last-child{border-right:0}
     .elly-schedule-table tr:last-child td{border-bottom:0}
     .elly-schedule-table .elly-time{font-size:16px;font-weight:600;font-variant-numeric:tabular-nums;background:#fbf9f6}
     .elly-schedule-dot{display:inline-block;width:12px;height:12px;background:#a78964;border-radius:50%;vertical-align:middle;flex:none}
     .elly-prenatal-mark{display:inline-flex;align-items:center;justify-content:center;background:#f0e1cc;color:#825c32;font-size:14px;font-weight:700;border-radius:6px;min-width:48px;min-height:30px;padding:3px 8px}
-    .elly-schedule-legend{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:18px 38px;margin:27px 0 20px;padding:20px 16px;background:#faf7f3;border-radius:12px}
+    .elly-schedule-legend{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:18px 38px;margin:18px 0;padding:16px;background:#faf7f3;border-radius:12px}
     .elly-legend-item{display:flex;align-items:center;gap:12px;color:#302c27;font-size:16px;line-height:1.5}
     .elly-legend-item strong{font-weight:700;word-break:keep-all}
+    .elly-schedule-notices{border:1px solid #e8e0d6;border-radius:12px;background:#fdfbf8;padding:19px 25px;margin:0 0 15px}
+    .elly-schedule-notices h3{font-size:17px;font-weight:700;color:#4a3d30;margin:0 0 12px}
+    .elly-schedule-notices ul{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+    .elly-schedule-notices li{display:flex;align-items:flex-start;gap:10px;min-width:0;font-size:14px;line-height:1.65;color:#554a3e;word-break:keep-all;overflow-wrap:break-word}
+    .elly-schedule-notices li::before{content:'✓';display:block;flex:0 0 24px;text-align:center;color:#a78964;font-weight:800;line-height:1.65}
     .elly-schedule-note{text-align:center;font-size:14px;line-height:1.7;color:#6d6256;margin:0 auto 22px;word-break:keep-all}
     .elly-schedule-cta{display:flex;align-items:center;justify-content:center;gap:10px;max-width:310px;margin:auto;padding:15px 20px;background:#78634e;color:#fff!important;border-radius:9px;text-decoration:none;font-size:15px;font-weight:650;transition:background .2s}
     .elly-schedule-cta:hover,.elly-schedule-cta:focus-visible{background:#5f4b38}
+    @media(min-width:850px){
+      .elly-schedule-section{padding-top:60px;padding-bottom:65px}
+      .elly-schedule-section .section-head{max-width:1000px;margin-bottom:26px}
+      .elly-schedule-section .section-head .eyebrow{font-size:12px;letter-spacing:.19em;margin-bottom:14px}
+      .elly-schedule-section .section-head h2{font-size:clamp(38px,3.5vw,48px);line-height:1.24;font-weight:650;letter-spacing:-.045em;margin:0 0 16px}
+      .elly-schedule-section .section-head p{font-size:19px;line-height:1.55;font-weight:500;max-width:900px;margin:0 auto;color:#51473d;word-break:keep-all}
+      .elly-schedule-notices{padding:27px 30px;margin-bottom:22px}
+      .elly-schedule-notices h3{font-size:24px;line-height:1.35;font-weight:750;margin-bottom:20px;letter-spacing:-.025em}
+      .elly-schedule-notices ul{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:34px;row-gap:18px;align-items:start}
+      .elly-schedule-notices li{font-size:17px;font-weight:600;line-height:1.65;color:#44392f}
+      .elly-schedule-notices li::before{font-size:20px}
+      .elly-schedule-notices li:last-child{grid-column:1 / -1}
+      .elly-schedule-note{font-size:17px;font-weight:600;line-height:1.7;margin-bottom:23px;color:#5d5044}
+      .elly-schedule-cta{max-width:360px;padding:18px 24px;font-size:18px;font-weight:750}
+    }
     @media(max-width:640px){
       .elly-schedule-section{padding:55px 14px 62px}
+      .elly-schedule-section .elly-schedule-wrap.wrap{width:100%;max-width:100%}
       .elly-schedule-panel{padding:14px 9px 23px;border-radius:14px}
       .elly-schedule-table th{font-size:14px;padding:13px 2px}
       .elly-schedule-table th:first-child{width:22%}
-      .elly-schedule-table td{height:57px}
+      .elly-schedule-table td{height:54px}
       .elly-schedule-table .elly-time{font-size:13px}
       .elly-schedule-dot{width:11px;height:11px}
       .elly-prenatal-mark{font-size:12px;min-width:38px;min-height:27px;padding:3px 5px}
-      .elly-schedule-legend{gap:14px;margin:20px 0 16px;padding:16px 12px;align-items:flex-start;flex-direction:column}
-      .elly-legend-item{font-size:15px;gap:12px}
+      .elly-schedule-section .section-head p{max-width:290px;margin-left:auto;margin-right:auto;line-height:1.65;word-break:keep-all;text-wrap:balance;font-size:14px}
+      .elly-schedule-legend{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.45fr);align-items:center;gap:8px;padding:13px 9px;margin:18px 0 15px}
+      .elly-legend-item{min-width:0;justify-content:center;gap:6px;font-size:12px;line-height:1.35;white-space:nowrap}
+      .elly-legend-item strong{font-size:12px;font-weight:700;word-break:normal;white-space:nowrap;letter-spacing:-.045em}
+      .elly-legend-item .elly-schedule-dot{width:9px;height:9px}
+      .elly-legend-item .elly-prenatal-mark{font-size:11px;min-width:32px;min-height:23px;padding:2px 4px}
+      .elly-schedule-notices{padding:17px 15px}
+      .elly-schedule-notices h3{font-size:16px}
+      .elly-schedule-notices li{font-size:13px;gap:8px}
+      .elly-schedule-notices li::before{flex-basis:20px}
       .elly-schedule-note{font-size:13px;padding:0 6px}
       .elly-schedule-cta{max-width:none;margin:0 7px}
     }
-
-    /* Wide desktop timetable: override shared .wrap width restrictions. */
-    .elly-schedule-section .elly-schedule-wrap.wrap{width:min(1120px,calc(100% - 32px));max-width:1120px;padding-left:0;padding-right:0}
-    .elly-schedule-section .elly-schedule-panel{width:100%;max-width:none;box-sizing:border-box}
-    .elly-schedule-section .elly-schedule-table td{height:55px}
-    .elly-schedule-section .elly-schedule-table th{padding-top:14px;padding-bottom:14px}
-    .elly-schedule-section .elly-schedule-legend{margin:18px 0 18px;padding:16px}
-    .elly-schedule-notices{border:1px solid #e8e0d6;border-radius:12px;background:#fdfbf8;padding:19px 25px;margin:0 0 15px}
-    .elly-schedule-notices h3{font-size:17px;font-weight:700;color:#4a3d30;margin:0 0 12px}
-    .elly-schedule-notices ul{list-style:none;padding:0;margin:0;display:grid;gap:9px}
-    .elly-schedule-notices li{position:relative;padding-left:23px;font-size:14px;line-height:1.55;color:#554a3e;word-break:keep-all}
-    .elly-schedule-notices li:before{content:'✓';position:absolute;left:0;top:0;color:#a78964;font-weight:800}
-    @media(min-width:850px){
-      .elly-schedule-section{padding-top:60px;padding-bottom:65px}
-      .elly-schedule-section .section-head{margin-bottom:22px}
-      .elly-schedule-notices ul{grid-template-columns:1fr 1fr;column-gap:32px}
-      .elly-schedule-notices li:last-child{grid-column:1 / -1}
-    }
-    @media(max-width:640px){
-      .elly-schedule-section .elly-schedule-wrap.wrap{width:100%;max-width:100%}
-      .elly-schedule-section .elly-schedule-table td{height:54px}
-      .elly-schedule-notices{padding:17px 15px}
-      .elly-schedule-notices h3{font-size:16px}
-      .elly-schedule-notices li{font-size:13px}
-    }
-
-    /* Mobile schedule refinement: balanced two-line intro and horizontal legend */
-    @media(max-width:640px){
-      .elly-schedule-section .section-head p{max-width:290px;margin-left:auto;margin-right:auto;line-height:1.65;word-break:keep-all;text-wrap:balance;font-size:14px}
-      .elly-schedule-section .elly-schedule-legend{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.45fr);align-items:center;gap:8px;padding:13px 9px;margin:18px 0 15px}
-      .elly-schedule-section .elly-legend-item{min-width:0;display:flex;flex-direction:row;align-items:center;justify-content:center;gap:6px;font-size:12px;line-height:1.35;white-space:nowrap}
-      .elly-schedule-section .elly-legend-item strong{font-size:12px;font-weight:700;word-break:normal;white-space:nowrap;letter-spacing:-.045em}
-      .elly-schedule-section .elly-legend-item .elly-schedule-dot{width:9px;height:9px}
-      .elly-schedule-section .elly-legend-item .elly-prenatal-mark{font-size:11px;min-width:32px;min-height:23px;padding:2px 4px}
-    }
     @media(max-width:360px){
-      .elly-schedule-section .elly-schedule-legend{gap:4px;padding:12px 5px}
-      .elly-schedule-section .elly-legend-item{gap:4px}
-      .elly-schedule-section .elly-legend-item strong{font-size:11px}
-    }
-
-    /* Desktop heading and timetable unified visual proportions */
-    @media(min-width:850px){
-      .elly-schedule-section .section-head{max-width:1000px;margin:0 auto 26px;text-align:center}
-      .elly-schedule-section .section-head .eyebrow{font-size:12px;letter-spacing:.19em;margin-bottom:14px}
-      .elly-schedule-section .section-head h2{font-size:clamp(30px,3vw,40px);line-height:1.25;font-weight:650;letter-spacing:-.045em;margin:0 0 12px}
-      .elly-schedule-section .section-head p{font-size:16px;line-height:1.6;margin:0 auto;max-width:720px;word-break:keep-all}
-      .elly-schedule-section .elly-schedule-panel{max-width:1000px;margin:0 auto}
-    }
-
-    @media(min-width:850px){
-      .elly-schedule-section .section-head h2{font-size:clamp(38px,3.5vw,48px);line-height:1.24;margin-bottom:16px}
-      .elly-schedule-section .section-head p{font-size:19px;line-height:1.55;font-weight:500;max-width:900px;color:#51473d}
-    }
-
-    /* Readability upgrade for the desktop guidance and reservation area */
-    @media(min-width:850px){
-      .elly-schedule-section .elly-schedule-notices{padding:27px 30px;margin-bottom:22px}
-      .elly-schedule-section .elly-schedule-notices h3{font-size:24px;line-height:1.35;font-weight:750;margin-bottom:20px;letter-spacing:-.025em}
-      .elly-schedule-section .elly-schedule-notices ul{gap:16px 30px}
-      .elly-schedule-section .elly-schedule-notices li{font-size:17px;font-weight:600;line-height:1.65;padding-left:29px;color:#44392f}
-      .elly-schedule-section .elly-schedule-notices li:before{font-size:20px;top:0}
-      .elly-schedule-section .elly-schedule-note{font-size:17px;font-weight:600;line-height:1.7;margin-bottom:23px;color:#5d5044}
-      .elly-schedule-section .elly-schedule-cta{max-width:360px;padding:18px 24px;font-size:18px;font-weight:750}
-    }
-
-    /* Consistent checklist alignment: grid items with fixed check column */
-    .elly-schedule-section .elly-schedule-notices li{
-      display:grid;grid-template-columns:24px minmax(0,1fr);column-gap:10px;
-      align-items:start;padding-left:0;
-    }
-    .elly-schedule-section .elly-schedule-notices li:before{
-      position:static;grid-column:1;grid-row:1;line-height:1.65;text-align:center;
-    }
-    .elly-schedule-section .elly-schedule-notices li{grid-auto-flow:column}
-    @media(min-width:850px){
-      .elly-schedule-section .elly-schedule-notices ul{
-        grid-template-columns:repeat(2,minmax(0,1fr));column-gap:34px;
-        row-gap:18px;align-items:start;
-      }
-      .elly-schedule-section .elly-schedule-notices li:last-child{grid-column:1 / -1}
-    }
-    @media(max-width:849px){
-      .elly-schedule-section .elly-schedule-notices li{grid-template-columns:20px minmax(0,1fr);column-gap:8px}
+      .elly-schedule-legend{gap:4px;padding:12px 5px}
+      .elly-legend-item{gap:4px}
+      .elly-legend-item strong{font-size:11px}
     }
   </style>
   <script>
