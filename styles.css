@@ -5059,3 +5059,28 @@ main :is(a,button):focus-visible,nav a:focus-visible{outline:2px solid #7A5D2A;o
   .elly-proof .elly-proof-card strong{font-size:23px}
   .elly-proof .elly-proof-card:first-child strong{font-size:19px}
 }
+
+/* Studio information: readable rows, contextual navigation, unbroken hours. */
+.elly-studio-info .elly-info-table dd .elly-info-link{
+  display:inline-block;
+  margin-left:.4em;
+  color:#315342;
+  font-weight:650;
+  text-decoration:underline;
+  text-decoration-color:rgba(49,83,66,.38);
+  text-underline-offset:4px;
+  white-space:nowrap;
+}
+.elly-studio-info .elly-info-table dd .elly-info-link:hover,
+.elly-studio-info .elly-info-table dd .elly-info-link:focus-visible{
+  color:#1D392B;
+  text-decoration-color:currentColor;
+}
+.elly-studio-info .elly-info-nowrap{white-space:nowrap;display:inline-block}
+.elly-studio-info .elly-info-table dd{overflow-wrap:normal;word-break:keep-all}
+@media(max-width:600px){
+  .elly-studio-info .elly-info-table dl>div{grid-template-columns:77px minmax(0,1fr);gap:12px}
+  .elly-studio-info .elly-info-table dd{font-size:13px;line-height:1.72}
+  .elly-studio-info .elly-info-table dt{font-size:13px}
+  .elly-studio-info .elly-info-table dd .elly-info-link{margin-left:0.25em}
+}
