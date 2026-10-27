@@ -409,3 +409,30 @@
  .elly-booking[data-elly-booking="momfit"] .eb-photo.eb-momfit-photo h2 span{display:block}
  .elly-booking[data-elly-booking="momfit"] .eb-photo.eb-momfit-photo .eb-momfit-program{font-size:15px!important;font-weight:600!important;color:#725633!important;line-height:1.7!important}
 }
+
+/* 2026-10-27: first-experience form usability polish, preserving form fields and submission. */
+.elly-booking .eb-form{border-radius:8px;}
+.elly-booking .eb-form-heading{letter-spacing:-.035em;word-break:keep-all;}
+.elly-booking .eb-choice span{border-radius:5px;word-break:keep-all;overflow-wrap:break-word;}
+.elly-booking .eb-choice input:checked+span{border-width:2px;padding:15px 14px;}
+.elly-booking .eb-choice input:focus-visible+span{outline:3px solid #A7834D;outline-offset:3px;}
+.elly-booking .eb-field input,.elly-booking .eb-field select,.elly-booking textarea{
+  min-height:52px;border-radius:5px;font-size:16px;
+}
+.elly-booking .eb-submit{
+  min-height:62px;border-radius:5px;font-size:17px;line-height:1.5;
+  transition:filter .2s ease;
+}
+.elly-booking .eb-submit:not(:disabled):hover{filter:brightness(1.1);}
+.elly-booking .eb-submit:focus-visible{outline:3px solid #A7834D;outline-offset:4px;}
+.elly-booking .eb-status:not(:empty){padding:13px 16px;border-left:3px solid #9B7A47;background:rgba(155,122,71,.08);font-size:14px;word-break:keep-all;}
+@media(max-width:650px){
+ .elly-booking .eb-form{padding:30px 20px;}
+ .elly-booking .eb-form-heading{font-size:clamp(22px,5.7vw,26px);line-height:1.5;}
+ .elly-booking legend,.elly-booking .eb-label{font-size:15px;line-height:1.65;}
+ .elly-booking .eb-choice span{min-height:52px;padding:15px 16px;}
+ .elly-booking .eb-choice input:checked+span{padding:14px 15px;}
+ .elly-booking .eb-help{font-size:13px;line-height:1.75;}
+ .elly-booking .eb-consent{font-size:13px;line-height:1.75;}
+}
+@media(prefers-reduced-motion:reduce){.elly-booking .eb-submit{transition:none;}}
