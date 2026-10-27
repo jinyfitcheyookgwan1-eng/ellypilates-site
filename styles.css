@@ -5120,3 +5120,8 @@ main :is(a,button):focus-visible,nav a:focus-visible{outline:2px solid #7A5D2A;o
   .elly-proof .elly-proof-grid{gap:9px}
   .elly-proof .elly-proof-card{min-height:144px}
 }
+
+/* Studio opening hours: intentional two-line layout. */
+.elly-studio-info .elly-info-hours-line{display:block}
+.elly-studio-info .elly-info-hours-line+.elly-info-hours-line{margin-top:2px}
+.elly-studio-info .elly-info-hours-separator{white-space:pre}
