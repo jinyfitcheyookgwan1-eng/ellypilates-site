@@ -5029,3 +5029,33 @@ main :is(a,button):focus-visible,nav a:focus-visible{outline:2px solid #7A5D2A;o
 @media(max-width:370px){
   .home-hero .home-hero-content h1{font-size:clamp(27px,7.25vw,29px)}
 }
+
+/* Experience metric cards: centered content and stronger primary figures. */
+.elly-proof .elly-proof-card{
+  align-items:center;
+  text-align:center;
+}
+.elly-proof .elly-proof-card strong{
+  width:100%;
+  text-align:center;
+  font-weight:900!important;
+  font-size:clamp(25px,2.55vw,38px);
+}
+.elly-proof .elly-proof-card:first-child strong{
+  font-size:clamp(22px,2.2vw,33px);
+}
+.elly-proof .elly-proof-card p{
+  text-align:center;
+}
+@media(max-width:800px){
+  .elly-proof .elly-proof-card strong{font-size:clamp(25px,4.65vw,34px)}
+  .elly-proof .elly-proof-card:first-child strong{font-size:clamp(22px,4.1vw,30px)}
+}
+@media(max-width:600px){
+  .elly-proof .elly-proof-card strong{font-size:clamp(24px,5.6vw,32px)}
+  .elly-proof .elly-proof-card:first-child strong{font-size:clamp(20px,4.9vw,28px)}
+}
+@media(max-width:370px){
+  .elly-proof .elly-proof-card strong{font-size:23px}
+  .elly-proof .elly-proof-card:first-child strong{font-size:19px}
+}
