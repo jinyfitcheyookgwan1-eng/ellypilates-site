@@ -248,7 +248,17 @@ main > section.elly-band-beige { background:#F4EEE0!important; }
           <div class="elly-legend-item"><span class="elly-schedule-dot" aria-hidden="true"></span><strong>정규 그룹 수업</strong></div>
           <div class="elly-legend-item"><span class="elly-prenatal-mark" aria-hidden="true">산전</span><strong>산전 임산부 그룹 수업</strong></div>
         </div>
-        <p class="elly-schedule-note">모든 레슨은 50분 사전 예약제로 운영되며, 스튜디오 사정에 따라 일정이 변경될 수 있습니다.</p>
+        <div class="elly-schedule-notices" aria-label="그룹레슨 이용 안내">
+          <h3>그룹레슨 이용 안내</h3>
+          <ul>
+            <li>모든 레슨 시간은 50분입니다. 수업 시작 시간을 꼭 지켜주세요.</li>
+            <li>몸과 마음을 준비할 수 있도록 수업 전 여유 있게 도착 부탁드립니다.</li>
+            <li>평일 시간표 외 레슨 시간도 2인 이상 모이시면 원하는 시간대 수업 개설이 가능합니다.</li>
+            <li>수업 참여 인원에 따라 수업이 추가되거나 감소될 수 있습니다.</li>
+            <li>레슨 프로그램은 참석 회원님들의 숙련도 등을 고려하여 변경될 수 있습니다.</li>
+          </ul>
+        </div>
+        <p class="elly-schedule-note">모든 레슨은 사전 예약제로 운영되며, 스튜디오 사정에 따라 일정이 변경될 수 있습니다.</p>
         <a class="elly-schedule-cta" href="index.html#experience-booking">체험 레슨 신청하기 <span aria-hidden="true">↗</span></a>
       </div>
     </div>
@@ -288,6 +298,31 @@ main > section.elly-band-beige { background:#F4EEE0!important; }
       .elly-legend-item{font-size:15px;gap:12px}
       .elly-schedule-note{font-size:13px;padding:0 6px}
       .elly-schedule-cta{max-width:none;margin:0 7px}
+    }
+
+    /* Wide desktop timetable: override shared .wrap width restrictions. */
+    .elly-schedule-section .elly-schedule-wrap.wrap{width:min(1120px,calc(100% - 32px));max-width:1120px;padding-left:0;padding-right:0}
+    .elly-schedule-section .elly-schedule-panel{width:100%;max-width:none;box-sizing:border-box}
+    .elly-schedule-section .elly-schedule-table td{height:55px}
+    .elly-schedule-section .elly-schedule-table th{padding-top:14px;padding-bottom:14px}
+    .elly-schedule-section .elly-schedule-legend{margin:18px 0 18px;padding:16px}
+    .elly-schedule-notices{border:1px solid #e8e0d6;border-radius:12px;background:#fdfbf8;padding:19px 25px;margin:0 0 15px}
+    .elly-schedule-notices h3{font-size:17px;font-weight:700;color:#4a3d30;margin:0 0 12px}
+    .elly-schedule-notices ul{list-style:none;padding:0;margin:0;display:grid;gap:9px}
+    .elly-schedule-notices li{position:relative;padding-left:23px;font-size:14px;line-height:1.55;color:#554a3e;word-break:keep-all}
+    .elly-schedule-notices li:before{content:'✓';position:absolute;left:0;top:0;color:#a78964;font-weight:800}
+    @media(min-width:850px){
+      .elly-schedule-section{padding-top:60px;padding-bottom:65px}
+      .elly-schedule-section .section-head{margin-bottom:22px}
+      .elly-schedule-notices ul{grid-template-columns:1fr 1fr;column-gap:32px}
+      .elly-schedule-notices li:last-child{grid-column:1 / -1}
+    }
+    @media(max-width:640px){
+      .elly-schedule-section .elly-schedule-wrap.wrap{width:100%;max-width:100%}
+      .elly-schedule-section .elly-schedule-table td{height:54px}
+      .elly-schedule-notices{padding:17px 15px}
+      .elly-schedule-notices h3{font-size:16px}
+      .elly-schedule-notices li{font-size:13px}
     }
   </style>
   <script>
