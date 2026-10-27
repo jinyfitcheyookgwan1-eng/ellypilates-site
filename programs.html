@@ -324,6 +324,21 @@ main > section.elly-band-beige { background:#F4EEE0!important; }
       .elly-schedule-notices h3{font-size:16px}
       .elly-schedule-notices li{font-size:13px}
     }
+
+    /* Mobile schedule refinement: balanced two-line intro and horizontal legend */
+    @media(max-width:640px){
+      .elly-schedule-section .section-head p{max-width:290px;margin-left:auto;margin-right:auto;line-height:1.65;word-break:keep-all;text-wrap:balance;font-size:14px}
+      .elly-schedule-section .elly-schedule-legend{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.45fr);align-items:center;gap:8px;padding:13px 9px;margin:18px 0 15px}
+      .elly-schedule-section .elly-legend-item{min-width:0;display:flex;flex-direction:row;align-items:center;justify-content:center;gap:6px;font-size:12px;line-height:1.35;white-space:nowrap}
+      .elly-schedule-section .elly-legend-item strong{font-size:12px;font-weight:700;word-break:normal;white-space:nowrap;letter-spacing:-.045em}
+      .elly-schedule-section .elly-legend-item .elly-schedule-dot{width:9px;height:9px}
+      .elly-schedule-section .elly-legend-item .elly-prenatal-mark{font-size:11px;min-width:32px;min-height:23px;padding:2px 4px}
+    }
+    @media(max-width:360px){
+      .elly-schedule-section .elly-schedule-legend{gap:4px;padding:12px 5px}
+      .elly-schedule-section .elly-legend-item{gap:4px}
+      .elly-schedule-section .elly-legend-item strong{font-size:11px}
+    }
   </style>
   <script>
     (() => {
