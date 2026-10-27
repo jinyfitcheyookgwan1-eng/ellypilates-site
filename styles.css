@@ -4794,3 +4794,22 @@ footer a{text-decoration:underline;text-underline-offset:3px;}
 @media (prefers-reduced-motion:reduce){
   .program-card{transition:none;}
 }
+
+/* 2026-10-27: programs trial journey — readable, restrained three-step layout. */
+.trial-steps-flow{gap:clamp(14px,2vw,26px);}
+.trial-steps-flow li{
+  padding:18px 22px 20px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:var(--surface);
+  min-width:0;
+}
+.trial-steps-flow li:first-child{padding-left:22px;border-left:1px solid var(--line);}
+.trial-steps-flow .ts-title{font-size:clamp(21px,2vw,25px);line-height:1.45;}
+.trial-steps-flow .ts-desc{font-size:15px;line-height:1.85;overflow-wrap:break-word;}
+@media(max-width:760px){
+  .trial-steps-flow{gap:12px;}
+  .trial-steps-flow li,.trial-steps-flow li:first-child{padding:18px;border:1px solid var(--line);}
+  .trial-steps-flow .ts-title{font-size:21px;}
+  .trial-steps-flow .ts-desc{font-size:14.5px;line-height:1.75;}
+}
