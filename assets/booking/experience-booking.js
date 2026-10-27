@@ -5,7 +5,7 @@ const endpoint='https://formspree.io/f/myeeeknl';
 const schedule={1:['10:00','19:00','20:00'],2:['09:00','19:00','20:00'],3:['10:00','21:00'],4:['09:00','19:00','20:00']};
 const prenatal={3:['11:00','19:00','20:00']};
 const today=()=>{const d=new Date();return [d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-')};
-const dayOf=s=>{if(!/^\d{4}-\d{2}-\d{2}$/.test(s))return -1;const [y,m,d]=s.split('-').map(Number);return new Date(y,m-1,d).getDay()};
+const dayOf=s=>{if(!/^\d{4}-\d{2}-\d{2}$/.test(s))return -1;const [y,m,d]=s.split('-').map(Number);const date=new Date(y,m-1,d);return date.getFullYear()===y&&date.getMonth()===m-1&&date.getDate()===d?date.getDay():-1};
 document.querySelectorAll('[data-elly-booking]').forEach(root=>{
  const form=root.querySelector('form'),isMom=root.dataset.ellyBooking==='momfit';
  const kind=()=>form.querySelector('input[name="lesson_type"]:checked')?.value||'';
@@ -32,6 +32,7 @@ document.querySelectorAll('[data-elly-booking]').forEach(root=>{
  const status=root.querySelector('[data-booking-status]'),submit=form.querySelector('button[type="submit"]');
  form.addEventListener('submit',async e=>{
   e.preventDefault();
+  if(submit.disabled)return;
   if(!form.reportValidity())return;
   if(kind().includes('3:1')&&!((groupSchedule[dayOf(date.value)]||[]).includes(time.value))){status.textContent='선택한 날짜에는 해당 그룹 수업이 없어요. 다른 날짜를 선택해 주세요.';return}
   if(date.value<today()){status.textContent='오늘 이후 날짜를 선택해 주세요.';return}
@@ -42,7 +43,7 @@ document.querySelectorAll('[data-elly-booking]').forEach(root=>{
   payload.set('_subject',isMom?'[엘리맘앤핏] 산전·산후 체험 신청':'[엘리필라테스] 일반 체험 신청');
   try{const res=await fetch(endpoint,{method:'POST',body:payload,headers:{Accept:'application/json'}});
    if(!res.ok)throw new Error('전송 실패');
-   form.reset();update();syncDateHint();status.textContent='체험 신청이 정상적으로 접수되었습니다. 담당자가 신청 내용을 확인한 후 순차적으로 연락드리겠습니다.';
+   form.reset();update();syncDateHint();if(stage&&stageWrap){stageWrap.hidden=true;if(stageInput)stageInput.value=''}status.textContent='체험 신청이 정상적으로 접수되었습니다. 담당자가 신청 내용을 확인한 후 순차적으로 연락드리겠습니다.';
   }catch(_){status.textContent='신청이 전송되지 않았어요. 잠시 후 다시 시도해 주세요.'}
   finally{submit.disabled=false}
  });
