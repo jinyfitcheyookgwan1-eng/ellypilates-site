@@ -4813,3 +4813,16 @@ footer a{text-decoration:underline;text-underline-offset:3px;}
   .trial-steps-flow .ts-title{font-size:21px;}
   .trial-steps-flow .ts-desc{font-size:14.5px;line-height:1.75;}
 }
+
+/* 2026-10-27 mobile audit: prevent forced single-line copy and tiny fallback fonts. */
+@media(max-width:700px){
+  .page-hero p.gallery-hero-desc,
+  .section-head p.media-intro-desc,
+  .section-head p.review-real-desc{
+    white-space:normal;
+    word-break:keep-all;
+    overflow-wrap:break-word;
+    font-size:clamp(13px,3.55vw,15px);
+    line-height:1.7;
+  }
+}
