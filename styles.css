@@ -4832,3 +4832,20 @@ footer a{text-decoration:underline;text-underline-offset:3px;}
 .site-cta-inline a{display:inline-block;padding:7px 10px;color:inherit;text-decoration:underline;text-decoration-color:currentColor;text-underline-offset:5px;text-decoration-thickness:1px;word-break:keep-all;}
 .site-cta-inline a:hover{opacity:.78;}
 @media(max-width:700px){.site-cta-inline{font-size:13.5px;margin-top:14px;}.site-cta-inline a{padding:10px 8px;}}
+
+/* Emergency 2026-10-27: Keep the brand's light palette consistent with fixed ivory/white section backgrounds. */
+:root:not([data-theme="dark"]){
+  --bg:#F4EEE0;
+  --bg-soft:#E8DEC5;
+  --surface:#FFFEFB;
+  --text:#211D17;
+  --text-muted:#453B2C;
+  --accent:#3E4C2E;
+  --accent-strong:#212A16;
+  --accent-soft:#DCE0C9;
+  --accent-gold:#7A5D2A;
+  --line:#DACAA0;
+  --line-strong:#B89F6E;
+  --shadow:0 18px 40px -24px rgba(28,22,12,0.4);
+  color-scheme:light;
+}
