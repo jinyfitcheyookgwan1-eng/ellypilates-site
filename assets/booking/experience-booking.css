@@ -436,3 +436,36 @@
  .elly-booking .eb-consent{font-size:13px;line-height:1.75;}
 }
 @media(prefers-reduced-motion:reduce){.elly-booking .eb-submit{transition:none;}}
+
+/* 2026-10-27: align preferred-time field with the rest of the booking form.
+   Earlier selector-specific rules used a 2px dark border and darker fill. */
+.elly-booking select[name="preferred_time"]{
+  border:1px solid var(--eb-line,#dacaa0)!important;
+  border-radius:5px!important;
+  background-color:var(--surface,#fffefb)!important;
+  color:var(--eb-ink,#211d17)!important;
+  -webkit-text-fill-color:var(--eb-ink,#211d17)!important;
+  font-family:'Gothic A1','Noto Sans KR',Arial,sans-serif!important;
+  font-size:16px!important;
+  font-weight:500!important;
+  min-height:52px;
+  opacity:1;
+}
+.elly-booking select[name="preferred_time"]:focus-visible{
+  outline:2px solid var(--eb-accent,#3e4c2e)!important;
+  outline-offset:2px;
+}
+.elly-booking select[name="preferred_time"]:disabled{
+  opacity:.7!important;
+  -webkit-text-fill-color:var(--eb-muted,#453b2c)!important;
+}
+.elly-booking select[name="preferred_time"] option{
+  color:var(--eb-ink,#211d17)!important;
+  background:var(--surface,#fffefb)!important;
+  font-size:16px!important;
+  font-weight:500!important;
+}
+@media(max-width:650px){
+  .elly-booking select[name="preferred_time"],
+  .elly-booking select[name="preferred_time"] option{font-size:16px!important;}
+}
