@@ -5192,3 +5192,6 @@ main :is(a,button):focus-visible,nav a:focus-visible{outline:2px solid #7A5D2A;o
 @media(max-width:370px){
   .quick-links .section-head h2{font-size:clamp(24px,6.4vw,27px)}
 }
+
+/* Homepage FOR YOUR BODY editorial headline — ELLY serif system. */
+.goal-intro.elly-tone-beige:has(> .eyebrow:first-child) h2{font-family:'Nanum Myeongjo','Noto Serif KR',serif!important;font-weight:700;letter-spacing:-.065em;line-height:1.43;word-break:keep-all}
