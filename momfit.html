@@ -234,6 +234,23 @@
 #lightbox .lightbox-figure{max-width:min(92vw,1100px);max-height:calc(100dvh - 100px)}
 #lightbox .lightbox-figure img{max-height:calc(100dvh - 145px);object-fit:contain}
 </style>
+<style>
+/* Real prenatal and postnatal reviews, matching homepage Naver cards. */
+main > .momfit-member-reviews{background:#fff!important;padding-block:56px}
+.momfit-member-reviews .section-head{margin-bottom:28px}
+.momfit-member-reviews h2{font-family:'Nanum Myeongjo',serif;word-break:keep-all;line-height:1.5}
+.momfit-review-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.momfit-review-grid .elly-review-card{min-width:0}
+.momfit-review-grid blockquote{padding:0;margin:0 0 17px;font-style:normal;word-break:keep-all;overflow-wrap:break-word}
+.momfit-all-reviews{display:flex;align-items:center;justify-content:center;gap:12px;width:fit-content;min-height:48px;margin:28px auto 0;padding:12px 24px;border-radius:10px;background:#212A16;color:#fff!important;font-size:14px;font-weight:700;text-decoration:none}
+.momfit-all-reviews:focus-visible{outline:2px solid #212A16;outline-offset:4px}
+@media(max-width:700px){
+ main > .momfit-member-reviews{padding-block:36px}
+ .momfit-review-grid{grid-template-columns:minmax(0,1fr);gap:18px}
+ .momfit-member-reviews .section-head{margin-bottom:22px}
+ .momfit-member-reviews h2{font-size:clamp(23px,6vw,29px)}
+}
+</style>
 </head>
 <body>
 <header>
@@ -467,6 +484,25 @@
   </script>
 
   
+<section class="elly-home-reviews momfit-member-reviews wrap" aria-labelledby="momfit-reviews-title">
+    <div class="section-head">
+      <div class="eyebrow">ELLY MOM&amp;FIT · REAL REVIEWS</div>
+      <h2 id="momfit-reviews-title">삼송맘들의 선택으로 검증된 엘리필라테스.</h2>
+      <p>임신 준비부터 산전·산후 회복까지,<br>실제 회원님들의 수업 경험을 확인해 보세요.</p>
+    </div>
+    <div class="momfit-review-grid">
+      <article class="elly-review-card">
+        <div class="elly-naver-review-head"><span class="elly-naver-mark" aria-hidden="true">N</span><span class="elly-naver-source"><strong>네이버 방문자 리뷰</strong><small>돼지은이 · 네이버 플레이스</small></span></div>
+        <div class="elly-naver-review-content"><p class="elly-review-category">PRENATAL · 산전 필라테스 후기</p><blockquote>임신 중 임산부 필라테스를 알아보던 중 엘리필라테스를 추천 받았어요! 산전 필라테스 수업 체험해보고 싶어서 1:1 수업을 진행 후 등록했어요~ 자세 꼼꼼하게 봐주시고 이해하기 쉽게 알려주셔서 힘들었지만 재미있게 따라갈 수 있었어요.</blockquote><a class="elly-naver-original" href="https://naver.me/GrelPUrA" target="_blank" rel="noopener noreferrer">네이버 플레이스에서 확인 <span aria-hidden="true">↗</span></a></div>
+      </article>
+      <article class="elly-review-card">
+        <div class="elly-naver-review-head"><span class="elly-naver-mark" aria-hidden="true">N</span><span class="elly-naver-source"><strong>네이버 방문자 리뷰</strong><small>soclsrnekfak · 네이버 플레이스</small></span></div>
+        <div class="elly-naver-review-content"><p class="elly-review-category">POSTNATAL · 산후 필라테스 후기</p><blockquote>아기 낳고 나서 체형이 바뀐 것 같아 체형교정 및 코어근력 강화를 위해 방문했어요. 제 몸을 체계적으로 진단해 주시면서 부족한 부분을 근력으로 키워 자세 교정 가능성을 설명해주셨어요.</blockquote><a class="elly-naver-original" href="https://naver.me/GrelPUrA" target="_blank" rel="noopener noreferrer">네이버 플레이스에서 확인 <span aria-hidden="true">↗</span></a></div>
+      </article>
+    </div>
+    <a class="momfit-all-reviews" href="review.html">회원님들의 리뷰 더 보기 <span aria-hidden="true">↗</span></a>
+  </section>
+
 <section id="momfit-experience-booking" class="elly-booking" data-elly-booking="momfit" aria-labelledby="momfit-booking-title">
  <div class="eb-inner">
   <div class="eb-photo eb-momfit-photo">
