@@ -214,6 +214,11 @@
 document.addEventListener('DOMContentLoaded',function(){
  document.querySelectorAll('.review-list-block .testi-quote').forEach(function(p,i){
   if(window.matchMedia('(min-width: 761px)').matches){return;}
+  // Only show an expand control when the review actually exceeds four rendered lines.
+  const style=window.getComputedStyle(p);
+  const lineHeight=parseFloat(style.lineHeight);
+  const maxHeight=lineHeight*4;
+  if(!Number.isFinite(maxHeight)||p.getBoundingClientRect().height<=maxHeight+2){return;}
   p.classList.add('is-collapsed');
   p.id='review-text-'+i;
   var btn=document.createElement('button');
