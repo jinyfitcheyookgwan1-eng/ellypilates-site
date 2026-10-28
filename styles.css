@@ -5441,3 +5441,21 @@ header nav.links a{font-family:'Nanum Myeongjo','Noto Serif KR',serif!important;
  body.elly-home-page .elly-proof .elly-proof-card p span{white-space:normal;overflow-wrap:break-word}
  body.elly-home-page .elly-proof .elly-proof-card{height:auto}
 }
+
+/* Visible mobile navigation control; shared by every page using this header. */
+@media(max-width:860px){
+ header .nav-toggle{
+  position:relative;width:88px;height:44px;padding:0 12px;
+  display:flex;flex-direction:column;align-items:flex-end;justify-content:center;gap:6px;
+  background:#212A16;color:#FFF5E6;border:1px solid #212A16;border-radius:10px;
+ }
+ header .nav-toggle::before{
+  content:"메뉴";position:absolute;left:12px;top:50%;transform:translateY(-50%);
+  font-family:'Gothic A1',sans-serif;font-size:13px;font-weight:700;line-height:1.4;letter-spacing:-.03em;
+ }
+ header .nav-toggle .nav-toggle-bar{background:#FFF5E6;height:2px;width:20px}
+ header .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1){width:20px;transform:translateY(4px) rotate(45deg)}
+ header .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2){width:20px;transform:translateY(-4px) rotate(-45deg)}
+ header .nav-toggle:focus-visible{outline:3px solid #A7834D;outline-offset:3px}
+ header .nav-toggle:active{background:#3E4C2E}
+}
