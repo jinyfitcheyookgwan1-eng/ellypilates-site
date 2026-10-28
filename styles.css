@@ -5454,3 +5454,11 @@ header nav.links a{font-family:'Nanum Myeongjo','Noto Serif KR',serif!important;
 
 /* ABOUT · trust guarantee: emphasize final two lines on all screens */
 .goal-intro p.trust-intro-desc .trust-desc-emphasis{color:var(--accent-gold);font-size:1.13em;font-weight:700;line-height:1.75;}
+
+/* Experience metrics: keep all four tiles precisely equal in the 2x2 mobile grid. */
+body.elly-home-page .elly-proof .elly-proof-grid{align-items:stretch;grid-auto-rows:1fr}
+body.elly-home-page .elly-proof .elly-proof-card{box-sizing:border-box;height:100%;min-height:0;justify-content:center;align-self:stretch}
+@media(max-width:600px){
+ body.elly-home-page .elly-proof .elly-proof-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:1fr}
+ body.elly-home-page .elly-proof .elly-proof-card{height:100%;min-height:0;padding:20px 8px;gap:12px}
+}
