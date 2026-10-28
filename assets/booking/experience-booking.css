@@ -483,19 +483,43 @@
 
 /* Homepage mobile booking: less vertical spacing, unchanged copy and fields. */
 @media(max-width:650px){
- #experience-booking .eb-form{padding:22px 20px}
- #experience-booking .eb-form-heading{margin-bottom:24px!important}
- #experience-booking fieldset{margin-bottom:22px}
- #experience-booking legend,#experience-booking .eb-label{margin-bottom:9px}
- #experience-booking .eb-fields>.eb-field+.eb-field{margin-top:12px}
- #experience-booking .eb-help{margin-top:6px}
- #experience-booking .eb-choice span{min-height:44px;padding:10px 14px}
- #experience-booking .eb-choice input:checked+span{padding:9px 13px}
- #experience-booking .eb-choices{gap:8px}
- #experience-booking input[type=date],#experience-booking select[name="preferred_time"],
- #experience-booking input[type=text],#experience-booking input[type=tel]{
+ :is(#experience-booking,#momfit-experience-booking) .eb-form{padding:22px 20px}
+ :is(#experience-booking,#momfit-experience-booking) .eb-form-heading{margin-bottom:24px!important}
+ :is(#experience-booking,#momfit-experience-booking) fieldset{margin-bottom:22px}
+ :is(#experience-booking,#momfit-experience-booking) legend,:is(#experience-booking,#momfit-experience-booking) .eb-label{margin-bottom:9px}
+ :is(#experience-booking,#momfit-experience-booking) .eb-fields>.eb-field+.eb-field{margin-top:12px}
+ :is(#experience-booking,#momfit-experience-booking) .eb-help{margin-top:6px}
+ :is(#experience-booking,#momfit-experience-booking) .eb-choice span{min-height:44px;padding:10px 14px}
+ :is(#experience-booking,#momfit-experience-booking) .eb-choice input:checked+span{padding:9px 13px}
+ :is(#experience-booking,#momfit-experience-booking) .eb-choices{gap:8px}
+ :is(#experience-booking,#momfit-experience-booking) input[type=date],:is(#experience-booking,#momfit-experience-booking) select[name="preferred_time"],
+ :is(#experience-booking,#momfit-experience-booking) input[type=text],:is(#experience-booking,#momfit-experience-booking) input[type=tel]{
   height:46px!important;min-height:46px!important;max-height:46px!important;padding:0 13px!important
  }
- #experience-booking textarea{min-height:88px;padding:12px 14px}
- #experience-booking .eb-submit{min-height:52px;padding:13px 16px}
+ :is(#experience-booking,#momfit-experience-booking) textarea{min-height:88px;padding:12px 14px}
+ :is(#experience-booking,#momfit-experience-booking) .eb-submit{min-height:52px;padding:13px 16px}
+}
+
+/* Momfit form: consistent input typography, including the stage selector. */
+#momfit-experience-booking select[name="mom_stage"],
+#momfit-experience-booking select[name="mom_stage"] option{
+ font-family:'Gothic A1','Noto Sans KR',Arial,sans-serif!important;
+ font-size:16px!important;font-weight:500!important;line-height:1.6!important
+}
+@media(max-width:650px){
+ #momfit-experience-booking .eb-form input[type=text],
+ #momfit-experience-booking .eb-form input[type=tel],
+ #momfit-experience-booking .eb-form input[type=date],
+ #momfit-experience-booking .eb-form select,
+ #momfit-experience-booking .eb-form textarea,
+ #momfit-experience-booking .eb-date-placeholder{
+  font-family:'Gothic A1','Noto Sans KR',Arial,sans-serif!important;
+  font-size:16px!important;font-weight:500!important
+ }
+ #momfit-experience-booking select[name="mom_stage"]{
+  width:100%;min-width:0;max-width:100%;
+  height:46px!important;min-height:46px!important;max-height:46px!important;
+  padding:0 13px!important;border:1px solid var(--eb-line,#dacaa0)!important;
+  background:#F4EEE0!important;color:var(--eb-ink,#211d17)!important
+ }
 }
