@@ -129,6 +129,31 @@
  .testi-source{flex-wrap:wrap;row-gap:6px}
 }
 </style>
+
+<style>
+/* Review page: same Naver source identity and white cards as the homepage. */
+.review-list-block .testimonial-list{display:grid;grid-template-columns:1fr;gap:24px}
+.review-list-block .testimonial-item{display:block;padding:0!important;border:1px solid #e8e5df!important;border-radius:16px!important;overflow:hidden;background:#fff;box-shadow:0 6px 20px -18px rgba(36,44,35,.28)}
+.review-list-block .testi-main{padding:0!important;min-width:0}
+.review-naver-header{display:flex;align-items:center;gap:10px;padding:12px 18px;background:#03c75a;color:#fff;font-family:'Gothic A1',sans-serif}
+.review-naver-mark{display:grid;place-items:center;width:30px;height:30px;flex:none;background:#fff;color:#03c75a;border-radius:6px;font-size:24px;font-weight:800;line-height:1}
+.review-naver-header strong{display:block;font-size:14px;line-height:1.5}
+.review-naver-header small{display:block;font-size:12px;line-height:1.6}
+.review-list-block .testi-head{margin:0;padding:20px 22px 14px;gap:12px;flex-wrap:wrap}
+.review-list-block .testi-photo{margin:0 22px 18px}
+.review-list-block .testi-quote{margin:0;padding:0 22px;font-family:'Gothic A1',sans-serif!important;font-size:16px!important;font-weight:400;line-height:1.85;color:#514b45;word-break:keep-all;overflow-wrap:break-word}
+.review-list-block .testi-tags{padding:16px 22px 0;margin:0;flex-wrap:wrap}
+.review-list-block .testi-source{margin:0;padding:16px 22px 0}
+.review-naver-link{display:flex;align-items:center;gap:8px;width:fit-content;margin:18px 22px 24px;padding-bottom:5px;border-bottom:1px solid #92b4a1;color:#2d7651;font-size:14px;font-weight:700;text-decoration:none}
+.review-naver-link:focus-visible{outline:2px solid #212A16;outline-offset:4px}
+@media(max-width:650px){
+.review-list-block .testi-head{padding:16px 18px 12px}
+.review-list-block .testi-photo{margin:0 18px 16px}
+.review-list-block .testi-quote{padding-inline:18px;font-size:15px!important}
+.review-list-block .testi-tags,.review-list-block .testi-source{padding-inline:18px}
+.review-naver-link{margin:16px 18px 22px}
+}
+</style>
 </head>
 <body>
 <header>
@@ -181,23 +206,21 @@
   <section class="page-hero wrap review-hero">
     <div class="eyebrow">04 · REVIEW</div>
     <h1>회원님들의 이야기</h1>
-    <p>엘리필라테스를 직접 경험한 회원님들의 이야기를 만나보세요.</p>
+    <p>네이버 플레이스에 남겨주신 실제 회원님들의 리뷰를 소개합니다.</p>
   </section>
 
   <section class="block wrap review-list-block" style="padding-top:18px;">
-    <div class="section-head review-section-head">
-      <div class="eyebrow">REAL REVIEW</div>
       <h2>엘리를 경험한 회원님들의 이야기</h2>
       <p class="review-real-desc">네이버 플레이스에 남겨주신 실제 회원님들의 리뷰를 소개합니다.</p>
     </div>
     <div class="testimonial-list">
       <article class="testimonial-item">
-        <div class="testi-main">
+        <div class="testi-main"><div class="review-naver-header"><span class="review-naver-mark" aria-hidden="true">N</span><div><strong>네이버 방문자 리뷰</strong><small>돼지은이 · 네이버 플레이스</small></div></div>
           <div class="testi-head">
             <div class="testi-who">
-              <div class="testi-avatar">돼</div>
+              
               <div class="testi-who-text">
-                <span class="testi-name">돼지은이</span>
+                
                 <span class="testi-meta">리뷰 21 · 사진 36</span>
               </div>
             </div>
@@ -212,14 +235,14 @@
             <span class="testi-source-rating"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.7l2.9 6.3 6.9.7-5.2 4.7 1.5 6.8L12 17.8l-6.1 3.4 1.5-6.8-5.2-4.7 6.9-.7L12 2.7Z"/></svg><span>5.0</span></span>
           </div>
         </div>
-      </article>
+      <a class="review-naver-link" href="https://naver.me/GrelPUrA" target="_blank" rel="noopener noreferrer">네이버 플레이스에서 확인 <span aria-hidden="true">↗</span></a></article>
       <article class="testimonial-item">
-        <div class="testi-main">
+        <div class="testi-main"><div class="review-naver-header"><span class="review-naver-mark" aria-hidden="true">N</span><div><strong>네이버 방문자 리뷰</strong><small>stu**** · 네이버 플레이스</small></div></div>
           <div class="testi-head">
             <div class="testi-who">
-              <div class="testi-avatar">S</div>
+              
               <div class="testi-who-text">
-                <span class="testi-name">stu****</span>
+                
                 <span class="testi-meta">리뷰 46 · 사진 39</span>
               </div>
             </div>
@@ -234,14 +257,14 @@
             <span class="testi-source-rating"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.7l2.9 6.3 6.9.7-5.2 4.7 1.5 6.8L12 17.8l-6.1 3.4 1.5-6.8-5.2-4.7 6.9-.7L12 2.7Z"/></svg><span>5.0</span></span>
           </div>
         </div>
-      </article>
+      <a class="review-naver-link" href="https://naver.me/GrelPUrA" target="_blank" rel="noopener noreferrer">네이버 플레이스에서 확인 <span aria-hidden="true">↗</span></a></article>
       <article class="testimonial-item">
-        <div class="testi-main">
+        <div class="testi-main"><div class="review-naver-header"><span class="review-naver-mark" aria-hidden="true">N</span><div><strong>네이버 방문자 리뷰</strong><small>깜냥58 · 네이버 플레이스</small></div></div>
           <div class="testi-head">
             <div class="testi-who">
-              <div class="testi-avatar">깜</div>
+              
               <div class="testi-who-text">
-                <span class="testi-name">깜냥58</span>
+                
                 <span class="testi-meta">리뷰 43 · 사진 31</span>
               </div>
             </div>
@@ -256,14 +279,14 @@
             <span class="testi-source-rating"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.7l2.9 6.3 6.9.7-5.2 4.7 1.5 6.8L12 17.8l-6.1 3.4 1.5-6.8-5.2-4.7 6.9-.7L12 2.7Z"/></svg><span>5.0</span></span>
           </div>
         </div>
-      </article>
+      <a class="review-naver-link" href="https://naver.me/GrelPUrA" target="_blank" rel="noopener noreferrer">네이버 플레이스에서 확인 <span aria-hidden="true">↗</span></a></article>
       <article class="testimonial-item">
-        <div class="testi-main">
+        <div class="testi-main"><div class="review-naver-header"><span class="review-naver-mark" aria-hidden="true">N</span><div><strong>네이버 방문자 리뷰</strong><small>soclsrnekfak · 네이버 플레이스</small></div></div>
           <div class="testi-head">
             <div class="testi-who">
-              <div class="testi-avatar">S</div>
+              
               <div class="testi-who-text">
-                <span class="testi-name">soclsrnekfak</span>
+                
                 <span class="testi-meta">리뷰 48 · 사진 62</span>
               </div>
             </div>
@@ -278,14 +301,14 @@
             <span class="testi-source-rating"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.7l2.9 6.3 6.9.7-5.2 4.7 1.5 6.8L12 17.8l-6.1 3.4 1.5-6.8-5.2-4.7 6.9-.7L12 2.7Z"/></svg><span>5.0</span></span>
           </div>
         </div>
-      </article>
+      <a class="review-naver-link" href="https://naver.me/GrelPUrA" target="_blank" rel="noopener noreferrer">네이버 플레이스에서 확인 <span aria-hidden="true">↗</span></a></article>
       <article class="testimonial-item">
-        <div class="testi-main">
+        <div class="testi-main"><div class="review-naver-header"><span class="review-naver-mark" aria-hidden="true">N</span><div><strong>네이버 방문자 리뷰</strong><small>red**** · 네이버 플레이스</small></div></div>
           <div class="testi-head">
             <div class="testi-who">
-              <div class="testi-avatar">R</div>
+              
               <div class="testi-who-text">
-                <span class="testi-name">red****</span>
+                
                 <span class="testi-meta">리뷰 6 · 사진 5</span>
               </div>
             </div>
@@ -300,14 +323,14 @@
             <span class="testi-source-rating"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.7l2.9 6.3 6.9.7-5.2 4.7 1.5 6.8L12 17.8l-6.1 3.4 1.5-6.8-5.2-4.7 6.9-.7L12 2.7Z"/></svg><span>5.0</span></span>
           </div>
         </div>
-      </article>
+      <a class="review-naver-link" href="https://naver.me/GrelPUrA" target="_blank" rel="noopener noreferrer">네이버 플레이스에서 확인 <span aria-hidden="true">↗</span></a></article>
       <article class="testimonial-item">
-        <div class="testi-main">
+        <div class="testi-main"><div class="review-naver-header"><span class="review-naver-mark" aria-hidden="true">N</span><div><strong>네이버 방문자 리뷰</strong><small>돼지감자44 · 네이버 플레이스</small></div></div>
           <div class="testi-head">
             <div class="testi-who">
-              <div class="testi-avatar">돼</div>
+              
               <div class="testi-who-text">
-                <span class="testi-name">돼지감자44</span>
+                
                 <span class="testi-meta">리뷰 40 · 사진 76</span>
               </div>
             </div>
@@ -322,7 +345,7 @@
             <span class="testi-source-rating"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.7l2.9 6.3 6.9.7-5.2 4.7 1.5 6.8L12 17.8l-6.1 3.4 1.5-6.8-5.2-4.7 6.9-.7L12 2.7Z"/></svg><span>5.0</span></span>
           </div>
         </div>
-      </article>
+      <a class="review-naver-link" href="https://naver.me/GrelPUrA" target="_blank" rel="noopener noreferrer">네이버 플레이스에서 확인 <span aria-hidden="true">↗</span></a></article>
     </div>
   </section>
 
