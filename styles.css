@@ -5271,3 +5271,15 @@ main :is(a,button):focus-visible,nav a:focus-visible{outline:2px solid #7A5D2A;o
 
 /* Ensure first-visit serif heading contrasts with deep green panel. */
 .elly-first-visit .elly-first-visit-panel > h3{color:#FFF5E6!important}
+
+/* Homepage-only card radius consistency. Preserve pills, circles, photos and Naver branding. */
+.elly-studio-info .elly-info-table{border-radius:16px!important}
+.elly-proof .elly-proof-card{border-radius:14px!important}
+.elly-first-visit .elly-first-visit-panel{border-radius:20px!important}
+.elly-home-reviews .elly-review-card{border-radius:16px!important}
+.elly-first-visit .elly-first-visit-actions a{border-radius:10px!important}
+@media(max-width:700px){
+ .elly-studio-info .elly-info-table{border-radius:16px!important}
+ .elly-proof .elly-proof-card{border-radius:14px!important}
+ .elly-first-visit .elly-first-visit-panel{border-radius:18px!important}
+}
