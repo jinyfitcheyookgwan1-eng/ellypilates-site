@@ -480,3 +480,22 @@
 .elly-booking .eb-choice span{border-radius:12px!important}
 .elly-booking input[type=date],.elly-booking input[type=text],.elly-booking input[type=tel],.elly-booking input[type=number],.elly-booking select,.elly-booking textarea{border-radius:10px!important}
 .elly-booking .eb-submit{border-radius:12px!important}
+
+/* Homepage mobile booking: less vertical spacing, unchanged copy and fields. */
+@media(max-width:650px){
+ #experience-booking .eb-form{padding:22px 20px}
+ #experience-booking .eb-form-heading{margin-bottom:24px!important}
+ #experience-booking fieldset{margin-bottom:22px}
+ #experience-booking legend,#experience-booking .eb-label{margin-bottom:9px}
+ #experience-booking .eb-fields>.eb-field+.eb-field{margin-top:12px}
+ #experience-booking .eb-help{margin-top:6px}
+ #experience-booking .eb-choice span{min-height:44px;padding:10px 14px}
+ #experience-booking .eb-choice input:checked+span{padding:9px 13px}
+ #experience-booking .eb-choices{gap:8px}
+ #experience-booking input[type=date],#experience-booking select[name="preferred_time"],
+ #experience-booking input[type=text],#experience-booking input[type=tel]{
+  height:46px!important;min-height:46px!important;max-height:46px!important;padding:0 13px!important
+ }
+ #experience-booking textarea{min-height:88px;padding:12px 14px}
+ #experience-booking .eb-submit{min-height:52px;padding:13px 16px}
+}
