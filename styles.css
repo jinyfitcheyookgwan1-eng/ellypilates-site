@@ -5172,3 +5172,23 @@ main :is(a,button):focus-visible,nav a:focus-visible{outline:2px solid #7A5D2A;o
   .elly-proof .elly-add-head h2,
   .elly-studio-info .elly-add-head h2{font-size:clamp(24px,6.4vw,27px)}
 }
+
+/* Site map headline: align with ELLY editorial serif identity. */
+.quick-links .section-head h2{
+  font-family:'Nanum Myeongjo','Noto Serif KR',serif!important;
+  font-weight:700;
+  font-size:clamp(30px,3.3vw,40px);
+  line-height:1.43;
+  letter-spacing:-.065em;
+  word-break:keep-all;
+}
+@media(max-width:600px){
+  .quick-links .section-head h2{
+    font-size:clamp(26px,6.5vw,32px);
+    line-height:1.43;
+    letter-spacing:-.075em;
+  }
+}
+@media(max-width:370px){
+  .quick-links .section-head h2{font-size:clamp(24px,6.4vw,27px)}
+}
