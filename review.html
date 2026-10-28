@@ -227,7 +227,13 @@ document.addEventListener('DOMContentLoaded',function(){
  });
 });
 </script>
-<style>@media(min-width:601px){.review-hero{text-align:center}.review-hero .eyebrow{margin-left:auto;margin-right:auto}.review-hero h1{font-size:clamp(32px,3.5vw,48px);line-height:1.4}.review-hero p{font-size:18px}}@media(max-width:600px){.review-hero{text-align:center;padding-left:18px;padding-right:18px}.review-hero h1{font-size:clamp(26px,6vw,33px);line-height:1.45;word-break:keep-all}.review-hero p{font-size:15px;line-height:1.75;word-break:keep-all}}</style></head>
+<style>@media(min-width:601px){.review-hero{text-align:center}.review-hero .eyebrow{margin-left:auto;margin-right:auto}.review-hero h1{font-size:clamp(32px,3.5vw,48px);line-height:1.4}.review-hero p{font-size:18px}}@media(max-width:600px){.review-hero{text-align:center;padding-left:18px;padding-right:18px}.review-hero h1{font-size:clamp(26px,6vw,33px);line-height:1.45;word-break:keep-all}.review-hero p{font-size:15px;line-height:1.75;word-break:keep-all}}</style><style>
+/* Review introduction: mobile-only two-line centered editorial layout */
+@media (max-width: 600px) {
+  .review-hero {text-align:center!important;}
+  .review-hero > p {max-width:360px!important;margin:20px auto 0!important;text-align:center!important;font-size:15px!important;font-weight:500!important;line-height:1.65!important;letter-spacing:-0.035em!important;word-break:keep-all!important;overflow-wrap:normal!important;}
+}
+</style><style>.review-mobile-break{display:none}@media(max-width:600px){.review-mobile-break{display:inline}}</style></head>
 <body>
 <header>
   <div class="wrap nav-row">
@@ -279,7 +285,7 @@ document.addEventListener('DOMContentLoaded',function(){
   <section class="page-hero wrap review-hero">
     <div class="eyebrow">04 · REVIEW</div>
     <h1>엘리 회원님들의 경험이<br>새로운 누군가의 시작이 됩니다.</h1>
-    <p>엘리필라테스를 직접 경험한 회원님들의 생생한 네이버 방문자 리뷰를 만나보세요.</p>
+    <p>엘리필라테스를 직접 경험한 회원님들의<br class="review-mobile-break"> 생생한 네이버 방문자 리뷰를 만나보세요.</p>
   </section>
 
   <section class="block wrap review-list-block" style="padding-top:18px;">
