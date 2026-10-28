@@ -5344,3 +5344,15 @@ body.elly-programs-page main h3:not(.faq-question):not(.accordion-title){
   font-family:'Nanum Myeongjo','Noto Serif KR',serif!important;
   font-weight:700!important;
 }
+
+/* Shared mobile menu: match the site's Nanum Myeongjo editorial headings. */
+.mobile-nav-panel .mobile-nav-links a{
+  font-family:'Nanum Myeongjo','Noto Serif KR',serif!important;
+  font-weight:700!important;
+  letter-spacing:-.045em;
+  line-height:1.45;
+}
+.mobile-nav-panel .mobile-nav-head .brand-text b{
+  font-family:'Nanum Myeongjo','Noto Serif KR',serif!important;
+  font-weight:700!important;
+}
