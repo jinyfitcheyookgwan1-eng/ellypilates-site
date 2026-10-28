@@ -209,6 +209,20 @@ body.elly-about-page .trust-badges-caption{margin:0;text-align:center}
  body.elly-about-page .trust-four-lines>span{display:block;white-space:nowrap}
 }
 </style>
+
+<style id="why-mobile-compact-inline-numbers">
+@media(max-width:700px){
+ body.elly-about-page .why-list .why-row{
+  grid-template-columns:30px minmax(0,1fr);
+  grid-template-areas:"number title" "description description";
+  align-items:baseline;column-gap:9px;row-gap:8px;padding:13px 0;
+ }
+ body.elly-about-page .why-list .why-num{grid-area:number;font-size:17px;line-height:1.4;padding:0;margin:0}
+ body.elly-about-page .why-list .why-title{grid-area:title;font-size:21px;line-height:1.4;margin:0;letter-spacing:-.045em;min-width:0}
+ body.elly-about-page .why-list .why-desc{grid-area:description;margin:0;padding:0;line-height:1.65}
+}
+</style>
+
 </head>
 <body class="elly-about-page">
 <header>
