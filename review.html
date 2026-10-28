@@ -176,6 +176,57 @@
 .review-feature-block .review-feature-scrim{display:none}
 @media(max-width:650px){.review-feature-block .review-feature-copy{padding:24px 22px}.review-feature-block .review-feature-copy h3{font-size:clamp(24px,6vw,29px)}}
 </style>
+<style>
+/* Review editorial layout: compact desktop cards, readable typography, full original text on demand. */
+@media(min-width:761px){
+ .review-list-block .testimonial-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}
+ .review-list-block .testimonial-item{height:100%;display:flex;flex-direction:column}
+ .review-list-block .testi-main{flex:1}
+ .review-list-block .testi-photo{height:245px;overflow:hidden;border-radius:10px}
+ .review-list-block .testi-photo img{width:100%;height:100%;object-fit:cover;display:block}
+ .review-list-block .testi-quote{font-size:16px!important;line-height:1.85;font-weight:500}
+ .review-list-block .testi-head{padding:15px 20px 12px}
+ .review-list-block .testi-photo{margin:0 20px 16px}
+ .review-list-block .testi-quote{padding:0 20px}
+ .review-list-block .testi-tags,.review-list-block .testi-source{padding-left:20px;padding-right:20px}
+ .review-list-block .review-naver-link{margin:16px 20px 22px}
+}
+@media(min-width:1100px){
+ .review-list-block .testimonial-list{gap:28px}
+ .review-list-block .testi-photo{height:265px}
+}
+.review-list-block .testi-quote.is-collapsed{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;line-clamp:4;overflow:hidden}
+.review-list-block .review-expand{align-self:flex-start;margin:10px 22px 0;padding:6px 0;border:0;border-bottom:1px solid #a58a62;background:transparent;color:#70572e;font-family:'Gothic A1',sans-serif;font-size:14px;font-weight:700;cursor:pointer}
+.review-list-block .review-expand:focus-visible{outline:2px solid #212a16;outline-offset:4px}
+.review-list-block .testi-meta{font-size:13px!important;font-weight:600;color:#625a50}
+.review-list-block .testi-program{font-size:12px!important;font-weight:700}
+.review-list-block .testi-tags span{font-size:12px!important;font-weight:600;color:#625846}
+.review-list-block .testi-source-label{font-size:12px!important;font-weight:600;color:#6b6459}
+.review-list-block .review-naver-header small{font-size:12px;font-weight:500}
+.review-list-block .review-naver-link{font-size:14px;font-weight:700}
+@media(max-width:760px){
+ .review-list-block .testimonial-list{grid-template-columns:minmax(0,1fr)}
+ .review-list-block .testi-quote{font-size:15px!important;line-height:1.85;font-weight:500}
+ .review-list-block .review-expand{margin-left:18px;margin-right:18px}
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+ document.querySelectorAll('.review-list-block .testi-quote').forEach(function(p,i){
+  p.classList.add('is-collapsed');
+  p.id='review-text-'+i;
+  var btn=document.createElement('button');
+  btn.type='button';btn.className='review-expand';btn.textContent='리뷰 전체 보기 +';
+  btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-controls',p.id);
+  p.insertAdjacentElement('afterend',btn);
+  btn.addEventListener('click',function(){
+   var open=p.classList.toggle('is-collapsed')===false;
+   btn.setAttribute('aria-expanded',String(open));
+   btn.textContent=open?'리뷰 접기 −':'리뷰 전체 보기 +';
+  });
+ });
+});
+</script>
 </head>
 <body>
 <header>
