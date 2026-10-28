@@ -475,3 +475,8 @@
 @media(max-width:650px){
   .elly-booking[data-elly-booking="general"] select[name="preferred_time"]{font-size:13px!important;font-weight:500!important}
 }
+
+/* ELLY consistent corner language: softly rounded booking controls. */
+.elly-booking .eb-choice span{border-radius:12px!important}
+.elly-booking input[type=date],.elly-booking input[type=text],.elly-booking input[type=tel],.elly-booking input[type=number],.elly-booking select,.elly-booking textarea{border-radius:10px!important}
+.elly-booking .eb-submit{border-radius:12px!important}
