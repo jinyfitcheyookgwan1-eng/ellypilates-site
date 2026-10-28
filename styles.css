@@ -5421,3 +5421,16 @@ header nav.links a{font-family:'Nanum Myeongjo','Noto Serif KR',serif!important;
  .elly-first-visit .elly-first-visit-note{font-size:14px;line-height:1.8}
  .elly-first-visit .elly-first-visit-actions a{font-size:16px;min-height:50px}
 }
+
+/* Homepage phone CTAs: equal columns with dedicated arrow space. */
+@media(max-width:640px){
+ body.elly-home-page .home-hero .hero-banner-actions{width:100%;min-width:0}
+ body.elly-home-page .home-hero .hero-banner-actions .cta-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ body.elly-home-page .home-hero .hero-banner-actions .btn{width:100%;min-width:0;min-height:46px;padding:12px 30px 12px 10px;font-size:clamp(12px,3.35vw,14px);letter-spacing:-.035em;justify-content:center}
+ body.elly-home-page .home-hero .hero-banner-actions .hero-cta-arrow{right:11px;width:15px;height:15px}
+ body.elly-home-page .home-hero-content .eyebrow{max-width:100%;overflow-wrap:anywhere}
+}
+@media(max-width:360px){
+ body.elly-home-page .home-hero .hero-banner-actions .cta-row{grid-template-columns:minmax(0,1fr)}
+ body.elly-home-page .home-hero .hero-banner-actions .btn{font-size:14px}
+}
