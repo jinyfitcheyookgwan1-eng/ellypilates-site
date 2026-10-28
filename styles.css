@@ -5318,5 +5318,5 @@ body.elly-home-page main .home-momfit-lead{
 }
 /* The MOM&FIT program descriptor is a supporting label, not a section headline. */
 body.elly-home-page main .home-momfit-type{
-  font-family:inherit;
+  font-family:'Noto Sans KR',sans-serif;
 }
