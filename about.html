@@ -172,6 +172,21 @@ body.elly-about-page .trust-layout{display:flex;flex-direction:column;align-item
 body.elly-about-page .trust-badges{width:100%;max-width:800px}
 body.elly-about-page .trust-badges-caption{margin:0;text-align:center}
 </style>
+
+<style id="about-mobile-trust-media-alignment">
+@media(max-width:700px){
+ body.elly-about-page .trust-main{width:100%;max-width:660px;text-align:center;margin-inline:auto}
+ body.elly-about-page .trust-main .trust-lead{font-size:clamp(24px,6.3vw,28px);line-height:1.55;letter-spacing:-.055em;margin:0 auto 24px;max-width:none;text-wrap:balance}
+ body.elly-about-page .trust-main p:not(.trust-lead){font-size:15px!important;line-height:1.85;margin:0 auto;max-width:36ch;text-align:center;word-break:keep-all;overflow-wrap:break-word;text-wrap:pretty}
+ body.elly-about-page .trust-main .trust-highlight{font-size:1em}
+ body.elly-about-page .trust-main .trust-safety-desc{margin-top:24px!important}
+ body.elly-about-page .video-section .section-head{width:100%;max-width:none;align-items:center;text-align:center;margin-inline:auto}
+ body.elly-about-page .video-section .section-head .eyebrow{align-self:center;margin-inline:auto}
+ body.elly-about-page .video-section .section-head h2{width:100%;text-align:center;text-wrap:balance}
+ body.elly-about-page .video-section .section-head .media-intro-desc{font-size:14px;line-height:1.8;white-space:normal;max-width:34ch;margin-inline:auto;text-align:center;word-break:keep-all}
+}
+</style>
+
 </head>
 <body class="elly-about-page">
 <header>
@@ -382,9 +397,10 @@ body.elly-about-page .trust-badges-caption{margin:0;text-align:center}
       </div>
       <a class="trust-badges-caption" href="https://blog.naver.com/duswl6880/224163188033" target="_blank" rel="noopener">핏페이 보증보험 서비스 자세히 보기 <span aria-hidden="true">↗</span></a>
 
-        <p class="trust-lead">운동을 시작하는 순간부터<br>결제까지 안심할 수 있도록.</p>
-        <p>엘리필라테스는 회원님의 안전한 이용을 위해<br><span class="trust-highlight">서울보증보험 가입으로 선결제 금액에 대한 지급보증보험</span>에 가입되어 있습니다.</p>
-        <p class="trust-safety-desc">수업의 전문성뿐만 아니라 회원님이 안심하고<br>오래 함께할 수 있는 운영 환경까지 생각합니다.</p>
+      <div class="trust-main">
+        <p class="trust-lead"><span>운동을 시작하는 순간부터</span><br><span>결제까지 안심할 수 있도록.</span></p>
+        <p class="trust-insurance-desc">엘리필라테스는 회원님의 안전한 이용을 위해<br><span class="trust-highlight">서울보증보험 가입으로 선결제 금액에 대한 지급보증보험</span>에 가입되어 있습니다.</p>
+        <p class="trust-safety-desc">수업의 전문성뿐만 아니라<br>회원님이 안심하고 오래 함께할 수 있는<br>운영 환경까지 생각합니다.</p>
       </div>
     </div>
   </section>
