@@ -540,3 +540,7 @@
 #momfit-experience-booking .eb-form input::placeholder,
 #momfit-experience-booking .eb-form textarea::placeholder{font-size:16px;font-weight:500;color:#514535;opacity:1}
 #momfit-experience-booking .eb-form .eb-choice small{font-size:12px!important;font-weight:400!important}
+
+/* Keep the empty native date text behind the visible date prompt. */
+#momfit-experience-booking .eb-form .eb-date-wrap:not(.eb-date-filled) input[type=date]{-webkit-text-fill-color:transparent!important}
+#momfit-experience-booking .eb-form .eb-date-wrap.eb-date-filled input[type=date]{-webkit-text-fill-color:#514535!important}
