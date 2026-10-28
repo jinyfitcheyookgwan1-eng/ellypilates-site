@@ -5405,3 +5405,19 @@ body.elly-programs-page main h3:not(.faq-question):not(.accordion-title){
  .elly-home-essentials a span{font-size:16px}
 }
 @media(prefers-reduced-motion:reduce){.elly-home-essentials a{transition:none}}
+
+/* Desktop header typography and homepage readability. */
+header nav.links a{font-family:'Nanum Myeongjo','Noto Serif KR',serif!important;font-weight:700!important;letter-spacing:-.035em}
+.elly-first-visit .elly-first-visit-actions{justify-content:center;align-items:center}
+.elly-first-visit .elly-first-visit-note{text-align:center}
+@media(min-width:901px){
+ .home-hero .home-hero-content p.lead{font-size:20px!important;line-height:1.85!important}
+ .home-hero .home-hero-content p.lead .lead-tag{font-size:23px!important;line-height:1.6}
+ .elly-studio-info .elly-info-table dt{font-size:17px;line-height:1.8;font-weight:700}
+ .elly-studio-info .elly-info-table dd{font-size:17px;line-height:1.8}
+ .elly-studio-info .elly-info-table dd .elly-info-link{font-size:16px}
+ .elly-first-visit .elly-first-visit-steps strong{font-size:19px;line-height:1.6}
+ .elly-first-visit .elly-first-visit-steps p{font-size:16px;line-height:1.85}
+ .elly-first-visit .elly-first-visit-note{font-size:14px;line-height:1.8}
+ .elly-first-visit .elly-first-visit-actions a{font-size:16px;min-height:50px}
+}
