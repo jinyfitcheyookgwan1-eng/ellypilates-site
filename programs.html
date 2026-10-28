@@ -169,6 +169,37 @@ main > section.elly-band-beige { background:#F4EEE0!important; }
  #why-three-to-one .group-choice-close span{display:block;word-break:keep-all}
 }
 </style>
+
+<style id="program-mobile-editorial-alignment">
+/* Requested mobile editorial alignment; individual cards retain their layout. */
+#why-three-to-one .group-choice-close{
+ font-family:'Nanum Myeongjo','Noto Serif KR',serif!important;font-weight:700!important;
+}
+@media(max-width:700px){
+ body.elly-programs-page .section-head .lt-intro-desc{
+  font-size:clamp(16px,4.2vw,18px)!important;line-height:1.8;word-break:keep-all;white-space:normal;
+ }
+ #why-three-to-one,#program,#trial-lesson .trial-intro,#trial-lesson .trial-why{text-align:center}
+ #why-three-to-one .eyebrow,#program .eyebrow,
+ #trial-lesson .trial-intro .eyebrow,#trial-lesson .trial-why .eyebrow{align-self:center;max-width:100%;font-size:11px;letter-spacing:.12em}
+ #why-three-to-one h2,#program h1,
+ #trial-lesson .trial-intro h2,#trial-lesson .trial-why h3{
+  margin-inline:auto;max-width:22ch;line-height:1.5;letter-spacing:-.055em;text-wrap:balance;
+ }
+ #why-three-to-one p,#program .programs-hero-desc,
+ #trial-lesson .trial-intro p,#trial-lesson .trial-why p{
+  max-width:36ch;margin-inline:auto;word-break:keep-all;overflow-wrap:break-word;text-wrap:pretty;
+ }
+ #why-three-to-one .group-choice-lead{max-width:27ch;margin-top:24px;margin-bottom:24px}
+ #why-three-to-one .group-choice-close{max-width:none;margin-top:26px;padding-top:22px;font-size:clamp(21px,5.4vw,25px);line-height:1.65}
+ #program .programs-hero-desc{font-size:15px;line-height:1.85;margin-top:20px}
+ #program .programs-hero-desc br,#trial-lesson .trial-br{display:none}
+ #trial-lesson .trial-intro .trial-sub,#trial-lesson .trial-why .trial-sub{font-size:15px;line-height:1.85}
+ #trial-lesson .trial-key{font-size:clamp(18px,4.8vw,21px);line-height:1.8;max-width:29ch;margin-block:24px}
+ #trial-lesson .trial-why{margin-top:30px;padding-top:30px}
+}
+</style>
+
 </head>
 <body class="elly-programs-page">
 <header>
