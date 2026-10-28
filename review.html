@@ -213,6 +213,7 @@
 <script>
 document.addEventListener('DOMContentLoaded',function(){
  document.querySelectorAll('.review-list-block .testi-quote').forEach(function(p,i){
+  if(window.matchMedia('(min-width: 761px)').matches){return;}
   p.classList.add('is-collapsed');
   p.id='review-text-'+i;
   var btn=document.createElement('button');
@@ -233,7 +234,7 @@ document.addEventListener('DOMContentLoaded',function(){
   .review-hero {text-align:center!important;}
   .review-hero > p {max-width:360px!important;margin:20px auto 0!important;text-align:center!important;font-size:15px!important;font-weight:500!important;line-height:1.65!important;letter-spacing:-0.035em!important;word-break:keep-all!important;overflow-wrap:normal!important;}
 }
-</style><style>.review-mobile-break{display:none}@media(max-width:600px){.review-mobile-break{display:inline}}</style></head>
+</style><style>.review-mobile-break{display:none}@media(max-width:600px){.review-mobile-break{display:inline}}</style><style>@media(min-width:761px){.review-list-block .review-expand{display:none!important}.review-list-block .testi-quote.is-collapsed{display:block!important;overflow:visible!important;-webkit-line-clamp:unset!important;line-clamp:unset!important}}</style></head>
 <body>
 <header>
   <div class="wrap nav-row">
