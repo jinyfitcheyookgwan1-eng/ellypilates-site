@@ -5283,3 +5283,10 @@ main :is(a,button):focus-visible,nav a:focus-visible{outline:2px solid #7A5D2A;o
  .elly-proof .elly-proof-card{border-radius:14px!important}
  .elly-first-visit .elly-first-visit-panel{border-radius:18px!important}
 }
+
+/* Homepage SITE MAP: compact mobile scrolling while retaining readable touch targets. */
+@media (max-width:640px){
+  .quick-links .quick-row{padding-top:13px;padding-bottom:13px;gap:12px}
+  .quick-links .qr-body{gap:3px}
+  .quick-links .qr-desc{line-height:1.45}
+}
