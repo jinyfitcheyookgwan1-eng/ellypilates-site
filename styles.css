@@ -5306,3 +5306,17 @@ main :is(a,button):focus-visible,nav a:focus-visible{outline:2px solid #7A5D2A;o
 
 /* Homepage MOM&FIT editorial statement: brand gold. */
 .home-momfit-text .home-momfit-lead{color:#94743C!important}
+
+/* Homepage editorial typography: consistent Myeongjo for section headlines only. */
+body.elly-home-page main h1,
+body.elly-home-page main h2,
+body.elly-home-page main .lv-title,
+body.elly-home-page main .home-momfit-lead{
+  font-family:'Nanum Myeongjo','Noto Serif KR',serif!important;
+  font-weight:700!important;
+  word-break:keep-all;
+}
+/* The MOM&FIT program descriptor is a supporting label, not a section headline. */
+body.elly-home-page main .home-momfit-type{
+  font-family:inherit;
+}
