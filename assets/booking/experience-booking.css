@@ -473,7 +473,7 @@
 
 /* Match booking preferred-time prompt typography to preferred-date prompt on mobile. */
 @media(max-width:650px){
-  .elly-booking[data-elly-booking="general"] select[name="preferred_time"]{font-size:13px!important;font-weight:500!important}
+  .elly-booking[data-elly-booking="general"] select[name="preferred_time"]{font-size:16px!important;font-weight:500!important}
 }
 
 /* ELLY consistent corner language: softly rounded booking controls. */
@@ -544,3 +544,18 @@
 /* Keep the empty native date text behind the visible date prompt. */
 #momfit-experience-booking .eb-form .eb-date-wrap:not(.eb-date-filled) input[type=date]{-webkit-text-fill-color:transparent!important}
 #momfit-experience-booking .eb-form .eb-date-wrap.eb-date-filled input[type=date]{-webkit-text-fill-color:#514535!important}
+
+/* General form: one mobile type scale for native fields and date prompt. */
+@media(max-width:650px){
+ #experience-booking .eb-form input[type=text],
+ #experience-booking .eb-form input[type=tel],
+ #experience-booking .eb-form input[type=date],
+ #experience-booking .eb-form select,
+ #experience-booking .eb-form textarea,
+ #experience-booking .eb-form .eb-date-placeholder{
+  font-family:'Gothic A1','Noto Sans KR',Arial,sans-serif!important;
+  font-size:16px!important;font-weight:500!important;letter-spacing:-.025em
+ }
+ #experience-booking .eb-form input::placeholder,
+ #experience-booking .eb-form textarea::placeholder{font-size:16px;font-weight:500}
+}
