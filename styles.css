@@ -5245,3 +5245,6 @@ main :is(a,button):focus-visible,nav a:focus-visible{outline:2px solid #7A5D2A;o
 .elly-home-faq-list details p{font-size:14px;line-height:1.85;color:#655b51;margin:0 0 20px 6px;word-break:keep-all}
 .elly-home-faq-more{display:flex;align-items:center;justify-content:center;gap:9px;width:fit-content;margin:25px auto 0;border-bottom:1px solid #315c46;padding:6px 2px;color:#204a3a;font-size:14px;font-weight:750;text-decoration:none}
 @media(max-width:700px){.elly-first-visit,.elly-home-faq{padding-block:48px}.elly-first-visit-panel{padding:27px 21px;border-radius:18px}.elly-first-visit-steps{grid-template-columns:1fr;gap:22px}.elly-first-visit-steps strong{font-size:16px}.elly-first-visit-steps p{font-size:13.5px}.elly-first-visit-num{width:39px;height:39px}.elly-first-visit-actions{flex-direction:column}.elly-first-visit-actions a{width:100%}.elly-home-faq-list summary{font-size:14.5px}.elly-home-faq-list details p{font-size:13.5px}}
+
+/* First visit editorial heading — consistent with ELLY homepage titles. */
+.elly-first-visit .elly-first-visit-panel > h3{font-family:'Nanum Myeongjo','Noto Serif KR',serif!important;font-weight:700!important;letter-spacing:-.055em;line-height:1.45;word-break:keep-all}
