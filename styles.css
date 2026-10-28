@@ -5451,3 +5451,6 @@ header nav.links a{font-family:'Nanum Myeongjo','Noto Serif KR',serif!important;
  header .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3){width:27px;transform:translateY(-8px) rotate(-45deg)}
  header .nav-toggle:focus-visible{outline:2px solid #A7834D;outline-offset:3px}
 }
+
+/* ABOUT · trust guarantee: emphasize final two lines on all screens */
+.goal-intro p.trust-intro-desc .trust-desc-emphasis{color:var(--accent-gold);font-size:1.13em;font-weight:700;line-height:1.75;}
