@@ -5386,3 +5386,10 @@ body.elly-programs-page main h3:not(.faq-question):not(.accordion-title){
 .elly-home-essentials a:hover{text-decoration:underline;text-underline-offset:5px}
 .elly-home-essentials a:focus-visible{outline:2px solid #212A16;outline-offset:3px;border-radius:4px}
 @media(max-width:700px){.elly-home-essentials{gap:4px;padding-block:14px 20px}.elly-home-essentials a{flex:1 1 0;white-space:nowrap;padding-inline:4px}}
+
+/* Four balanced lines for the homepage instructor statement on mobile. */
+@media(max-width:650px){
+ .home-education-emphasis .education-line{display:block;white-space:nowrap}
+ .home-education-emphasis .education-desktop-break{display:none}
+ .home-education-emphasis{font-size:clamp(11px,3.4vw,16px);line-height:1.85}
+}
