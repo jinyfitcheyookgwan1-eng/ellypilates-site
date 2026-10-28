@@ -5248,3 +5248,17 @@ main :is(a,button):focus-visible,nav a:focus-visible{outline:2px solid #7A5D2A;o
 
 /* First visit editorial heading — consistent with ELLY homepage titles. */
 .elly-first-visit .elly-first-visit-panel > h3{font-family:'Nanum Myeongjo','Noto Serif KR',serif!important;font-weight:700!important;letter-spacing:-.055em;line-height:1.45;word-break:keep-all}
+
+/* Naver review refinement: preserve authentic source recognition, reduce visual weight. */
+.elly-home-reviews .elly-review-card{border-color:#e8e5df!important;border-radius:16px!important;box-shadow:0 6px 20px -18px rgba(36,44,35,.28)!important}
+.elly-home-reviews .elly-naver-review-head{padding:10px 16px!important;gap:10px!important;background:#03c75a}
+.elly-home-reviews .elly-naver-mark{width:27px!important;height:27px!important;font-size:20px!important;border-radius:5px!important}
+.elly-home-reviews .elly-naver-source{gap:1px!important}
+.elly-home-reviews .elly-naver-source strong{font-size:12.5px!important;line-height:1.4}
+.elly-home-reviews .elly-naver-source small{font-size:10.5px!important;line-height:1.4}
+.elly-home-reviews .elly-naver-review-content{padding:19px 20px 19px!important}
+.elly-home-reviews .elly-naver-review-content .elly-review-category{margin-bottom:9px!important}
+.elly-home-reviews .elly-naver-review-content h3{margin-top:0!important;margin-bottom:13px!important;font-size:18px!important;line-height:1.45!important}
+.elly-home-reviews .elly-naver-review-content blockquote{margin-top:0!important;margin-bottom:17px!important;font-size:14px!important;line-height:1.78!important}
+.elly-home-reviews .elly-naver-original{font-size:12px!important}
+@media(max-width:650px){.elly-home-reviews .elly-naver-review-head{padding:10px 14px!important}.elly-home-reviews .elly-naver-review-content{padding:18px 17px 19px!important}.elly-home-reviews .elly-naver-review-content h3{font-size:17px!important;margin-bottom:12px!important}.elly-home-reviews .elly-naver-review-content blockquote{font-size:13.5px!important;line-height:1.75!important;margin-bottom:17px!important}}
