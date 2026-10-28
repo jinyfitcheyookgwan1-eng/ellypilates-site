@@ -434,5 +434,28 @@
  lb.addEventListener('touchstart',e=>{if(e.touches.length===1)startX=e.touches[0].clientX;},{passive:true});
  lb.addEventListener('touchend',e=>{if(startX===null||!lb.classList.contains('open'))return;const dx=e.changedTouches[0].clientX-startX;startX=null;if(Math.abs(dx)>55){const btn=lb.querySelector(dx<0?'[data-lb-next]':'[data-lb-prev]');if(btn)btn.click();}},{passive:true});
 })();
+</script><script id="visit-independent-lightbox">
+/* Self-contained visit gallery, independent of shared scripts. */
+(function(){
+function init(){
+ const overlay=document.getElementById('lightbox');
+ const images=Array.from(document.querySelectorAll('.visit-photos .gallery-item, .visit-map-card .gallery-item'));
+ if(!overlay||!images.length)return;
+ const photo=overlay.querySelector('#lightboxImg'),counter=overlay.querySelector('#lightboxCount');
+ const data=images.map(b=>({src:b.querySelector('img')?.getAttribute('src'),alt:b.querySelector('img')?.alt||''}));
+ let current=0,oldOverflow='',lastFocus=null,startX=null;
+ function show(n){current=(n+data.length)%data.length;photo.src=data[current].src;photo.alt=data[current].alt;counter.textContent=(current+1)+' / '+data.length;}
+ function open(n){lastFocus=document.activeElement;oldOverflow=document.body.style.overflow;show(n);overlay.classList.add('open');overlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';overlay.querySelector('.lb-close')?.focus();}
+ function close(){overlay.classList.remove('open');overlay.setAttribute('aria-hidden','true');document.body.style.overflow=oldOverflow;lastFocus?.focus?.();}
+ // Capture phase prevents another gallery handler from opening or closing the overlay twice.
+ images.forEach((b,i)=>b.addEventListener('click',e=>{e.preventDefault();e.stopImmediatePropagation();open(i);},true));
+ overlay.querySelectorAll('[data-lb-close]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();e.stopImmediatePropagation();close();},true));
+ [['[data-lb-prev]',-1],['[data-lb-next]',1]].forEach(([sel,dir])=>overlay.querySelector(sel)?.addEventListener('click',e=>{e.preventDefault();e.stopImmediatePropagation();show(current+dir);},true));
+ document.addEventListener('keydown',e=>{if(!overlay.classList.contains('open'))return;if(e.key==='Escape'){e.preventDefault();e.stopImmediatePropagation();close();}else if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();e.stopImmediatePropagation();show(current+(e.key==='ArrowRight'?1:-1));}},true);
+ overlay.addEventListener('touchstart',e=>{if(e.touches.length===1)startX=e.touches[0].clientX;},{passive:true});
+ overlay.addEventListener('touchend',e=>{if(startX===null)return;const dx=e.changedTouches[0].clientX-startX;startX=null;if(Math.abs(dx)>55)show(current+(dx<0?1:-1));},{passive:true});
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
 </script></body>
 </html>
