@@ -274,6 +274,17 @@ main > section.momfit-band-beige{background:#F4EEE0!important}
 .momfit-member-reviews .momfit-review-emphasis{color:#96723e;font-weight:750;line-height:1.55;word-break:keep-all}
 .momfit-member-reviews .section-head>p:not(.momfit-review-emphasis){font-size:15.5px;line-height:1.8;color:#3f3b34}
 }
+</style><style id="momfit-review-gold-override">
+/* Explicit high-specificity override against earlier review heading rules */
+html body section.momfit-member-reviews .section-head p.momfit-review-emphasis{
+ color:#96723e !important;
+ -webkit-text-fill-color:#96723e !important;
+}
+@media(min-width:900px){
+ html body section.momfit-member-reviews .section-head p.momfit-review-emphasis{
+  white-space:nowrap;font-size:clamp(20px,2vw,25px);line-height:1.5;
+ }
+}
 </style></head>
 <body>
 <header>
