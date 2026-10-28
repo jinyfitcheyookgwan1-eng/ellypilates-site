@@ -5218,3 +5218,30 @@ main :is(a,button):focus-visible,nav a:focus-visible{outline:2px solid #7A5D2A;o
 .elly-home-reviews .elly-naver-original{align-self:flex-start;color:#247a4c;font-size:12px;font-weight:700;text-decoration:none;border-bottom:1px solid #90bba2;padding-bottom:3px}
 .elly-home-reviews .elly-naver-original:hover,.elly-home-reviews .elly-naver-original:focus-visible{color:#075c30;border-color:currentColor}
 @media(max-width:650px){.elly-home-reviews .elly-naver-review-head{padding:12px 15px}.elly-home-reviews .elly-naver-review-content{padding:19px 18px 18px}}
+
+/* First-visit guidance and homepage FAQ — ELLY editorial system. */
+.elly-first-visit,.elly-home-faq{padding-block:62px;background:#f7f2e8;color:#302a25}
+.elly-first-visit .elly-add-head,.elly-home-faq .elly-add-head{text-align:center;margin-bottom:28px}
+.elly-first-visit .elly-add-head h2,.elly-home-faq .elly-add-head h2{font-family:'Nanum Myeongjo','Noto Serif KR',serif!important;font-weight:700;letter-spacing:-.055em;line-height:1.43}
+.elly-first-visit-panel{max-width:1060px;margin:auto;background:#204a3a;border-radius:23px;padding:36px 42px;color:#fff}
+.elly-first-visit-panel h3{font-size:clamp(22px,2.7vw,30px);font-weight:750;letter-spacing:-.04em;margin:0 0 24px}
+.elly-first-visit-steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:25px 28px;margin:0;padding:0;list-style:none}
+.elly-first-visit-steps li{display:flex;gap:14px;align-items:flex-start;min-width:0}
+.elly-first-visit-num{display:grid;place-items:center;width:43px;height:43px;flex:none;border-radius:50%;background:#f7f2e8;color:#204a3a;font-size:15px;font-weight:800}
+.elly-first-visit-steps strong{font-size:17px;font-weight:750;line-height:1.5}
+.elly-first-visit-steps p{font-size:14px;line-height:1.75;color:#e2e8e2;margin:6px 0 0;word-break:keep-all}
+.elly-first-visit-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.elly-first-visit-actions a{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:47px;padding:11px 18px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:750}
+.elly-first-visit-primary{background:#f7f2e8;color:#204a3a!important}
+.elly-first-visit-secondary{border:1px solid #bacac1;color:#fff!important}
+.elly-first-visit-note{font-size:12px;color:#d9e3dd;line-height:1.6;margin:17px 0 0}
+.elly-home-faq{background:#fffefb}
+.elly-home-faq-list{max-width:980px;margin:0 auto;border-top:1px solid #dfd5c7}
+.elly-home-faq-list details{border-bottom:1px solid #dfd5c7;padding:0 5px}
+.elly-home-faq-list summary{position:relative;cursor:pointer;padding:19px 32px 19px 6px;list-style:none;font-size:16px;font-weight:700;line-height:1.6;word-break:keep-all}
+.elly-home-faq-list summary::-webkit-details-marker{display:none}
+.elly-home-faq-list summary:after{content:'+';position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:23px;font-weight:400;color:#8c7658}
+.elly-home-faq-list details[open] summary:after{content:'−'}
+.elly-home-faq-list details p{font-size:14px;line-height:1.85;color:#655b51;margin:0 0 20px 6px;word-break:keep-all}
+.elly-home-faq-more{display:flex;align-items:center;justify-content:center;gap:9px;width:fit-content;margin:25px auto 0;border-bottom:1px solid #315c46;padding:6px 2px;color:#204a3a;font-size:14px;font-weight:750;text-decoration:none}
+@media(max-width:700px){.elly-first-visit,.elly-home-faq{padding-block:48px}.elly-first-visit-panel{padding:27px 21px;border-radius:18px}.elly-first-visit-steps{grid-template-columns:1fr;gap:22px}.elly-first-visit-steps strong{font-size:16px}.elly-first-visit-steps p{font-size:13.5px}.elly-first-visit-num{width:39px;height:39px}.elly-first-visit-actions{flex-direction:column}.elly-first-visit-actions a{width:100%}.elly-home-faq-list summary{font-size:14.5px}.elly-home-faq-list details p{font-size:13.5px}}
