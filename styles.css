@@ -5290,3 +5290,14 @@ main :is(a,button):focus-visible,nav a:focus-visible{outline:2px solid #7A5D2A;o
   .quick-links .qr-body{gap:3px}
   .quick-links .qr-desc{line-height:1.45}
 }
+
+/* Homepage photo CTA buttons: match ELLY deep green brand system. */
+.lesson-visual .lv-btn{
+  background:#212A16!important;
+  border-color:rgba(247,242,232,.72)!important;
+  color:#F7F2E8!important;
+}
+.lesson-visual:hover .lv-btn,.lesson-visual:focus-visible .lv-btn{
+  background:#30402A!important;
+  border-color:#F7F2E8!important;
+}
