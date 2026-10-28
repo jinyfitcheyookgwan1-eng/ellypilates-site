@@ -154,6 +154,16 @@
 .review-naver-link{margin:16px 18px 22px}
 }
 </style>
+<style>
+/* Reset the legacy testimonial grid so the source header stays above the photo. */
+.review-list-block .testi-main{display:flex!important;flex-direction:column;gap:0;align-items:stretch}
+.review-list-block .testi-main> *{grid-area:auto;order:0;min-width:0}
+.review-list-block .testi-main>.review-naver-header{order:-1}
+.review-hero{padding-bottom:28px!important}
+.review-list-block{padding-top:0!important}
+.review-list-block .testimonial-list{margin-top:0}
+.review-list-block .review-naver-header{border-radius:0}
+</style>
 </head>
 <body>
 <header>
@@ -210,9 +220,6 @@
   </section>
 
   <section class="block wrap review-list-block" style="padding-top:18px;">
-      <h2>엘리를 경험한 회원님들의 이야기</h2>
-      <p class="review-real-desc">네이버 플레이스에 남겨주신 실제 회원님들의 리뷰를 소개합니다.</p>
-    </div>
     <div class="testimonial-list">
       <article class="testimonial-item">
         <div class="testi-main"><div class="review-naver-header"><span class="review-naver-mark" aria-hidden="true">N</span><div><strong>네이버 방문자 리뷰</strong><small>돼지은이 · 네이버 플레이스</small></div></div>
