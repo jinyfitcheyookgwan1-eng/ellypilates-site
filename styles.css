@@ -5371,3 +5371,7 @@ body.elly-programs-page main h3:not(.faq-question):not(.accordion-title){
  .elly-first-visit .elly-first-visit-actions a{box-sizing:border-box;min-height:44px;padding:9px 14px}
  .elly-first-visit .elly-first-visit-note{margin-top:12px}
 }
+
+/* Directional arrows at the right edge of the two homepage hero buttons. */
+.home-hero .hero-banner-actions .btn{position:relative;padding-left:34px;padding-right:42px}
+.home-hero .hero-banner-actions .hero-cta-arrow{position:absolute;right:15px;top:50%;transform:translateY(-50%);width:16px;height:16px;flex:none;pointer-events:none}
