@@ -229,6 +229,24 @@ body.elly-about-page .trust-badges-caption{margin:0;text-align:center}
  body.elly-about-page .why-list .why-row .why-desc .why-highlight{font-weight:700}
 }
 </style>
+
+<style id="why-mobile-editorial-finish">
+@media(max-width:700px){
+ body.elly-about-page .why-list .why-row{
+  grid-template-columns:26px minmax(0,1fr);
+  grid-template-areas:"number title" ". description";
+  column-gap:10px;row-gap:7px;padding:14px 0;
+ }
+ body.elly-about-page .why-list .why-row .why-num{font-size:15px;line-height:1.5}
+ body.elly-about-page .why-list .why-row .why-title{font-size:21px;line-height:1.45;letter-spacing:-.045em}
+ body.elly-about-page .why-list .why-row .why-desc{
+  font-size:16px!important;font-weight:500;line-height:1.75;letter-spacing:-.035em;
+  text-align:left;word-break:keep-all;overflow-wrap:break-word;min-width:0;
+ }
+ body.elly-about-page .why-list .why-row .why-highlight{font-weight:700}
+}
+</style>
+
 </head>
 <body class="elly-about-page">
 <header>
@@ -346,17 +364,17 @@ body.elly-about-page .trust-badges-caption{margin:0;text-align:center}
       </div>
       <div class="why-row">
         <span class="why-num">03</span>
-        <h3 class="why-title">ELLY MOM &amp; FIT</h3>
+        <h3 class="why-title">엘리맘앤핏</h3>
         <p class="why-desc"><strong class="why-highlight">삼송맘들이 선택한</strong><br>산전&middot;산후 임산부 운동 전문 프로그램</p>
       </div>
       <div class="why-row">
         <span class="why-num">04</span>
-        <h3 class="why-title">PRIVATE SPACE</h3>
-        <p class="why-desc why-desc--space"><strong class="why-highlight">삼송역에서 가장 가까운 프라이빗 필라테스 공간</strong><br>자연광과 창릉천 통창 뷰가 함께하는 편안한 웰니스 공간</p>
+        <h3 class="why-title">프라이빗 공간</h3>
+        <p class="why-desc why-desc--space">삼송역에서 가장 가까운<br><strong class="why-highlight">프라이빗 필라테스 공간</strong><br>자연광과 창릉천 통창 뷰가 함께하는 편안한 웰니스 공간</p>
       </div>
       <div class="why-row">
         <span class="why-num">05</span>
-        <h3 class="why-title">WELLNESS COMMUNITY</h3>
+        <h3 class="why-title">웰니스 커뮤니티</h3>
         <p class="why-desc">회원들과 함께 만들어가는<br><strong class="why-highlight">건강한 웰니스 커뮤니티</strong></p>
       </div>
     </div>
