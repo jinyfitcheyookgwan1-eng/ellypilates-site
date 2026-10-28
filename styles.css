@@ -5204,3 +5204,17 @@ main :is(a,button):focus-visible,nav a:focus-visible{outline:2px solid #7A5D2A;o
   line-height:1.43;
   word-break:keep-all;
 }
+
+/* Real Naver Place review cards: recognizable source, restrained ELLY editorial finish. */
+.elly-home-reviews .elly-review-card{padding:0!important;overflow:hidden;border:1px solid #e7e2d9;border-radius:18px;background:#fff;display:flex;flex-direction:column;box-shadow:0 8px 26px -22px rgba(30,55,40,.2)}
+.elly-home-reviews .elly-naver-review-head{display:flex;align-items:center;gap:10px;padding:13px 17px;background:#03c75a;color:#fff}
+.elly-home-reviews .elly-naver-mark{width:29px;height:29px;flex:none;display:grid;place-items:center;font:900 22px/1 Arial,sans-serif;color:#03c75a;background:#fff;border-radius:6px;letter-spacing:-.09em}
+.elly-home-reviews .elly-naver-source{display:flex;flex:1;min-width:0;flex-direction:column;gap:2px}
+.elly-home-reviews .elly-naver-source strong{font-size:13px;font-weight:750;letter-spacing:-.02em}
+.elly-home-reviews .elly-naver-source small{font-size:11px;opacity:.95;overflow-wrap:anywhere}
+.elly-home-reviews .elly-naver-review-label{font-size:10px;font-weight:650;white-space:nowrap;border:1px solid rgba(255,255,255,.7);padding:4px 6px;border-radius:4px}
+.elly-home-reviews .elly-naver-review-content{display:flex;flex:1;flex-direction:column;padding:22px 21px 19px}
+.elly-home-reviews .elly-naver-review-content blockquote{flex:1;margin-bottom:18px}
+.elly-home-reviews .elly-naver-original{align-self:flex-start;color:#247a4c;font-size:12px;font-weight:700;text-decoration:none;border-bottom:1px solid #90bba2;padding-bottom:3px}
+.elly-home-reviews .elly-naver-original:hover,.elly-home-reviews .elly-naver-original:focus-visible{color:#075c30;border-color:currentColor}
+@media(max-width:650px){.elly-home-reviews .elly-naver-review-head{padding:12px 15px}.elly-home-reviews .elly-naver-review-content{padding:19px 18px 18px}}
