@@ -470,3 +470,8 @@
   .elly-booking select[name="preferred_time"] option{font-size:16px!important;}
 }
 
+
+/* Match booking preferred-time prompt typography to preferred-date prompt on mobile. */
+@media(max-width:650px){
+  .elly-booking[data-elly-booking="general"] select[name="preferred_time"]{font-size:13px!important;font-weight:500!important}
+}
