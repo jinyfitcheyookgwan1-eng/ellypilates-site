@@ -5262,3 +5262,9 @@ main :is(a,button):focus-visible,nav a:focus-visible{outline:2px solid #7A5D2A;o
 .elly-home-reviews .elly-naver-review-content blockquote{margin-top:0!important;margin-bottom:17px!important;font-size:14px!important;line-height:1.78!important}
 .elly-home-reviews .elly-naver-original{font-size:12px!important}
 @media(max-width:650px){.elly-home-reviews .elly-naver-review-head{padding:10px 14px!important}.elly-home-reviews .elly-naver-review-content{padding:18px 17px 19px!important}.elly-home-reviews .elly-naver-review-content h3{font-size:17px!important;margin-bottom:12px!important}.elly-home-reviews .elly-naver-review-content blockquote{font-size:13.5px!important;line-height:1.75!important;margin-bottom:17px!important}}
+
+/* Homepage brand green alignment: match primary hero reservation CTA. */
+.elly-proof .elly-proof-card{background:#212A16!important;border-color:rgba(255,245,230,.18)!important}
+.elly-first-visit .elly-first-visit-panel{background:#212A16!important}
+.elly-first-visit .elly-first-visit-num{color:#212A16!important}
+.elly-first-visit .elly-first-visit-primary{color:#212A16!important}
