@@ -164,6 +164,18 @@
 .review-list-block .testimonial-list{margin-top:0}
 .review-list-block .review-naver-header{border-radius:0}
 </style>
+<style>
+/* Editorial review CTA: brand typography and green action, original photograph. */
+.review-feature-block .review-feature{display:flex;flex-direction:column;aspect-ratio:auto;max-width:900px;background:#F4EEE0;border:1px solid #ded5c4;border-radius:18px;box-shadow:none}
+.review-feature-block .review-feature-copy{order:-1;position:relative;padding:30px 32px 26px;align-items:flex-start}
+.review-feature-block .review-feature-sub{order:-1;margin:0 0 13px;font-family:'Gothic A1',sans-serif;font-size:11px;font-weight:600;letter-spacing:.16em;color:#876d4d}
+.review-feature-block .review-feature-copy h3{margin:0;font-family:'Nanum Myeongjo',serif;font-size:clamp(26px,3vw,34px);font-weight:700;line-height:1.5;letter-spacing:-.045em}
+.review-feature-block .review-feature-cta{margin:20px 0 0;padding:12px 18px;min-height:46px;box-sizing:border-box;border:1px solid #212A16;border-radius:10px;background:#212A16;color:#FFF5E6;font-family:'Gothic A1',sans-serif;font-size:14px;font-weight:600;gap:14px;letter-spacing:0}
+.review-feature-block .review-feature:hover .review-feature-cta{color:#FFF5E6;background:#303D20;border-color:#303D20}
+.review-feature-block .review-feature img{position:relative;inset:auto;width:100%;height:auto;object-fit:contain;display:block}
+.review-feature-block .review-feature-scrim{display:none}
+@media(max-width:650px){.review-feature-block .review-feature-copy{padding:24px 22px}.review-feature-block .review-feature-copy h3{font-size:clamp(24px,6vw,29px)}}
+</style>
 </head>
 <body>
 <header>
@@ -361,9 +373,9 @@
       <img width="1254" height="1254" src="assets/review/review-banner.jpg" alt="엘리를 경험한 회원님들의 이야기 - 필라테스 리포머 동작 중인 엘리필라테스 대표원장" loading="lazy">
       <div class="review-feature-scrim"></div>
       <div class="review-feature-copy">
-        <h3>엘리를 경험한<br>회원님들의 이야기</h3>
-        <span class="review-feature-sub">ELLY PILATES MEMBER REVIEW</span>
-        <span class="review-feature-cta">네이버 리뷰 보기 <span aria-hidden="true">→</span></span>
+        <span class="review-feature-sub">MEMBER STORIES</span>
+        <h3>엘리를 경험한<br>회원님들의 실제 이야기</h3>
+        <span class="review-feature-cta">네이버에서 후기 더 보기 <span aria-hidden="true">↗</span></span>
       </div>
     </a>
   </section>
