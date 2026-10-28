@@ -5303,3 +5303,6 @@ main :is(a,button):focus-visible,nav a:focus-visible{outline:2px solid #7A5D2A;o
 }
 
 @media(max-width:640px){.goal-intro p.for-your-body-desc{width:100%;max-width:none;font-size:clamp(12px,3.55vw,14.5px)!important;line-height:1.8;white-space:nowrap;letter-spacing:-.045em}}
+
+/* Homepage MOM&FIT editorial statement: brand gold. */
+.home-momfit-text .home-momfit-lead{color:#94743C!important}
