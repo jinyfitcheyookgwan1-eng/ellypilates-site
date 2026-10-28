@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Gowun+Batang:wght@400;700&family=Gothic+A1:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/about/about-hero-banner.jpg" fetchpriority="high">
-<link rel="stylesheet" href="styles.css?v=20261028-three-line-menu">
+<link rel="stylesheet" href="styles.css?v=20261028-trust-emphasis-fix">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -258,7 +258,17 @@ body.elly-about-page .trust-badges-caption{margin:0;text-align:center}
   .why-elly .why-row {padding-top:20px!important;padding-bottom:20px!important;min-height:0!important;align-items:center!important;}
   .why-elly .why-row .why-title,.why-elly .why-row .why-desc {margin-top:0!important;margin-bottom:0!important;}
 }
-</style></head>
+</style>
+<style id="elly-trust-emphasis-20261028">
+/* Scoped final two guarantee lines; override older mobile paragraph rules. */
+body.elly-about-page .goal-intro p.trust-intro-desc.trust-four-lines > span.trust-desc-emphasis {
+  color:#7A6035 !important;
+  font-weight:700 !important;
+  font-size:1.16em !important;
+  line-height:1.8;
+}
+</style>
+</head>
 <body class="elly-about-page">
 <header>
   <div class="wrap nav-row">
