@@ -239,7 +239,65 @@ document.addEventListener('DOMContentLoaded',function(){
   .review-hero {text-align:center!important;}
   .review-hero > p {max-width:360px!important;margin:20px auto 0!important;text-align:center!important;font-size:15px!important;font-weight:500!important;line-height:1.65!important;letter-spacing:-0.035em!important;word-break:keep-all!important;overflow-wrap:normal!important;}
 }
-</style><style>.review-mobile-break{display:none}@media(max-width:600px){.review-mobile-break{display:inline}}</style><style>@media(min-width:761px){.review-list-block .review-expand{display:none!important}.review-list-block .testi-quote.is-collapsed{display:block!important;overflow:visible!important;-webkit-line-clamp:unset!important;line-clamp:unset!important}}</style></head>
+</style><style>.review-mobile-break{display:none}@media(max-width:600px){.review-mobile-break{display:inline}}</style><style>@media(min-width:761px){.review-list-block .review-expand{display:none!important}.review-list-block .testi-quote.is-collapsed{display:block!important;overflow:visible!important;-webkit-line-clamp:unset!important;line-clamp:unset!important}}</style>
+<style id="elly-review-feature-overlay-20261028">
+/* One cohesive photo card: original studio image remains unchanged. */
+.review-feature-block .review-feature{
+  position:relative;display:block;isolation:isolate;overflow:hidden;
+  width:100%;max-width:900px;aspect-ratio:1.28;
+  border:1px solid #d8c8a9;border-radius:20px;
+  background:#eee2ce;box-shadow:0 12px 32px rgba(47,39,25,.07);
+}
+.review-feature-block .review-feature img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center 52%;display:block;
+}
+.review-feature-block .review-feature-scrim{
+  display:block;position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(248,240,226,.97) 0%,rgba(248,240,226,.92) 16%,rgba(248,240,226,.57) 32%,rgba(248,240,226,0) 55%);
+}
+.review-feature-block .review-feature-copy{
+  position:absolute;z-index:1;top:0;left:0;right:0;
+  display:flex;flex-direction:column;align-items:flex-start;
+  padding:clamp(22px,3.5vw,38px);background:none;
+}
+.review-feature-block .review-feature-sub{
+  margin:0 0 10px;color:#7A6035;font-size:clamp(10px,1.1vw,12px);
+  font-weight:700;letter-spacing:.18em;
+}
+.review-feature-block .review-feature-copy h3{
+  margin:0;color:#211d17;font-size:clamp(23px,2.9vw,34px);
+  font-weight:700;line-height:1.45;letter-spacing:-.045em;
+}
+.review-feature-block .review-feature-cta{
+  display:inline-flex;align-items:center;justify-content:space-between;
+  margin:18px 0 0;min-height:44px;padding:11px 18px;
+  border-radius:11px;background:#212A16;border:1px solid #212A16;
+  color:#FFF8EA;font-size:clamp(12px,1.4vw,14px);font-weight:700;
+  box-shadow:0 4px 12px rgba(33,42,22,.12);
+}
+.review-feature-block .review-feature:hover .review-feature-cta,
+.review-feature-block .review-feature:focus-visible .review-feature-cta{background:#354226;border-color:#354226}
+.review-feature-block .review-feature:focus-visible{outline:3px solid #96743C;outline-offset:3px}
+@media(max-width:650px){
+  .review-feature-block .review-feature{aspect-ratio:1 / 1.08;border-radius:17px}
+  .review-feature-block .review-feature img{object-position:center 50%}
+  .review-feature-block .review-feature-scrim{
+    background:linear-gradient(180deg,rgba(248,240,226,.98) 0%,rgba(248,240,226,.94) 19%,rgba(248,240,226,.62) 38%,rgba(248,240,226,0) 64%);
+  }
+  .review-feature-block .review-feature-copy{padding:clamp(18px,5vw,25px)}
+  .review-feature-block .review-feature-copy h3{font-size:clamp(21px,5.4vw,27px);line-height:1.42}
+  .review-feature-block .review-feature-cta{margin-top:15px;padding:10px 14px;min-height:42px;font-size:clamp(12px,3.25vw,14px);gap:12px}
+}
+@media(max-width:370px){
+  .review-feature-block .review-feature{aspect-ratio:1 / 1.17}
+  .review-feature-block .review-feature-copy h3{font-size:20px}
+}
+@media(prefers-reduced-motion:no-preference){
+  .review-feature-block .review-feature-cta{transition:background-color .2s,border-color .2s}
+}
+</style>
+</head>
 <body>
 <header>
   <div class="wrap nav-row">
