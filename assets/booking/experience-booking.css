@@ -523,3 +523,20 @@
   background:#F4EEE0!important;color:var(--eb-ink,#211d17)!important
  }
 }
+
+/* Momfit choice labels and native inputs share one type scale. */
+#momfit-experience-booking .eb-form .eb-choice>span,
+#momfit-experience-booking .eb-form select,
+#momfit-experience-booking .eb-form select option,
+#momfit-experience-booking .eb-form input[type=text],
+#momfit-experience-booking .eb-form input[type=tel],
+#momfit-experience-booking .eb-form input[type=date],
+#momfit-experience-booking .eb-form textarea,
+#momfit-experience-booking .eb-form .eb-date-placeholder{
+ font-family:'Gothic A1','Noto Sans KR',Arial,sans-serif!important;
+ font-size:16px!important;font-weight:500!important;letter-spacing:-.025em;
+ color:#514535!important;-webkit-text-fill-color:#514535!important
+}
+#momfit-experience-booking .eb-form input::placeholder,
+#momfit-experience-booking .eb-form textarea::placeholder{font-size:16px;font-weight:500;color:#514535;opacity:1}
+#momfit-experience-booking .eb-form .eb-choice small{font-size:12px!important;font-weight:400!important}
