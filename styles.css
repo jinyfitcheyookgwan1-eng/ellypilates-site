@@ -5329,3 +5329,18 @@ body.elly-about-page main h3.why-title{
  font-weight:700!important;
  word-break:keep-all;
 }
+
+/* Site-wide editorial headings: section titles on every page, not body copy, FAQ questions or blog-card headlines. */
+body main h1,
+body main h2,
+body main .section-title,
+body main .page-title{
+  font-family:'Nanum Myeongjo','Noto Serif KR',serif!important;
+  font-weight:700!important;
+  word-break:keep-all;
+}
+/* Program cards are individually titled sections; keep functional form labels untouched. */
+body.elly-programs-page main h3:not(.faq-question):not(.accordion-title){
+  font-family:'Nanum Myeongjo','Noto Serif KR',serif!important;
+  font-weight:700!important;
+}
