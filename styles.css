@@ -5379,3 +5379,10 @@ body.elly-programs-page main h3:not(.faq-question):not(.accordion-title){
 /* Match the homepage review CTA to ELLY brand green. */
 .elly-home-reviews .elly-add-link{background:#212A16}
 .elly-home-reviews .elly-add-link:hover,.elly-home-reviews .elly-add-link:focus-visible{background:#303D20}
+
+/* Compact practical links at the end of the homepage. */
+.elly-home-essentials{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 24px;padding-block:20px 28px;border-top:1px solid #dfd5c7}
+.elly-home-essentials a{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:4px 8px;box-sizing:border-box;color:#212A16;font-size:14px;font-weight:600;text-decoration:none}
+.elly-home-essentials a:hover{text-decoration:underline;text-underline-offset:5px}
+.elly-home-essentials a:focus-visible{outline:2px solid #212A16;outline-offset:3px;border-radius:4px}
+@media(max-width:700px){.elly-home-essentials{gap:4px;padding-block:14px 20px}.elly-home-essentials a{flex:1 1 0;white-space:nowrap;padding-inline:4px}}
