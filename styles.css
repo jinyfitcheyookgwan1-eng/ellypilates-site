@@ -5320,3 +5320,12 @@ body.elly-home-page main .home-momfit-lead{
 body.elly-home-page main .home-momfit-type{
   font-family:'Noto Sans KR',sans-serif;
 }
+
+/* ABOUT page: unify editorial section titles with homepage typography. */
+body.elly-about-page main h1,
+body.elly-about-page main h2,
+body.elly-about-page main h3.why-title{
+ font-family:'Nanum Myeongjo','Noto Serif KR',serif!important;
+ font-weight:700!important;
+ word-break:keep-all;
+}
