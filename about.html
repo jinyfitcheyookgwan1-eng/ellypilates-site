@@ -549,6 +549,34 @@ body.elly-about-page .elly-values-panel p{font-size:clamp(15px,1.4vw,16.5px);lin
  body.elly-about-page .elly-values-panel h3{font-size:24px;line-height:1.4;margin:6px 0 11px}
  body.elly-about-page .elly-values-panel p{font-size:15.5px;line-height:1.72;letter-spacing:-.018em}
 }
+
+/* Director's message: compact editorial portrait and copy. Scoped to ABOUT only. */
+body.elly-about-page .elly-director-editorial{padding-top:58px;padding-bottom:64px}
+body.elly-about-page .elly-director-header{margin-bottom:24px}
+body.elly-about-page .elly-director-header h2{font-size:clamp(26px,3vw,34px);margin-top:12px}
+body.elly-about-page .elly-director-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(225px,34%);align-items:center;gap:clamp(24px,4vw,54px)}
+body.elly-about-page .elly-director-copy{display:flex;flex-direction:column;gap:14px;max-width:none;min-width:0;font-family:'Pretendard','Gothic A1',sans-serif;font-size:16px;font-weight:400;line-height:1.8;letter-spacing:-.022em;color:#51483d}
+body.elly-about-page .elly-director-copy p{margin:0;text-wrap:pretty;word-break:keep-all;overflow-wrap:break-word}
+body.elly-about-page .elly-director-copy .elly-director-lead{font-family:'Nanum Myeongjo',serif;font-size:clamp(19px,2.2vw,26px);font-weight:700;line-height:1.65;letter-spacing:-.05em;color:#594737;margin-bottom:5px}
+body.elly-about-page .elly-director-copy .founder-signature{font-family:'Pretendard','Gothic A1',sans-serif;font-size:14px;font-weight:600;line-height:1.65;color:#3E4C2E;margin-top:10px;letter-spacing:-.025em}
+body.elly-about-page .elly-director-photo{position:static;order:initial;max-width:none;width:100%;margin:0}
+body.elly-about-page .elly-director-photo .founder-side-photo{aspect-ratio:4/4.3;border-radius:3px;box-shadow:none}
+body.elly-about-page .elly-director-photo .founder-side-photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
+@media(max-width:700px){
+ body.elly-about-page .elly-director-editorial{padding-top:40px;padding-bottom:43px}
+ body.elly-about-page .elly-director-header{margin-bottom:18px}
+ body.elly-about-page .elly-director-header h2{font-size:25px;margin-top:9px}
+ body.elly-about-page .elly-director-layout{grid-template-columns:minmax(0,1fr) minmax(0,35%);gap:14px;align-items:start}
+ body.elly-about-page .elly-director-copy{font-size:13px;line-height:1.7;gap:9px;letter-spacing:-.035em}
+ body.elly-about-page .elly-director-copy .elly-director-lead{font-size:clamp(15px,3.9vw,18px);line-height:1.58;margin-bottom:2px}
+ body.elly-about-page .elly-director-copy .founder-signature{font-size:12px;line-height:1.65;margin-top:5px}
+ body.elly-about-page .elly-director-photo .founder-side-photo{aspect-ratio:3/5.2}
+}
+@media(max-width:360px){
+ body.elly-about-page .elly-director-layout{grid-template-columns:minmax(0,1fr) 32%;gap:10px}
+ body.elly-about-page .elly-director-copy{font-size:12.5px}
+ body.elly-about-page .elly-director-copy .elly-director-lead{font-size:15px}
+}
 </style>
 </head>
 <body class="elly-about-page">
@@ -761,21 +789,19 @@ body.elly-about-page .elly-values-panel p{font-size:clamp(15px,1.4vw,16.5px);lin
   ];
   </script>
 
-  <section class="elly-tone-beige block wrap elly-band-white">
-    <div class="section-head">
-      <div class="eyebrow">GREETING</div>
-      <h2>대표원장 인사말</h2>
+  <section class="elly-tone-beige block wrap elly-band-white elly-director-editorial" aria-labelledby="elly-director-heading">
+    <div class="section-head elly-director-header">
+      <div class="eyebrow">DIRECTOR'S MESSAGE</div>
+      <h2 id="elly-director-heading">대표원장 인사말</h2>
     </div>
-    <div class="founder-layout">
-      <div class="founder-main founder-main--letter about-copy">
-        <p>좋은 수업은 회원 한 분 한 분의 몸과 움직임을 깊이 이해하는 것에서 시작된다고 생각합니다.</p>
-        <p>엘리필라테스는 전문성과 진정성을 바탕으로 각자의 신체 상태와 운동 목적에 맞는 수업을 제공하고, 매 순간 변함없는 수업의 품질을 지키기 위해 노력하고 있습니다.</p>
-        <p>저희가 추구하는 가치는 단순히 운동을 가르치는 것을 넘어, 한 번의 수업이 오래도록 기억되는 좋은 경험이 되는 것입니다.</p>
-        <p>앞으로도 정직한 운영과 세심한 지도를 통해 회원님들의 신뢰를 쌓아가며, 지역에서 가장 신뢰받는 필라테스 브랜드로 성장하겠습니다.</p>
-        <p>감사합니다.</p>
+    <div class="founder-layout elly-director-layout">
+      <div class="founder-main founder-main--letter about-copy elly-director-copy">
+        <p class="elly-director-lead">좋은 수업은 한 사람의 몸과 움직임을 깊이 이해하는 것에서 시작됩니다.</p>
+        <p>회원 한 분 한 분의 상태와 목적을 세심하게 살피며, 각자에게 필요한 움직임을 지도합니다.</p>
+        <p>앞으로도 전문성과 진정성, 변함없는 수업의 품질로 신뢰에 보답하겠습니다.</p>
         <p class="founder-signature">엘리필라테스 삼송역점<br>대표원장 김연지</p>
       </div>
-      <aside class="founder-side">
+      <aside class="founder-side elly-director-photo">
         <figure class="founder-side-photo">
           <img width="900" height="851" src="assets/about/founder-portrait.jpg" alt="엘리필라테스 삼송역점 대표원장 김연지" loading="lazy" decoding="async">
         </figure>
