@@ -483,15 +483,20 @@ body.elly-about-page .about-hero-photo-only+.elly-philosophy{padding-top:35px}
  body.elly-about-page .about-hero-photo-only+.elly-philosophy{padding-top:22px}
 }
 
-/* Mission/Vision single-line editorial statements: preserve official copy. */
+/* Mission / Vision: confident typographic scale with controlled mobile line breaks. */
+body.elly-about-page .elly-philosophy-mobile-break{display:none}
 @media(min-width:701px){
  body.elly-about-page .elly-philosophy-promises{max-width:1120px}
- body.elly-about-page .elly-philosophy-promise{grid-template-columns:128px minmax(0,1fr);gap:18px;padding-block:24px}
- body.elly-about-page .elly-philosophy-promise h3{max-width:none;font-family:'Pretendard','Gothic A1',sans-serif;font-size:clamp(17px,1.65vw,23px);font-weight:650;letter-spacing:-.05em;white-space:nowrap}
+ body.elly-about-page .elly-philosophy-promise{grid-template-columns:150px minmax(0,1fr);gap:20px;padding-block:30px}
+ body.elly-about-page .elly-philosophy-promise h3{max-width:none;font-family:'Pretendard','Gothic A1',sans-serif;font-size:clamp(20px,2vw,28px);font-weight:700;letter-spacing:-.05em;line-height:1.55;white-space:normal}
 }
 @media(max-width:700px){
- body.elly-about-page .elly-philosophy-promise{padding-block:19px 20px;gap:9px}
- body.elly-about-page .elly-philosophy-promise h3{font-family:'Pretendard','Gothic A1',sans-serif;font-size:clamp(9.7px,3.08vw,13.5px);font-weight:700;letter-spacing:-.075em;line-height:1.6;white-space:nowrap;max-width:none;word-break:normal;overflow-wrap:normal;text-wrap:nowrap}
+ body.elly-about-page .elly-philosophy-promise{padding-block:23px 26px;gap:12px}
+ body.elly-about-page .elly-philosophy-promise h3{font-family:'Pretendard','Gothic A1',sans-serif;font-size:clamp(18px,5.05vw,23px);font-weight:700;letter-spacing:-.065em;line-height:1.62;white-space:normal;max-width:none;word-break:keep-all;overflow-wrap:break-word;text-wrap:initial}
+ body.elly-about-page .elly-philosophy-mobile-break{display:block}
+}
+@media(max-width:360px){
+ body.elly-about-page .elly-philosophy-promise h3{font-size:clamp(17px,4.85vw,19px);letter-spacing:-.07em}
 }
 </style>
 </head>
@@ -558,11 +563,11 @@ body.elly-about-page .about-hero-photo-only+.elly-philosophy{padding-top:35px}
       <div class="elly-philosophy-promises">
         <article class="elly-philosophy-promise">
           <span class="elly-philosophy-label">MISSION <span>미션</span></span>
-          <h3>한 번의 수업이 평생의 기준이 되는 경험을 제공합니다.</h3>
+          <h3>한 번의 수업이 평생의 기준이 되는 <br class="elly-philosophy-mobile-break">경험을 제공합니다.</h3>
         </article>
         <article class="elly-philosophy-promise">
           <span class="elly-philosophy-label">VISION <span>비전</span></span>
-          <h3>지역에서 가장 신뢰받는 1등 필라테스 브랜드가 됩니다.</h3>
+          <h3>지역에서 가장 신뢰받는 1등 <br class="elly-philosophy-mobile-break">필라테스 브랜드가 됩니다.</h3>
         </article>
       </div>
       <div class="elly-philosophy-values-head">
