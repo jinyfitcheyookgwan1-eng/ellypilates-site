@@ -498,6 +498,32 @@ body.elly-about-page .elly-philosophy-mobile-break{display:none}
 @media(max-width:360px){
  body.elly-about-page .elly-philosophy-promise h3{font-size:clamp(17px,4.85vw,19px);letter-spacing:-.07em}
 }
+
+/* Deep-forest editorial polish: limited to the About philosophy section. */
+body.elly-about-page .elly-philosophy{--elly-forest:#3E4C2E;--elly-forest-dark:#293821;--elly-forest-muted:#657155}
+body.elly-about-page .elly-philosophy-promise .elly-philosophy-label{color:var(--elly-forest)}
+body.elly-about-page .elly-philosophy-promise .elly-philosophy-label span{color:#777d6b}
+body.elly-about-page .elly-philosophy-promise h3{color:#242920;font-weight:750;letter-spacing:-.055em}
+body.elly-about-page .elly-philosophy-values-head .elly-philosophy-label{color:var(--elly-forest);font-weight:750}
+body.elly-about-page .elly-values-tablist{border-color:#c8cbbf}
+body.elly-about-page .elly-values-tab{color:#5c6454;transition:background-color .22s ease,color .22s ease}
+body.elly-about-page .elly-values-tab+.elly-values-tab{border-left-color:#d9d9cf}
+body.elly-about-page .elly-values-tab-number{color:#777f6e}
+body.elly-about-page .elly-values-tab[aria-selected="true"]{background:var(--elly-forest);color:#fff}
+body.elly-about-page .elly-values-tab[aria-selected="true"] .elly-values-tab-number{color:#d9dfcb}
+body.elly-about-page .elly-values-tab[aria-selected="true"]::after{display:none}
+body.elly-about-page .elly-values-tab:not([aria-selected="true"]):hover{background:#e9ecdf;color:var(--elly-forest-dark)}
+body.elly-about-page .elly-values-tab:focus-visible{outline:2px solid var(--elly-forest-dark);outline-offset:-4px}
+body.elly-about-page .elly-values-en{color:var(--elly-forest-muted)}
+body.elly-about-page .elly-values-panel h3{color:var(--elly-forest-dark)}
+@media(min-width:701px){
+ body.elly-about-page .elly-philosophy-promise h3{font-size:clamp(22px,2.16vw,30px);line-height:1.54}
+}
+@media(max-width:700px){
+ body.elly-about-page .elly-philosophy-promise h3{font-size:clamp(20px,5.35vw,25px);line-height:1.56}
+ body.elly-about-page .elly-values-tab{padding-top:14px;padding-bottom:15px}
+}
+@media(prefers-reduced-motion:reduce){body.elly-about-page .elly-values-tab{transition:none}}
 </style>
 </head>
 <body class="elly-about-page">
