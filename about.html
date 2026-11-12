@@ -466,6 +466,22 @@ body.elly-about-page .about-hero-photo-only+.elly-philosophy{padding-top:64px}
  body.elly-about-page .about-hero-photo-only .hero-banner-media img{object-position:center center}
  body.elly-about-page .about-hero-photo-only+.elly-philosophy{padding-top:35px}
 }
+
+/* ABOUT image title: premium photographic caption, mission follows immediately. */
+body.elly-about-page .about-hero-photo-only{isolation:isolate;height:clamp(280px,30vw,400px)}
+body.elly-about-page .about-hero-photo-only::after{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(180deg,rgba(19,16,12,0) 22%,rgba(19,16,12,.12) 47%,rgba(19,16,12,.72) 100%);pointer-events:none}
+body.elly-about-page .about-photo-philosophy{position:absolute;z-index:1;left:0;right:0;bottom:0;padding-bottom:clamp(25px,3vw,43px);color:#fff}
+body.elly-about-page .about-photo-philosophy .eyebrow{color:#f0e1c7;border-bottom-color:rgba(255,255,255,.42);font-family:'Pretendard','Gothic A1',sans-serif;font-size:12px;letter-spacing:.18em}
+body.elly-about-page .about-photo-philosophy .eyebrow::before{background:#e4c89b}
+body.elly-about-page .about-photo-philosophy h2{color:#fff;font-family:'Nanum Myeongjo',serif;font-size:clamp(26px,3.2vw,39px);line-height:1.48;letter-spacing:-.065em;margin-top:16px;max-width:800px;text-shadow:0 2px 14px rgba(0,0,0,.28)}
+body.elly-about-page .about-hero-photo-only+.elly-philosophy{padding-top:35px}
+@media(max-width:700px){
+ body.elly-about-page .about-hero-photo-only{height:clamp(225px,54vw,290px)}
+ body.elly-about-page .about-photo-philosophy{padding-bottom:25px}
+ body.elly-about-page .about-photo-philosophy .eyebrow{font-size:10px;letter-spacing:.15em}
+ body.elly-about-page .about-photo-philosophy h2{font-size:clamp(23px,5.9vw,29px);line-height:1.45;margin-top:12px;letter-spacing:-.065em}
+ body.elly-about-page .about-hero-photo-only+.elly-philosophy{padding-top:22px}
+}
 </style>
 </head>
 <body class="elly-about-page">
@@ -520,14 +536,14 @@ body.elly-about-page .about-hero-photo-only+.elly-philosophy{padding-top:64px}
     <div class="hero-banner-media">
       <img width="2600" height="1130" src="assets/about/about-hero-banner.jpg" alt="엘리필라테스 삼송역점 내부 공간" fetchpriority="high" decoding="async">
     </div>
+    <div class="about-photo-philosophy wrap">
+      <div class="eyebrow">OUR PHILOSOPHY</div>
+      <h2 id="elly-philosophy-title">엘리필라테스가 지키는 가치</h2>
+    </div>
   </section>
 
   <section class="elly-philosophy elly-band-beige" aria-labelledby="elly-philosophy-title">
     <div class="wrap elly-philosophy-inner">
-      <div class="elly-philosophy-heading">
-        <div class="eyebrow">OUR PHILOSOPHY</div>
-        <h2 id="elly-philosophy-title">엘리필라테스가 지키는 가치</h2>
-      </div>
       <div class="elly-philosophy-promises">
         <article class="elly-philosophy-promise">
           <span class="elly-philosophy-label">MISSION <span>미션</span></span>
