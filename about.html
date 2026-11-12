@@ -404,6 +404,31 @@ body.elly-about-page .elly-values-panel p{font-family:'Pretendard','Gothic A1',s
  body.elly-about-page .elly-values-panel p{font-size:15.5px;line-height:1.85}
 
 }
+
+/* 2026-11-13: final editorial finishing — intentionally no cards, shadows or ornamental icons. */
+body.elly-about-page .elly-philosophy-values-head{margin-top:76px;margin-bottom:17px}
+body.elly-about-page .elly-values-tablist{border-top:1px solid #cabfae;border-bottom:1px solid #cabfae}
+body.elly-about-page .elly-values-tab{min-height:102px;padding:20px 18px 21px;gap:12px;align-items:flex-start;justify-content:center;font-family:'Pretendard','Gothic A1',sans-serif;font-size:clamp(17px,1.75vw,21px);font-weight:550;letter-spacing:-.045em;color:#7b7368}
+body.elly-about-page .elly-values-tab+.elly-values-tab{border-left:1px solid rgba(180,162,139,.45)}
+body.elly-about-page .elly-values-tab-number{font-size:11px;color:#a48c6d;font-weight:500;letter-spacing:.18em}
+body.elly-about-page .elly-values-tab[aria-selected="true"]{color:#2d2823}
+body.elly-about-page .elly-values-tab[aria-selected="true"]::after{left:18px;right:18px;bottom:-1px;height:2px;background:#6c573e}
+body.elly-about-page .elly-values-panels{min-height:214px;padding:37px 20px 14px}
+body.elly-about-page .elly-values-panel{max-width:890px;display:grid;grid-template-columns:minmax(150px,225px) minmax(0,1fr);column-gap:38px;align-items:start}
+body.elly-about-page .elly-values-en{grid-column:1;grid-row:1;color:#9a866b;font-size:11px;letter-spacing:.16em;line-height:1.7}
+body.elly-about-page .elly-values-panel h3{grid-column:1;grid-row:2;margin:8px 0 0;font-family:'Nanum Myeongjo',serif;font-size:clamp(24px,2.6vw,30px);font-weight:700;line-height:1.55;letter-spacing:-.06em}
+body.elly-about-page .elly-values-panel p{grid-column:2;grid-row:1 / span 2;align-self:center;font-family:'Pretendard','Gothic A1',sans-serif;font-size:clamp(16px,1.5vw,18px);line-height:1.95;letter-spacing:-.025em;color:#50483e;max-width:51ch}
+@media(max-width:700px){
+ body.elly-about-page .elly-philosophy-values-head{margin-top:49px;margin-bottom:15px}
+ body.elly-about-page .elly-values-tab{min-height:87px;padding:15px 4px 16px;gap:9px;align-items:center;text-align:center;font-size:clamp(13px,3.55vw,16px);font-weight:600;white-space:nowrap}
+ body.elly-about-page .elly-values-tab-number{font-size:10px}
+ body.elly-about-page .elly-values-tab[aria-selected="true"]::after{left:5px;right:5px}
+ body.elly-about-page .elly-values-panels{padding:28px 6px 4px;min-height:195px}
+ body.elly-about-page .elly-values-panel{display:block;max-width:none}
+ body.elly-about-page .elly-values-en{font-size:10px}
+ body.elly-about-page .elly-values-panel h3{font-size:25px;margin:7px 0 11px}
+ body.elly-about-page .elly-values-panel p{font-size:16px;line-height:1.83;max-width:none}
+}
 </style>
 </head>
 <body class="elly-about-page">
