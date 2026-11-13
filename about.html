@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Gowun+Batang:wght@400;700&family=Gothic+A1:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/about/about-hero-banner.jpg" fetchpriority="high">
-<link rel="stylesheet" href="styles.css?v=20261028-trust-emphasis-fix">
+<link rel="stylesheet" href="styles.css?v=20261113-editorial-polish">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -612,6 +612,15 @@ body.elly-about-page .elly-trust-content .elly-trust-gallery-two .elly-trust-bad
  body.elly-about-page .elly-trust-content .trust-badges.elly-trust-gallery-two{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;max-width:none}
  body.elly-about-page .elly-trust-content .elly-trust-gallery-two .elly-trust-badge-item img{border-radius:9px}
  body.elly-about-page .elly-trust-content .elly-trust-gallery-two figcaption{font-size:12px;line-height:1.5}
+}
+
+/* Trust proof cards: refined captions without making mobile text unreadable. */
+body.elly-about-page .elly-trust-gallery-two .elly-trust-badge-item{display:flex;flex-direction:column}
+body.elly-about-page .elly-trust-gallery-two .elly-trust-badge-item figcaption{line-height:1.6;word-break:keep-all;overflow-wrap:break-word}
+@media(max-width:700px){
+ body.elly-about-page .elly-trust-gallery-two .elly-trust-badge-item figcaption{font-size:12px;line-height:1.55}
+ body.elly-about-page .elly-trust-gallery-two .elly-trust-badge-item figcaption strong{display:block}
+ body.elly-about-page .elly-trust-gallery-two .elly-trust-badge-item figcaption span{display:block}
 }
 </style>
 </head>
