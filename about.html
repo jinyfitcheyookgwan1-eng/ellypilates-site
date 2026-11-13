@@ -670,6 +670,55 @@ body.elly-about-page .elly-trust-gallery-two .elly-trust-badge-item figcaption{l
  body.elly-about-page .elly-philosophy-promise{padding-inline:24px}
  body.elly-about-page .elly-values-tab{padding-inline:14px}
 }
+
+/* 2026-11-13 PC final typography, width and detail alignment */
+@media (min-width: 900px) {
+ body.elly-about-page .elly-philosophy-inner.wrap{
+   width:calc(100% - 48px);max-width:1540px;
+   margin-left:auto;margin-right:auto;
+ }
+ body.elly-about-page .elly-philosophy-promises,
+ body.elly-about-page .elly-values-tabs{max-width:none;width:100%}
+ body.elly-about-page .elly-philosophy-promise{gap:12px}
+ body.elly-about-page .elly-philosophy-promise .elly-philosophy-label,
+ body.elly-about-page .elly-philosophy-values-head .elly-philosophy-label{
+   font-size:clamp(15px,1.15vw,17px);font-weight:750;
+   letter-spacing:.085em;line-height:1.5;color:#304b3b;
+ }
+ body.elly-about-page .elly-philosophy-promise .elly-philosophy-label span,
+ body.elly-about-page .elly-philosophy-values-head .elly-philosophy-label span{
+   font-size:13px;font-weight:600;color:#5d6859;letter-spacing:0;
+ }
+ body.elly-about-page .elly-philosophy-values-head{margin-top:25px;margin-bottom:12px}
+ body.elly-about-page .elly-values-tablist{gap:10px}
+ body.elly-about-page .elly-values-tab{
+   font-size:clamp(16px,1.4vw,20px);font-weight:650;
+   min-height:82px;padding:13px 22px;
+ }
+ body.elly-about-page .elly-values-tab-number{font-size:12px;font-weight:650}
+ body.elly-about-page .elly-values-panels{
+   width:100%;min-height:0;padding:16px 6px 0;
+ }
+ body.elly-about-page .elly-values-panel{
+   max-width:none;grid-template-columns:minmax(170px,24%) minmax(0,1fr);
+   column-gap:22px;align-items:center;
+ }
+ body.elly-about-page .elly-values-en{
+   font-size:12px;font-weight:650;color:#56684d;
+ }
+ body.elly-about-page .elly-values-panel h3{
+   font-size:clamp(25px,2.15vw,31px);line-height:1.4;margin:5px 0 0;
+   color:#263b2d;
+ }
+ body.elly-about-page .elly-values-panel p{
+   max-width:none;font-size:clamp(16px,1.45vw,19px);
+   font-weight:500;line-height:1.65;letter-spacing:-.02em;
+   color:#3f443e;
+ }
+}
+@media (min-width: 900px) and (max-width: 1199px){
+ body.elly-about-page .elly-philosophy-inner.wrap{width:calc(100% - 40px)}
+}
 </style>
 </head>
 <body class="elly-about-page">
