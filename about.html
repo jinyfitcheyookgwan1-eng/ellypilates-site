@@ -623,45 +623,52 @@ body.elly-about-page .elly-trust-gallery-two .elly-trust-badge-item figcaption{l
  body.elly-about-page .elly-trust-gallery-two .elly-trust-badge-item figcaption span{display:block}
 }
 
-/* 2026-11-13 PC editorial layout: wider mission / vision and core values. */
+/* 2026-11-13 PC editorial layout v2: wider composition, shorter scroll. */
 @media (min-width: 1024px) {
- body.elly-about-page .elly-philosophy{padding-bottom:90px}
- body.elly-about-page .elly-philosophy-inner{
-   box-sizing:border-box;width:calc(100% - 112px);max-width:1360px;margin-inline:auto;
+ body.elly-about-page .about-hero-photo-only+.elly-philosophy{padding-top:24px}
+ body.elly-about-page .elly-philosophy{padding-bottom:42px}
+ body.elly-about-page .elly-philosophy-inner.wrap{
+   box-sizing:border-box;width:calc(100% - 72px);max-width:1480px;margin-inline:auto;
  }
  body.elly-about-page .elly-philosophy-promises{
-   max-width:none;grid-template-columns:repeat(2,minmax(0,1fr));
+   width:100%;max-width:none;margin-inline:0;grid-template-columns:repeat(2,minmax(0,1fr));
    gap:0;border-top:1px solid #c7bba8;border-bottom:1px solid #c7bba8;
  }
  body.elly-about-page .elly-philosophy-promise{
    display:flex;flex-direction:column;align-items:flex-start;justify-content:center;
-   gap:24px;padding:46px clamp(24px,3.4vw,58px);min-height:190px;
+   gap:14px;padding:24px clamp(24px,3.2vw,52px);min-height:0;
  }
  body.elly-about-page .elly-philosophy-promise:first-child{padding-left:8px}
  body.elly-about-page .elly-philosophy-promise+.elly-philosophy-promise{
    border-top:0;border-left:1px solid #d6cab9;
  }
  body.elly-about-page .elly-philosophy-promise h3{
-   max-width:580px;font-size:clamp(23px,2.05vw,30px);line-height:1.6;
+   max-width:620px;font-size:clamp(22px,2.15vw,30px);line-height:1.48;
    letter-spacing:-.055em;word-break:keep-all;
  }
- body.elly-about-page .elly-philosophy-values-head{max-width:none;margin-top:58px;margin-bottom:16px}
- body.elly-about-page .elly-values-tabs{max-width:none;margin-inline:0}
+ body.elly-about-page .elly-philosophy-values-head{
+   max-width:none;margin-top:27px;margin-bottom:11px
+ }
+ body.elly-about-page .elly-values-tabs{width:100%;max-width:none;margin-inline:0}
  body.elly-about-page .elly-values-tablist{gap:12px;border-bottom:0}
  body.elly-about-page .elly-values-tab{
-   box-sizing:border-box;min-height:105px;padding:22px 24px;border-radius:3px;
+   box-sizing:border-box;min-height:84px;padding:14px 22px;border-radius:3px;
    background:#304b3b;color:#fff;transition:background-color .2s ease;
  }
  body.elly-about-page .elly-values-tab[aria-selected="true"]{background:#203d2d}
- body.elly-about-page .elly-values-tab[aria-selected="true"]::after{left:24px;right:24px;background:#d8c5a4}
+ body.elly-about-page .elly-values-tab[aria-selected="true"]::after{left:22px;right:22px;background:#d8c5a4}
  body.elly-about-page .elly-values-tab-number{color:#d9cfbb}
- body.elly-about-page .elly-values-panels{max-width:none;min-height:155px;padding:28px 8px 8px}
- body.elly-about-page .elly-values-panel{max-width:850px}
+ body.elly-about-page .elly-values-panels{
+   max-width:none;min-height:0;padding:16px 8px 0;
+ }
+ body.elly-about-page .elly-values-panel{max-width:1000px}
+ body.elly-about-page .elly-values-panel h3{margin-block:5px 8px}
+ body.elly-about-page .elly-values-panel p{line-height:1.65}
 }
 @media (min-width: 1024px) and (max-width: 1199px) {
- body.elly-about-page .elly-philosophy-inner{width:calc(100% - 72px)}
- body.elly-about-page .elly-philosophy-promise{padding-inline:26px}
- body.elly-about-page .elly-values-tab{padding-inline:16px}
+ body.elly-about-page .elly-philosophy-inner.wrap{width:calc(100% - 48px)}
+ body.elly-about-page .elly-philosophy-promise{padding-inline:24px}
+ body.elly-about-page .elly-values-tab{padding-inline:14px}
 }
 </style>
 </head>
