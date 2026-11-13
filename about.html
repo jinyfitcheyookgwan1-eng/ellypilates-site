@@ -603,6 +603,16 @@ body.elly-about-page .goal-intro.story-intro{padding-top:56px}
  body.elly-about-page .elly-director-copy{font-size:13px;line-height:1.63}
  body.elly-about-page .elly-director-copy .elly-director-lead{font-size:15px}
 }
+
+/* Trust credentials in two compact side-by-side cards at all viewports. */
+body.elly-about-page .elly-trust-content .trust-badges.elly-trust-gallery-two{width:100%;max-width:940px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(10px,2vw,22px);align-items:start;margin-inline:auto}
+body.elly-about-page .elly-trust-content .elly-trust-gallery-two .elly-trust-badge-item{min-width:0;margin:0}
+body.elly-about-page .elly-trust-content .elly-trust-gallery-two .elly-trust-badge-item img{display:block;width:100%;max-width:100%;height:auto;object-fit:contain;border-radius:12px}
+@media(max-width:700px){
+ body.elly-about-page .elly-trust-content .trust-badges.elly-trust-gallery-two{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;max-width:none}
+ body.elly-about-page .elly-trust-content .elly-trust-gallery-two .elly-trust-badge-item img{border-radius:9px}
+ body.elly-about-page .elly-trust-content .elly-trust-gallery-two figcaption{font-size:12px;line-height:1.5}
+}
 </style>
 </head>
 <body class="elly-about-page">
@@ -856,18 +866,18 @@ body.elly-about-page .goal-intro.story-intro{padding-top:56px}
 
   <section class="elly-tone-beige block wrap elly-band-beige elly-trust-content" aria-label="지급보증보험과 핏투데이 안심운영센터 안내">
     <div class="trust-layout">
-      <div class="trust-badges">
-        <figure class="elly-trust-badge-item">
-          <a href="https://blog.naver.com/duswl6880/224163188033" target="_blank" rel="noopener" aria-label="핏투데이 안심결제 지급보증보험 서비스 안내 자세히 보기">
-            <img width="1254" height="1254" src="assets/trust/guarantee-badge.jpg" alt="엘리필라테스 선결제 금액 지급보증보험 가입 안내" loading="lazy" decoding="async">
-          </a>
-          <figcaption><strong>선결제 금액 지급보증보험</strong><span>핏투데이 안심결제 등록 건에 한해 적용</span></figcaption>
-        </figure>
+      <div class="trust-badges elly-trust-gallery-two">
         <figure class="elly-trust-badge-item">
           <a href="https://blog.naver.com/duswl6880/224163188033" target="_blank" rel="noopener" aria-label="핏투데이 안심운영센터 선정 인증 안내 자세히 보기">
             <img width="1400" height="1400" src="assets/trust/fittoday-safe-center.jpg" alt="엘리필라테스 핏투데이 안심운영센터 인증 이미지" loading="lazy" decoding="async">
           </a>
           <figcaption><strong>핏투데이 안심운영센터</strong><span>핏투데이 선정 기준에 따른 인증</span></figcaption>
+        </figure>
+        <figure class="elly-trust-badge-item">
+          <a href="https://blog.naver.com/duswl6880/224163188033" target="_blank" rel="noopener" aria-label="핏투데이 안심결제 지급보증보험 서비스 안내 자세히 보기">
+            <img width="1254" height="1254" src="assets/trust/guarantee-badge.jpg" alt="엘리필라테스 선결제 금액 지급보증보험 가입 안내" loading="lazy" decoding="async">
+          </a>
+          <figcaption><strong>선결제 금액 지급보증보험</strong><span>핏투데이 안심결제 등록 건에 한해 적용</span></figcaption>
         </figure>
       </div>
       <a class="trust-badges-caption" href="https://blog.naver.com/duswl6880/224163188033" target="_blank" rel="noopener">핏페이 보증보험 서비스 자세히 보기 <span aria-hidden="true">↗</span></a>
