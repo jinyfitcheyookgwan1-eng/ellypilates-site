@@ -5462,3 +5462,49 @@ body.elly-home-page .elly-proof .elly-proof-card{box-sizing:border-box;height:10
  body.elly-home-page .elly-proof .elly-proof-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:1fr}
  body.elly-home-page .elly-proof .elly-proof-card{height:100%;min-height:0;padding:20px 8px;gap:12px}
 }
+
+
+/* ELLY 2026-11-13 cross-page finishing: restrained typography and spacing.
+   Preserve established palette, page grids, image content and section order. */
+:where(main) img{max-width:100%}
+:where(main) a:focus-visible,
+:where(main) button:focus-visible,
+:where(main) summary:focus-visible{
+  outline:2px solid #3E4C2E;
+  outline-offset:3px;
+}
+:where(.section-head) p{
+  line-height:1.8;
+  letter-spacing:-.015em;
+  word-break:keep-all;
+  overflow-wrap:break-word;
+}
+:where(.section-head) h2{
+  text-wrap:balance;
+  overflow-wrap:break-word;
+}
+:where(.eyebrow){
+  line-height:1.5;
+}
+@media(max-width:700px){
+  body.elly-home-page .section-head,
+  body.elly-about-page .section-head,
+  body.elly-programs-page .section-head{
+    margin-bottom:clamp(22px,6vw,32px);
+  }
+  body.elly-home-page .section-head p,
+  body.elly-about-page .section-head p,
+  body.elly-programs-page .section-head p{
+    line-height:1.78;
+  }
+  body.elly-home-page .eyebrow,
+  body.elly-about-page .eyebrow,
+  body.elly-programs-page .eyebrow{
+    letter-spacing:.14em;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  :where(main) *{
+    scroll-behavior:auto;
+  }
+}
