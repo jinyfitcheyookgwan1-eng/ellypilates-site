@@ -412,8 +412,8 @@ main > section.elly-band-beige { background:#F4EEE0!important; }
         <p>엘리필라테스 삼송역점 3:1 그룹레슨 스케줄 안내</p>
       </div>
       <div class="elly-schedule-panel">
-        <table class="elly-schedule-table" aria-label="엘리필라테스 월요일부터 목요일까지 그룹레슨 시간표">
-          <thead><tr><th scope="col">시간</th><th scope="col">월</th><th scope="col">화</th><th scope="col">수</th><th scope="col">목</th></tr></thead>
+        <table class="elly-schedule-table" aria-label="엘리필라테스 월요일부터 토요일까지 그룹레슨 시간표">
+          <thead><tr><th scope="col">시간</th><th scope="col">월</th><th scope="col">화</th><th scope="col">수</th><th scope="col">목</th><th scope="col">금</th><th scope="col">토</th></tr></thead>
           <tbody id="elly-schedule-body"></tbody>
         </table>
         <div class="elly-schedule-legend" aria-label="시간표 표시 안내">
@@ -444,7 +444,7 @@ main > section.elly-band-beige { background:#F4EEE0!important; }
     .elly-schedule-panel{width:100%;max-width:1000px;box-sizing:border-box;margin:auto;background:#fff;border:1px solid #e8e0d6;border-radius:20px;padding:26px 30px 32px;box-shadow:0 12px 34px rgba(65,47,29,.035)}
     .elly-schedule-table{width:100%;border-collapse:separate;border-spacing:0;table-layout:fixed;color:#40382f}
     .elly-schedule-table th{background:#f0e9df;color:#594a39;font-size:16px;font-weight:650;padding:14px 6px;border-bottom:1px solid #e4d8c9}
-    .elly-schedule-table th:first-child{border-radius:10px 0 0 0;width:19%}
+    .elly-schedule-table th:first-child{border-radius:10px 0 0 0;width:17%}
     .elly-schedule-table th:last-child{border-radius:0 10px 0 0}
     .elly-schedule-table td{height:55px;text-align:center;vertical-align:middle;border-bottom:1px solid #eee8e0;border-right:1px solid #f2ede7}
     .elly-schedule-table td:last-child{border-right:0}
@@ -482,12 +482,12 @@ main > section.elly-band-beige { background:#F4EEE0!important; }
       .elly-schedule-section{padding:55px 14px 62px}
       .elly-schedule-section .elly-schedule-wrap.wrap{width:100%;max-width:100%}
       .elly-schedule-panel{padding:14px 9px 23px;border-radius:14px}
-      .elly-schedule-table th{font-size:14px;padding:9px 2px}
-      .elly-schedule-table th:first-child{width:22%}
-      .elly-schedule-table td{height:44px}
-      .elly-schedule-table .elly-time{font-size:13px}
+      .elly-schedule-table th{font-size:13px;padding:9px 1px}
+      .elly-schedule-table th:first-child{width:20%}
+      .elly-schedule-table td{height:44px;padding:0 1px}
+      .elly-schedule-table .elly-time{font-size:12px}
       .elly-schedule-dot{width:11px;height:11px}
-      .elly-prenatal-mark{font-size:12px;min-width:38px;min-height:27px;padding:3px 5px}
+      .elly-prenatal-mark{font-size:11px;min-width:0;min-height:25px;padding:3px 5px}
       .elly-schedule-section .section-head p{max-width:290px;margin-left:auto;margin-right:auto;line-height:1.65;word-break:keep-all;text-wrap:balance;font-size:14px}
       .elly-schedule-legend{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.45fr);align-items:center;gap:8px;padding:13px 9px;margin:18px 0 15px}
       .elly-legend-item{min-width:0;justify-content:center;gap:6px;font-size:12px;line-height:1.35;white-space:nowrap}
@@ -541,16 +541,16 @@ main > section.elly-band-beige { background:#F4EEE0!important; }
     (() => {
       // Edit only this array when the timetable changes: 0 = no class, 1 = regular, 2 = prenatal.
       const scheduleRows = [
-        {time:'09:00',days:[0,1,0,1]},
-        {time:'10:00',days:[1,0,1,0]},
-        {time:'11:00',days:[0,0,2,0]},
-        {time:'19:00',days:[1,1,2,1]},
-        {time:'20:00',days:[1,1,2,1]},
-        {time:'21:00',days:[1,0,1,0]}
+        {time:'09:00',days:[0,1,0,1,0,0]},
+        {time:'10:00',days:[1,0,1,0,1,2]},
+        {time:'11:00',days:[0,0,2,0,0,0]},
+        {time:'19:00',days:[1,1,2,1,0,0]},
+        {time:'20:00',days:[1,1,2,1,0,0]},
+        {time:'21:00',days:[1,0,1,0,0,0]}
       ];
       const body=document.getElementById('elly-schedule-body');
       if(!body)return;
-      const dayNames=['월요일','화요일','수요일','목요일'];
+      const dayNames=['월요일','화요일','수요일','목요일','금요일','토요일'];
       scheduleRows.forEach(row=>{
         const tr=document.createElement('tr');
         const time=document.createElement('td');
