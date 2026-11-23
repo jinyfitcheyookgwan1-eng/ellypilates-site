@@ -634,41 +634,77 @@ main .momfit-faq-main .faq-item p{
   main .momfit-faq-main .faq-item p{padding-left:46px}
 }
 </style>
-<style id="momfit-lesson-desktop-layout-20261123">
-/* Keep the existing mobile experience; present the two prenatal options in a balanced desktop grid. */
-@media (min-width: 761px) {
-  .momfit-upgrade-lesson .momfit-upgrade-inner {max-width: 1080px;}
+<style id="momfit-unified-prenatal-design-20261123">
+/* One high-contrast prenatal group timetable; shared design on desktop and mobile. */
+.momfit-upgrade-lesson .momfit-schedule.momfit-unified-card{
+  display:block;background:#f7f2e9;border:1px solid #d9cbb5;border-radius:18px;
+  color:#233326;padding:32px 38px;margin-top:28px;box-shadow:0 5px 22px rgba(36,49,31,.045);
+}
+.momfit-upgrade-lesson .momfit-unified-header{display:block;text-align:left}
+.momfit-upgrade-lesson .momfit-unified-eyebrow{
+  font:700 12px/1.5 'Gothic A1',sans-serif;letter-spacing:.13em;color:#5c6b52;margin-bottom:8px;
+}
+.momfit-upgrade-lesson .momfit-unified-header h3{
+  font:700 clamp(21px,2.4vw,27px)/1.45 'Gothic A1',sans-serif;
+  color:#203225;margin:0 0 8px;
+}
+.momfit-upgrade-lesson .momfit-unified-header p{
+  font-size:15px;line-height:1.7;color:#44483e;margin:0;
+}
+.momfit-upgrade-lesson .momfit-unified-features{
+  display:flex;gap:0;align-items:center;flex-wrap:wrap;margin-top:14px;
+}
+.momfit-upgrade-lesson .momfit-unified-features span{
+  color:#4e5948;font-size:13px;font-weight:600;line-height:1.6;
+}
+.momfit-upgrade-lesson .momfit-unified-features span+span:before{
+  content:"·";display:inline-block;margin:0 11px;color:#8f9c86;
+}
+.momfit-upgrade-lesson .momfit-unified-times{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;
+  padding-top:23px;margin-top:24px;border-top:1px solid #d7cbb9;
+}
+.momfit-upgrade-lesson .momfit-unified-day{
+  display:flex;align-items:center;gap:18px;min-width:0;
+}
+.momfit-upgrade-lesson .momfit-unified-day>strong{
+  font:700 17px/1.5 'Gothic A1',sans-serif;color:#203225;white-space:nowrap;
+}
+.momfit-upgrade-lesson .momfit-unified-slots{display:flex;gap:7px;flex-wrap:wrap}
+.momfit-upgrade-lesson .momfit-unified-slots span{
+  display:inline-flex;min-height:42px;min-width:64px;align-items:center;justify-content:center;
+  padding:8px 10px;border-radius:8px;border:1px solid #c7d0bf;background:#fff;
+  font:700 16px/1.3 'Gothic A1',sans-serif;color:#203225;font-variant-numeric:tabular-nums;
+}
+@media(min-width:761px){
+  .momfit-upgrade-lesson .momfit-upgrade-inner{max-width:1080px}
   .momfit-upgrade-lesson .momfit-upgrade-kicker,
   .momfit-upgrade-lesson #momfit-lesson-heading,
-  .momfit-upgrade-lesson > .momfit-upgrade-inner > .momfit-upgrade-lead {text-align:center;}
-  .momfit-upgrade-lesson .momfit-upgrade-lead {margin-bottom:32px;}
-  .momfit-upgrade-lesson .momfit-lesson-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;}
-  .momfit-upgrade-lesson .momfit-lesson-grid article {
-    min-height:178px;padding:28px 32px;border-radius:16px;
+  .momfit-upgrade-lesson .momfit-upgrade-inner>.momfit-upgrade-lead{text-align:center}
+  .momfit-upgrade-lesson .momfit-upgrade-lead{margin-bottom:32px}
+  .momfit-upgrade-lesson .momfit-lesson-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+  .momfit-upgrade-lesson .momfit-lesson-grid article{
+    min-height:170px;padding:28px 32px;border-radius:16px;
     display:flex;flex-direction:column;justify-content:center;
   }
-  .momfit-upgrade-lesson .momfit-lesson-grid article h3 {font-size:21px;margin:12px 0 9px;}
-  .momfit-upgrade-lesson .momfit-lesson-grid article p {font-size:15px;line-height:1.8;}
-  .momfit-upgrade-lesson .momfit-schedule.momfit-prenatal-weekly {margin-top:28px;padding:30px 36px;border-radius:16px;}
-  .momfit-upgrade-lesson .momfit-schedule .momfit-prenatal-row,
-  .momfit-upgrade-lesson .momfit-schedule > .momfit-prenatal-row:first-child {
-    display:grid;grid-template-columns:minmax(0,1fr) auto;
-    align-items:center;column-gap:28px;
-  }
-  .momfit-upgrade-lesson .momfit-schedule .momfit-prenatal-info {display:flex;flex-direction:column;gap:8px;}
-  .momfit-upgrade-lesson .momfit-schedule .momfit-prenatal-info strong {font-size:18px;line-height:1.5;}
-  .momfit-upgrade-lesson .momfit-schedule .momfit-prenatal-info > span {font-size:14px;color:#e2e4d9;}
-  .momfit-upgrade-lesson .momfit-schedule .momfit-schedule-times {justify-content:flex-end;}
-  .momfit-upgrade-lesson .momfit-schedule .momfit-schedule-times span {
-    min-width:72px;min-height:48px;display:inline-flex;align-items:center;justify-content:center;
-    font-size:17px;
-  }
-  .momfit-upgrade-lesson .momfit-support-note {margin-top:20px;}
+  .momfit-upgrade-lesson .momfit-lesson-grid article h3{font-size:21px;margin:12px 0 9px}
+  .momfit-upgrade-lesson .momfit-lesson-grid article p{font-size:15px;line-height:1.8}
 }
-@media (min-width:761px) and (max-width:920px){
-  .momfit-upgrade-lesson .momfit-schedule .momfit-prenatal-row,
-  .momfit-upgrade-lesson .momfit-schedule > .momfit-prenatal-row:first-child {grid-template-columns:1fr;row-gap:14px;}
-  .momfit-upgrade-lesson .momfit-schedule .momfit-schedule-times {justify-content:flex-start;}
+@media(max-width:1040px){
+  .momfit-upgrade-lesson .momfit-unified-times{grid-template-columns:1fr;gap:14px}
+}
+@media(max-width:760px){
+  .momfit-upgrade-lesson .momfit-schedule.momfit-unified-card{padding:24px 20px;border-radius:15px}
+  .momfit-upgrade-lesson .momfit-unified-header h3{font-size:21px}
+  .momfit-upgrade-lesson .momfit-unified-header p{font-size:14px}
+  .momfit-upgrade-lesson .momfit-unified-times{display:flex;flex-direction:column;gap:16px;margin-top:20px;padding-top:20px}
+  .momfit-upgrade-lesson .momfit-unified-day{display:flex;align-items:flex-start;gap:12px}
+  .momfit-upgrade-lesson .momfit-unified-day>strong{min-width:56px;font-size:15px;padding-top:9px}
+  .momfit-upgrade-lesson .momfit-unified-slots span{font-size:15px;min-width:60px;min-height:40px}
+}
+@media(max-width:380px){
+  .momfit-upgrade-lesson .momfit-unified-day{flex-direction:column;gap:7px}
+  .momfit-upgrade-lesson .momfit-unified-day>strong{padding-top:0}
 }
 </style>
 </head>
@@ -961,14 +997,16 @@ main .momfit-faq-main .faq-item p{
         <article><span>01 · PRIVATE</span><h3>1:1 개인레슨</h3><p>임신 주수와 컨디션, 운동 목적에 따른 맞춤 산전 수업</p></article>
         <article><span>02 · PRENATAL</span><h3>3:1 임산부 전용 그룹</h3><p>임신 주수와 당일 컨디션을 고려한 소수정예 산전 수업</p></article>
       </div>
-      <div class="momfit-schedule momfit-prenatal-weekly" aria-label="3:1 임산부 그룹레슨 시간표">
-        <div class="momfit-prenatal-row">
-          <div class="momfit-prenatal-info"><strong>3:1 임산부 그룹레슨</strong><span>매주 수요일 · 50분 · 최대 3명</span></div>
-          <div class="momfit-schedule-times"><span>11:00</span><span>19:00</span><span>20:00</span></div>
+      <div class="momfit-schedule momfit-unified-card" aria-label="3:1 임산부 전용 그룹레슨 통합 시간표">
+        <div class="momfit-unified-header">
+          <div class="momfit-unified-eyebrow">PRENATAL GROUP PILATES</div>
+          <h3>3:1 임산부 전용 그룹레슨</h3>
+          <p>임신 주수와 당일 컨디션을 고려한 소수정예 산전 수업</p>
+          <div class="momfit-unified-features"><span>최대 3명</span><span>담임제 운영</span><span>사전 예약제</span></div>
         </div>
-        <div class="momfit-prenatal-row momfit-prenatal-weekend">
-          <div class="momfit-prenatal-info"><strong>삼송 지역 주말 임산부 그룹레슨 운영</strong><span>매주 토요일 · 50분 · 최대 3명</span></div>
-          <div class="momfit-schedule-times"><span>10:00</span><span>11:00</span></div>
+        <div class="momfit-unified-times" aria-label="정규 그룹 시간표">
+          <div class="momfit-unified-day"><strong>수요일</strong><div class="momfit-unified-slots"><span>11:00</span><span>19:00</span><span>20:00</span></div></div>
+          <div class="momfit-unified-day"><strong>토요일</strong><div class="momfit-unified-slots"><span>10:00</span><span>11:00</span></div></div>
         </div>
       </div>
       <p class="momfit-support-note">※ 그룹 수업은 사전 예약제로 운영되며, 정원·시간표·참여 가능 여부는 상담 시 확인해 주세요. 출산 후에는 일반 3:1 그룹과 개인레슨 병행도 안내합니다.</p>
