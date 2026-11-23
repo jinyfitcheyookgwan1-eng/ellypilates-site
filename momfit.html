@@ -634,6 +634,43 @@ main .momfit-faq-main .faq-item p{
   main .momfit-faq-main .faq-item p{padding-left:46px}
 }
 </style>
+<style id="momfit-lesson-desktop-layout-20261123">
+/* Keep the existing mobile experience; present the two prenatal options in a balanced desktop grid. */
+@media (min-width: 761px) {
+  .momfit-upgrade-lesson .momfit-upgrade-inner {max-width: 1080px;}
+  .momfit-upgrade-lesson .momfit-upgrade-kicker,
+  .momfit-upgrade-lesson #momfit-lesson-heading,
+  .momfit-upgrade-lesson > .momfit-upgrade-inner > .momfit-upgrade-lead {text-align:center;}
+  .momfit-upgrade-lesson .momfit-upgrade-lead {margin-bottom:32px;}
+  .momfit-upgrade-lesson .momfit-lesson-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;}
+  .momfit-upgrade-lesson .momfit-lesson-grid article {
+    min-height:178px;padding:28px 32px;border-radius:16px;
+    display:flex;flex-direction:column;justify-content:center;
+  }
+  .momfit-upgrade-lesson .momfit-lesson-grid article h3 {font-size:21px;margin:12px 0 9px;}
+  .momfit-upgrade-lesson .momfit-lesson-grid article p {font-size:15px;line-height:1.8;}
+  .momfit-upgrade-lesson .momfit-schedule.momfit-prenatal-weekly {margin-top:28px;padding:30px 36px;border-radius:16px;}
+  .momfit-upgrade-lesson .momfit-schedule .momfit-prenatal-row,
+  .momfit-upgrade-lesson .momfit-schedule > .momfit-prenatal-row:first-child {
+    display:grid;grid-template-columns:minmax(0,1fr) auto;
+    align-items:center;column-gap:28px;
+  }
+  .momfit-upgrade-lesson .momfit-schedule .momfit-prenatal-info {display:flex;flex-direction:column;gap:8px;}
+  .momfit-upgrade-lesson .momfit-schedule .momfit-prenatal-info strong {font-size:18px;line-height:1.5;}
+  .momfit-upgrade-lesson .momfit-schedule .momfit-prenatal-info > span {font-size:14px;color:#e2e4d9;}
+  .momfit-upgrade-lesson .momfit-schedule .momfit-schedule-times {justify-content:flex-end;}
+  .momfit-upgrade-lesson .momfit-schedule .momfit-schedule-times span {
+    min-width:72px;min-height:48px;display:inline-flex;align-items:center;justify-content:center;
+    font-size:17px;
+  }
+  .momfit-upgrade-lesson .momfit-support-note {margin-top:20px;}
+}
+@media (min-width:761px) and (max-width:920px){
+  .momfit-upgrade-lesson .momfit-schedule .momfit-prenatal-row,
+  .momfit-upgrade-lesson .momfit-schedule > .momfit-prenatal-row:first-child {grid-template-columns:1fr;row-gap:14px;}
+  .momfit-upgrade-lesson .momfit-schedule .momfit-schedule-times {justify-content:flex-start;}
+}
+</style>
 </head>
 <body>
 <header>
